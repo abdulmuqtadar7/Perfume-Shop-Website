@@ -1,645 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop — Fragrance House | Premium Attars & Perfume Oils</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Parc de Faris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sticky Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Fragrance<span>House</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html" class="active">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="about.html#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="https://wa.me/923001234567" class="btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    WhatsApp
-                </a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Shop Header -->
-    <section class="page-header">
-        <h1>Our Collection</h1>
-        <p>Explore our premium range of organic attars, perfume oils, and ittars</p>
-    </section>
+<div class="sale-strip">
+  🔥 RAMADAN SPECIAL — Up to 40% OFF on selected fragrances! Limited time only.
+</div>
 
-    <!-- Mobile Filter Toggle -->
-    <div class="mobile-filter-toggle">
-        <button class="btn btn-secondary" id="filterToggleBtn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
-            Filters
-        </button>
-        <div class="filter-group filter-search-mobile">
-            <input type="text" id="searchFilterMobile" placeholder="Search fragrances...">
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
+      <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
+    </svg>
+    Parc de Faris
+  </a>
+  <nav class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="shop.html" class="active">Shop</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button class="nav-cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="about.html#contact">Contact</a>
+</nav>
+
+<div class="page-header">
+  <h1>Our Collections</h1>
+  <p>Discover all our premium attars, oud oils &amp; bakhoor</p>
+</div>
+
+<div class="container">
+  <div class="shop-layout">
+
+    <!-- Desktop Sidebar -->
+    <aside class="filter-sidebar" id="filterSidebar">
+      <div class="sidebar-top">
+        <h3>Filters</h3>
+        <button class="clear-btn" id="clearFilters">Clear All</button>
+      </div>
+      <div class="sidebar-search">
+        <input type="search" id="searchInput" placeholder="Search products...">
+      </div>
+      
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Gender <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="men"> Men</label>
+<label class="fcb-label"><input type="checkbox" data-filter="women"> Women</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Season <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="summer"> Summer</label>
+<label class="fcb-label"><input type="checkbox" data-filter="winter"> Winter</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Type <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="soft"> Soft</label>
+<label class="fcb-label"><input type="checkbox" data-filter="fresh"> Fresh</label>
+<label class="fcb-label"><input type="checkbox" data-filter="woody"> Woody</label>
+<label class="fcb-label"><input type="checkbox" data-filter="fruity"> Fruity</label>
+<label class="fcb-label"><input type="checkbox" data-filter="sweet"> Sweet</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Range <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="affordable"> Affordable (Under Rs. 2,000)</label>
+<label class="fcb-label"><input type="checkbox" data-filter="premium"> Premium (Rs. 2,000–5,000)</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Sillage / Projection <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="soft"> Soft</label>
+<label class="fcb-label"><input type="checkbox" data-filter="medium"> Medium</label>
+<label class="fcb-label"><input type="checkbox" data-filter="strong"> Strong</label>
+<label class="fcb-label"><input type="checkbox" data-filter="premium"> Premium</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Premium Attars <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="french-attars"> French Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="arabic-attars"> Arabic Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="pure-attars"> Pure Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="oud-attars"> Oud Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="mukhalat-oud"> Mukhalat Oud</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Bakhoor <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="bukhoor-wood"> Bukhoor Wood</label>
+<label class="fcb-label"><input type="checkbox" data-filter="bukhoor-burner"> Bukhoor Burner</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Best Sellers <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="mughal"> Mughal</label>
+<label class="fcb-label"><input type="checkbox" data-filter="office"> Office</label>
+<label class="fcb-label"><input type="checkbox" data-filter="18plus"> 18+</label>
+<label class="fcb-label"><input type="checkbox" data-filter="night-rush"> Night Rush</label>
+
+      </div>
+    </div>
+    </aside>
+
+    <!-- Main Shop Area -->
+    <div class="shop-main">
+      <div class="shop-header">
+        <h2>All Products</h2>
+        <span class="shop-count" id="shopCount">Showing 16 products</span>
+      </div>
+      <div class="products-grid" id="productGrid">
+        
+      <div class="product-card fade-up" data-tags="arabic-attars woody strong mughal men">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Mughal Oud" loading="lazy">
         </div>
+        <div class="pc-body">
+          <span class="pc-badge">Arabic Attar &bull; Woody &bull; Strong</span>
+          <h3>Mughal Oud</h3>
+          <p class="pc-price">Rs. 3,500</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Mughal Oud',3500)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Mughal+Oud" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="men fresh strong 18plus night-rush">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Night Rush" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Men &bull; Fresh &bull; Strong</span>
+          <h3>Night Rush</h3>
+          <p class="pc-price">Rs. 2,800</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Night Rush',2800)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Night+Rush" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="french-attars floral women soft">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="French Rose" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">French Attar &bull; Floral &bull; Women</span>
+          <h3>French Rose</h3>
+          <p class="pc-price">Rs. 2,200</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('French Rose',2200)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+French+Rose" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="pure-attars oud-attars premium strong">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Oud Al Taif" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Pure Attar &bull; Oud &bull; Premium</span>
+          <h3>Oud Al Taif</h3>
+          <p class="pc-price">Rs. 4,800</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Oud Al Taif',4800)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Oud+Al+Taif" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="men soft office affordable">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Office Musk" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Men &bull; Soft &bull; Office</span>
+          <h3>Office Musk</h3>
+          <p class="pc-price">Rs. 1,800</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Office Musk',1800)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Office+Musk" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="women fresh summer affordable">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Summer Breeze" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Women &bull; Fresh &bull; Summer</span>
+          <h3>Summer Breeze</h3>
+          <p class="pc-price">Rs. 1,500</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Summer Breeze',1500)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Summer+Breeze" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="men woody winter premium">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Winter Warmth" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Men &bull; Woody &bull; Winter</span>
+          <h3>Winter Warmth</h3>
+          <p class="pc-price">Rs. 3,000</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Winter Warmth',3000)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Winter+Warmth" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="mukhalat-oud premium strong">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Mukhalat Oud Blend" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Mukhalat Oud &bull; Premium &bull; Strong</span>
+          <h3>Mukhalat Oud Blend</h3>
+          <p class="pc-price">Rs. 5,500</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Mukhalat Oud Blend',5500)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Mukhalat+Oud+Blend" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="women fruity sweet summer affordable">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Sweet Berries" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Women &bull; Fruity &bull; Sweet</span>
+          <h3>Sweet Berries</h3>
+          <p class="pc-price">Rs. 1,200</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Sweet Berries',1200)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Sweet+Berries" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="bukhoor-wood">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Bukhoor Al Oud Wood" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Bukhoor Wood</span>
+          <h3>Bukhoor Al Oud Wood</h3>
+          <p class="pc-price">Rs. 2,500</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Bukhoor Al Oud Wood',2500)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Bukhoor+Al+Oud+Wood" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="bukhoor-burner">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Classic Burner Set" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Bukhoor Burner</span>
+          <h3>Classic Burner Set</h3>
+          <p class="pc-price">Rs. 1,800</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Classic Burner Set',1800)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Classic+Burner+Set" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="arabic-attars woody premium">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Amber Royale" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Arabic Attar &bull; Woody &bull; Premium</span>
+          <h3>Amber Royale</h3>
+          <p class="pc-price">Rs. 4,200</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Amber Royale',4200)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Amber+Royale" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="women floral sweet night-rush">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Night Jasmine" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Women &bull; Floral &bull; Sweet</span>
+          <h3>Night Jasmine</h3>
+          <p class="pc-price">Rs. 2,000</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Night Jasmine',2000)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Night+Jasmine" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="pure-attars premium strong">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Saffron Gold" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Pure Attar &bull; Premium &bull; Strong</span>
+          <h3>Saffron Gold</h3>
+          <p class="pc-price">Rs. 6,500</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Saffron Gold',6500)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Saffron+Gold" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="men fresh summer affordable">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Fresh Ocean" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Men &bull; Fresh &bull; Summer</span>
+          <h3>Fresh Ocean</h3>
+          <p class="pc-price">Rs. 1,600</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Fresh Ocean',1600)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Fresh+Ocean" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card fade-up" data-tags="french-attars floral women premium">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Rose Taif Pure" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">French Attar &bull; Floral &bull; Premium</span>
+          <h3>Rose Taif Pure</h3>
+          <p class="pc-price">Rs. 3,800</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Rose Taif Pure',3800)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Rose+Taif+Pure" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <p id="noResults" style="display:none; text-align:center; color:var(--muted); padding:48px 0;">No products match your filters.</p>
     </div>
 
-    <!-- Shop Layout: Sidebar + Grid -->
-    <section class="section shop-layout">
-        <div class="container shop-container">
-            <!-- Filter Sidebar -->
-            <div class="filter-sidebar-overlay" id="filterOverlay"></div>
-            <aside class="filter-sidebar" id="filterSidebar">
-                <div class="sidebar-header">
-                    <h3>Filters</h3>
-                    <button class="sidebar-close" id="sidebarClose">&times;</button>
-                </div>
-                <div class="sidebar-search">
-                    <input type="text" id="searchFilter" placeholder="Search fragrances...">
-                </div>
+  </div>
+</div>
 
-                <!-- Gender -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Gender <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="gender" value="men"> Men</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="gender" value="women"> Women</label>
-                    </div>
-                </div>
+<!-- Mobile Filter FAB -->
+<button class="mobile-filter-fab" id="mobileFilterBtn">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="11" y2="6"/><line x1="13" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="7" y2="12"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="13" y2="18"/><line x1="15" y1="18" x2="20" y2="18"/><circle cx="12" cy="6" r="2" fill="currentColor"/><circle cx="8" cy="12" r="2" fill="currentColor"/><circle cx="14" cy="18" r="2" fill="currentColor"/></svg>
+  Filter
+</button>
 
-                <!-- Season -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Season <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="season" value="summer"> Summer</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="season" value="winter"> Winter</label>
-                    </div>
-                </div>
+<!-- Mobile Filter Drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="filter-drawer" id="filterDrawer">
+  <div class="drawer-header">
+    <h3>Filters</h3>
+    <button class="drawer-close" id="drawerClose">&times;</button>
+  </div>
+  <div class="sidebar-top" style="margin-bottom:10px">
+    <span></span>
+    <button class="clear-btn" id="clearFiltersMobile">Clear All</button>
+  </div>
+  <div class="sidebar-search">
+    <input type="search" id="searchInputMobile" placeholder="Search products...">
+  </div>
+  
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Gender <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="men"> Men</label>
+<label class="fcb-label"><input type="checkbox" data-filter="women"> Women</label>
 
-                <!-- Perfumes -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Perfumes <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="perfumes" value="men"> Men</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="perfumes" value="women"> Women</label>
-                    </div>
-                </div>
-
-                <!-- Type -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Type <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="type" value="soft"> Soft</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="type" value="fresh"> Fresh</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="type" value="woody"> Woody</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="type" value="fruity"> Fruity</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="type" value="sweet"> Sweet</label>
-                    </div>
-                </div>
-
-                <!-- Range -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Range <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="range" value="affordable"> Affordable (Under Rs. 2,000)</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="range" value="premium"> Premium (Rs. 2,000–5,000)</label>
-                    </div>
-                </div>
-
-                <!-- Sillage / Projection -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Sillage / Projection <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="sillage" value="soft"> Soft</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="sillage" value="medium"> Medium</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="sillage" value="strong"> Strong</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="sillage" value="premium"> Premium</label>
-                    </div>
-                </div>
-
-                <!-- Premium Attars -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Premium Attars <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="attars" value="french-attars"> French Attars</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="attars" value="arabic-attars"> Arabic Attars</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="attars" value="pure-attars"> Pure Attars</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="attars" value="oud-attars"> Oud Attars</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="attars" value="mukhalat-oud"> Mukhalat Oud</label>
-                    </div>
-                </div>
-
-                <!-- Premium Bakhoors -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Premium Bakhoors <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="bakhoors" value="bukhoor-wood"> Bukhoor Wood</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="bakhoors" value="bukhoor-burner"> Bukhoor Burner</label>
-                    </div>
-                </div>
-
-                <!-- Best Sellers -->
-                <div class="filter-section">
-                    <button class="filter-section-toggle" aria-expanded="true">Best Sellers <span class="toggle-icon">−</span></button>
-                    <div class="filter-section-content">
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="bestsellers" value="mughal"> Mughal</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="bestsellers" value="office"> Office</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="bestsellers" value="18plus"> 18+</label>
-                        <label class="filter-checkbox"><input type="checkbox" data-filter="bestsellers" value="night-rush"> Night Rush</label>
-                    </div>
-                </div>
-
-                <button class="btn btn-secondary btn-full" id="clearFilters" style="margin-top:20px;">Clear All Filters</button>
-            </aside>
-
-            <!-- Products Grid -->
-            <div class="shop-main">
-                <div class="products-grid shop-grid" id="shopGrid">
-                    <!-- 1. Mughal Oud -->
-                    <div class="product-card fade-in" data-name="Mughal Oud" data-price="3500"
-                         data-gender="men" data-season="" data-perfumes="men" data-type="woody"
-                         data-range="premium" data-sillage="strong" data-attars="arabic-attars"
-                         data-bakhoors="" data-bestsellers="mughal">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80" alt="Mughal Oud" loading="lazy">
-                            <span class="product-tag">Woody</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Mughal Oud</h3>
-                            <p class="product-notes"><strong>Top:</strong> Saffron, Oud | <strong>Mid:</strong> Rose, Sandalwood | <strong>Base:</strong> Musk, Amber</p>
-                            <p class="product-price">Rs. 3,500</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Mughal Oud', 3500)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Mughal%20Oud" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. Night Rush -->
-                    <div class="product-card fade-in" data-name="Night Rush" data-price="2800"
-                         data-gender="men" data-season="" data-perfumes="men" data-type="fresh"
-                         data-range="premium" data-sillage="strong" data-attars=""
-                         data-bakhoors="" data-bestsellers="18plus night-rush">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80" alt="Night Rush" loading="lazy">
-                            <span class="product-tag">Fresh</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Night Rush</h3>
-                            <p class="product-notes"><strong>Top:</strong> Bergamot, Mint | <strong>Mid:</strong> Lavender, Geranium | <strong>Base:</strong> Tonka, Vetiver</p>
-                            <p class="product-price">Rs. 2,800</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Night Rush', 2800)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Night%20Rush" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. French Rose -->
-                    <div class="product-card fade-in" data-name="French Rose" data-price="2200"
-                         data-gender="women" data-season="" data-perfumes="women" data-type="soft"
-                         data-range="premium" data-sillage="soft" data-attars="french-attars"
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="French Rose" loading="lazy">
-                            <span class="product-tag">Floral</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>French Rose</h3>
-                            <p class="product-notes"><strong>Top:</strong> Rose Petals | <strong>Mid:</strong> Peony, Jasmine | <strong>Base:</strong> Musk, Powder</p>
-                            <p class="product-price">Rs. 2,200</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('French Rose', 2200)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20French%20Rose" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. Oud Al Taif -->
-                    <div class="product-card fade-in" data-name="Oud Al Taif" data-price="4800"
-                         data-gender="" data-season="" data-perfumes="" data-type="woody"
-                         data-range="premium" data-sillage="premium" data-attars="pure-attars oud-attars"
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1608834967573-37db8e89c5ac?w=600&q=80" alt="Oud Al Taif" loading="lazy">
-                            <span class="product-tag">Oud</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Oud Al Taif</h3>
-                            <p class="product-notes"><strong>Top:</strong> Oud, Saffron | <strong>Mid:</strong> Rose, Incense | <strong>Base:</strong> Amber, Sandalwood</p>
-                            <p class="product-price">Rs. 4,800</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Oud Al Taif', 4800)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Oud%20Al%20Taif" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Office Musk -->
-                    <div class="product-card fade-in" data-name="Office Musk" data-price="1800"
-                         data-gender="men" data-season="" data-perfumes="men" data-type="soft"
-                         data-range="affordable" data-sillage="soft" data-attars=""
-                         data-bakhoors="" data-bestsellers="office">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80" alt="Office Musk" loading="lazy">
-                            <span class="product-tag">Musky</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Office Musk</h3>
-                            <p class="product-notes"><strong>Top:</strong> Citrus, Aldehyde | <strong>Mid:</strong> White Musk | <strong>Base:</strong> Cedar, Powder</p>
-                            <p class="product-price">Rs. 1,800</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Office Musk', 1800)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Office%20Musk" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 6. Summer Breeze -->
-                    <div class="product-card fade-in" data-name="Summer Breeze" data-price="1500"
-                         data-gender="women" data-season="summer" data-perfumes="women" data-type="fresh"
-                         data-range="affordable" data-sillage="soft" data-attars=""
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80" alt="Summer Breeze" loading="lazy">
-                            <span class="product-tag">Fresh</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Summer Breeze</h3>
-                            <p class="product-notes"><strong>Top:</strong> Lemon, Peach | <strong>Mid:</strong> Lily, Freesia | <strong>Base:</strong> White Musk</p>
-                            <p class="product-price">Rs. 1,500</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Summer Breeze', 1500)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Summer%20Breeze" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 7. Winter Warmth -->
-                    <div class="product-card fade-in" data-name="Winter Warmth" data-price="3000"
-                         data-gender="men" data-season="winter" data-perfumes="men" data-type="woody"
-                         data-range="premium" data-sillage="strong" data-attars=""
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=600&q=80" alt="Winter Warmth" loading="lazy">
-                            <span class="product-tag">Woody</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Winter Warmth</h3>
-                            <p class="product-notes"><strong>Top:</strong> Cinnamon, Cardamom | <strong>Mid:</strong> Oud, Cedar | <strong>Base:</strong> Vanilla, Amber</p>
-                            <p class="product-price">Rs. 3,000</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Winter Warmth', 3000)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Winter%20Warmth" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 8. Mukhalat Oud Blend -->
-                    <div class="product-card fade-in" data-name="Mukhalat Oud Blend" data-price="5500"
-                         data-gender="" data-season="" data-perfumes="" data-type="woody"
-                         data-range="premium" data-sillage="strong premium" data-attars="mukhalat-oud"
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1601295452898-17a73f1e6191?w=600&q=80" alt="Mukhalat Oud Blend" loading="lazy">
-                            <span class="product-tag">Oriental</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Mukhalat Oud Blend</h3>
-                            <p class="product-notes"><strong>Top:</strong> Oud, Saffron | <strong>Mid:</strong> Rose, Amber | <strong>Base:</strong> Musk, Sandalwood</p>
-                            <p class="product-price">Rs. 5,500</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Mukhalat Oud Blend', 5500)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Mukhalat%20Oud%20Blend" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 9. Sweet Berries -->
-                    <div class="product-card fade-in" data-name="Sweet Berries" data-price="1200"
-                         data-gender="women" data-season="summer" data-perfumes="women" data-type="fruity sweet"
-                         data-range="affordable" data-sillage="soft" data-attars=""
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80" alt="Sweet Berries" loading="lazy">
-                            <span class="product-tag">Fruity</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Sweet Berries</h3>
-                            <p class="product-notes"><strong>Top:</strong> Raspberry, Strawberry | <strong>Mid:</strong> Peony, Caramel | <strong>Base:</strong> Vanilla, Musk</p>
-                            <p class="product-price">Rs. 1,200</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Sweet Berries', 1200)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Sweet%20Berries" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 10. Bukhoor Al Oud Wood -->
-                    <div class="product-card fade-in" data-name="Bukhoor Al Oud Wood" data-price="2500"
-                         data-gender="" data-season="" data-perfumes="" data-type="woody"
-                         data-range="premium" data-sillage="strong" data-attars=""
-                         data-bakhoors="bukhoor-wood" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Bukhoor Al Oud Wood" loading="lazy">
-                            <span class="product-tag">Bakhoor</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Bukhoor Al Oud Wood</h3>
-                            <p class="product-notes"><strong>Top:</strong> Oud Wood Chips | <strong>Mid:</strong> Frankincense | <strong>Base:</strong> Amber, Musk</p>
-                            <p class="product-price">Rs. 2,500</p>
-                            <div class="size-options">
-                                <button class="size-btn active">50g</button>
-                                <button class="size-btn">100g</button>
-                                <button class="size-btn">200g</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Bukhoor Al Oud Wood', 2500)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Bukhoor%20Al%20Oud%20Wood" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 11. Classic Burner Set -->
-                    <div class="product-card fade-in" data-name="Classic Burner Set" data-price="1800"
-                         data-gender="" data-season="" data-perfumes="" data-type=""
-                         data-range="affordable" data-sillage="" data-attars=""
-                         data-bakhoors="bukhoor-burner" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1627634777217-c864268db30c?w=600&q=80" alt="Classic Burner Set" loading="lazy">
-                            <span class="product-tag">Bakhoor</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Classic Burner Set</h3>
-                            <p class="product-notes">Handcrafted ceramic burner with complimentary bakhoor chips sampler</p>
-                            <p class="product-price">Rs. 1,800</p>
-                            <div class="size-options">
-                                <button class="size-btn active">Small</button>
-                                <button class="size-btn">Large</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Classic Burner Set', 1800)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Classic%20Burner%20Set" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 12. Amber Royale -->
-                    <div class="product-card fade-in" data-name="Amber Royale" data-price="4200"
-                         data-gender="" data-season="" data-perfumes="" data-type="woody"
-                         data-range="premium" data-sillage="strong" data-attars="arabic-attars"
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=600&q=80" alt="Amber Royale" loading="lazy">
-                            <span class="product-tag">Woody</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Amber Royale</h3>
-                            <p class="product-notes"><strong>Top:</strong> Amber, Spice | <strong>Mid:</strong> Oud, Cedarwood | <strong>Base:</strong> Vanilla, Leather</p>
-                            <p class="product-price">Rs. 4,200</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Amber Royale', 4200)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Amber%20Royale" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 13. Night Jasmine -->
-                    <div class="product-card fade-in" data-name="Night Jasmine" data-price="2000"
-                         data-gender="women" data-season="" data-perfumes="women" data-type="sweet"
-                         data-range="affordable" data-sillage="medium" data-attars=""
-                         data-bakhoors="" data-bestsellers="night-rush">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Night Jasmine" loading="lazy">
-                            <span class="product-tag">Floral</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Night Jasmine</h3>
-                            <p class="product-notes"><strong>Top:</strong> Night Jasmine | <strong>Mid:</strong> Tuberose, Ylang | <strong>Base:</strong> White Musk, Vanilla</p>
-                            <p class="product-price">Rs. 2,000</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Night Jasmine', 2000)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Night%20Jasmine" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 14. Saffron Gold -->
-                    <div class="product-card fade-in" data-name="Saffron Gold" data-price="6500"
-                         data-gender="" data-season="" data-perfumes="" data-type="woody"
-                         data-range="premium" data-sillage="strong premium" data-attars="pure-attars"
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1601295452898-17a73f1e6191?w=600&q=80" alt="Saffron Gold" loading="lazy">
-                            <span class="product-tag">Premium</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Saffron Gold</h3>
-                            <p class="product-notes"><strong>Top:</strong> Saffron, Gold Amber | <strong>Mid:</strong> Oud, Rose Absolute | <strong>Base:</strong> Musk, Sandalwood</p>
-                            <p class="product-price">Rs. 6,500</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Saffron Gold', 6500)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Saffron%20Gold" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 15. Fresh Ocean -->
-                    <div class="product-card fade-in" data-name="Fresh Ocean" data-price="1600"
-                         data-gender="men" data-season="summer" data-perfumes="men" data-type="fresh"
-                         data-range="affordable" data-sillage="medium" data-attars=""
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80" alt="Fresh Ocean" loading="lazy">
-                            <span class="product-tag">Fresh</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Fresh Ocean</h3>
-                            <p class="product-notes"><strong>Top:</strong> Sea Salt, Lime | <strong>Mid:</strong> Marine Accord | <strong>Base:</strong> Driftwood, Musk</p>
-                            <p class="product-price">Rs. 1,600</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Fresh Ocean', 1600)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Fresh%20Ocean" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 16. Rose Taif Pure -->
-                    <div class="product-card fade-in" data-name="Rose Taif Pure" data-price="3800"
-                         data-gender="women" data-season="" data-perfumes="women" data-type="soft"
-                         data-range="premium" data-sillage="medium" data-attars="french-attars"
-                         data-bakhoors="" data-bestsellers="">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Rose Taif Pure" loading="lazy">
-                            <span class="product-tag">Floral</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Rose Taif Pure</h3>
-                            <p class="product-notes"><strong>Top:</strong> Taif Rose | <strong>Mid:</strong> Jasmine, Honey | <strong>Base:</strong> Amber, Vanilla, Musk</p>
-                            <p class="product-price">Rs. 3,800</p>
-                            <div class="size-options">
-                                <button class="size-btn active">6ml</button>
-                                <button class="size-btn">12ml</button>
-                                <button class="size-btn">20ml</button>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-cart" onclick="addToCart('Rose Taif Pure', 3800)">Add to Cart</button>
-                                <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Rose%20Taif%20Pure" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="logo">Fragrance<span>House</span></h3>
-                    <p>Premium Organic Attars & Perfume Oils — Crafted with love in Pakistan</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Get in Touch</h4>
-                    <p><a href="https://wa.me/923001234567" target="_blank" rel="noopener">WhatsApp: +92 300 1234567</a></p>
-                    <p>Email: info@fragrancebrand.pk</p>
-                    <p>Lahore, Pakistan</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
-                        <a href="#" aria-label="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .55.04.81.1v-3.5a6.37 6.37 0 00-.81-.05A6.34 6.34 0 003.15 15.7a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.18a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.61z"/></svg></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fragrance House. All rights reserved. | Lahore, Pakistan</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cart Drawer -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <button class="cart-close" id="cartClose">&times;</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <p class="cart-empty">Your cart is empty</p>
-        </div>
-        <div class="cart-footer" id="cartFooter" style="display:none;">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cartTotal">Rs. 0</span>
-            </div>
-            <a href="https://wa.me/923001234567?text=I%20want%20to%20place%20an%20order" class="btn btn-primary btn-full" target="_blank" rel="noopener">Order via WhatsApp</a>
-        </div>
+      </div>
     </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Season <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="summer"> Summer</label>
+<label class="fcb-label"><input type="checkbox" data-filter="winter"> Winter</label>
 
-    <!-- Chatbot -->
-    <div class="chatbot-btn" id="chatbotBtn">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+      </div>
     </div>
-    <div class="chatbot-window" id="chatbotWindow">
-        <div class="chatbot-header">
-            <h4>Fragrance House</h4>
-            <button class="chatbot-close" id="chatbotClose">&times;</button>
-        </div>
-        <div class="chatbot-messages" id="chatbotMessages"></div>
-        <div class="chatbot-quick-replies" id="chatbotQuickReplies"></div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbotInput" placeholder="Type a message...">
-            <button id="chatbotSend">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-            </button>
-        </div>
-    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Type <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="soft"> Soft</label>
+<label class="fcb-label"><input type="checkbox" data-filter="fresh"> Fresh</label>
+<label class="fcb-label"><input type="checkbox" data-filter="woody"> Woody</label>
+<label class="fcb-label"><input type="checkbox" data-filter="fruity"> Fruity</label>
+<label class="fcb-label"><input type="checkbox" data-filter="sweet"> Sweet</label>
 
-    <script src="script.js"></script>
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Range <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="affordable"> Affordable (Under Rs. 2,000)</label>
+<label class="fcb-label"><input type="checkbox" data-filter="premium"> Premium (Rs. 2,000–5,000)</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Sillage / Projection <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="soft"> Soft</label>
+<label class="fcb-label"><input type="checkbox" data-filter="medium"> Medium</label>
+<label class="fcb-label"><input type="checkbox" data-filter="strong"> Strong</label>
+<label class="fcb-label"><input type="checkbox" data-filter="premium"> Premium</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Premium Attars <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="french-attars"> French Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="arabic-attars"> Arabic Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="pure-attars"> Pure Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="oud-attars"> Oud Attars</label>
+<label class="fcb-label"><input type="checkbox" data-filter="mukhalat-oud"> Mukhalat Oud</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Bakhoor <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="bukhoor-wood"> Bukhoor Wood</label>
+<label class="fcb-label"><input type="checkbox" data-filter="bukhoor-burner"> Bukhoor Burner</label>
+
+      </div>
+    </div>
+    <div class="filter-group">
+      <button class="fgroup-toggle" aria-expanded="true">
+        Best Sellers <span class="fgroup-icon">&#8964;</span>
+      </button>
+      <div class="fgroup-options">
+        <label class="fcb-label"><input type="checkbox" data-filter="mughal"> Mughal</label>
+<label class="fcb-label"><input type="checkbox" data-filter="office"> Office</label>
+<label class="fcb-label"><input type="checkbox" data-filter="18plus"> 18+</label>
+<label class="fcb-label"><input type="checkbox" data-filter="night-rush"> Night Rush</label>
+
+      </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="font-size:1.3rem;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
+            <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
+          </svg>
+          Parc de Faris
+        </a>
+        <p>Premium organic attars, oud oils &amp; perfume blends.</p>
+        <p class="footer-tagline">L'art du parfum — The Art of Fragrance</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/923001234567" target="_blank" rel="noopener">+92 300 123 4567</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@pardefaris.pk">info@pardefaris.pk</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Parc de Faris. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header-row">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose">&times;</button>
+  </div>
+  <div class="cart-items-wrap" id="cartItemsList">
+    <p class="cart-empty">Your cart is empty</p>
+  </div>
+  <div class="cart-footer-row" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">Rs. 0</span>
+    </div>
+    <a href="https://wa.me/923001234567?text=I+want+to+place+an+order" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener">Order via WhatsApp</a>
+  </div>
+</div>
+
+<!-- Chatbot -->
+<button class="chatbot-fab" id="chatbotFab" aria-label="Open chat">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+<div class="chatbot-win" id="chatbotWin">
+  <div class="chatbot-head">
+    <h4>Parc de Faris Assistant</h4>
+    <button class="chatbot-head-close" id="chatbotClose">&times;</button>
+  </div>
+  <div class="chatbot-msgs" id="chatbotMsgs"></div>
+  <div class="chatbot-qr" id="chatbotQR"></div>
+  <div class="chatbot-input-row">
+    <input type="text" id="chatbotInput" placeholder="Type a message...">
+    <button class="chatbot-send" id="chatbotSend">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,437 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fragrance House — Premium Organic Attars & Perfume Oils</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parc de Faris — L'art du parfum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        🔥 SUMMER SALE — Up to 40% OFF on selected fragrances! Limited time only.
+
+<div class="sale-strip">
+  🔥 RAMADAN SPECIAL — Up to 40% OFF on selected fragrances! Limited time only.
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
+      <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
+    </svg>
+    Parc de Faris
+  </a>
+  <nav class="nav-center">
+    <a href="index.html" class="active">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button class="nav-cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="about.html#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-up">
+    <span class="hero-label">New Collection 2026</span>
+    <h1>Parc de Faris</h1>
+    <p class="hero-subtitle">L'art du parfum — Crafted for the Exceptional</p>
+    <div class="hero-buttons">
+      <a href="shop.html" class="btn btn-primary">Explore Collection</a>
+      <a href="about.html" class="btn btn-ghost">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-mouse"></div>
+  </div>
+</section>
+
+<div class="deal-section">
+  <div class="deal-left">
+    <span class="deal-badge">Limited Time Offer</span>
+    <h2>Ramadan Special &mdash;<br>Up to 40% Off</h2>
+    <p>Celebrate with the finest attars and oud blends. Offer ends when stock runs out.</p>
+
+    <div class="countdown">
+      <div class="countdown-unit">
+        <span class="digit" id="cd-days">00</span>
+        <span class="unit-label">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="digit" id="cd-hours">00</span>
+        <span class="unit-label">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="digit" id="cd-mins">00</span>
+        <span class="unit-label">Mins</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="digit" id="cd-secs">00</span>
+        <span class="unit-label">Secs</span>
+      </div>
     </div>
 
-    <!-- Sticky Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Fragrance<span>House</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="about.html#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="https://wa.me/923001234567" class="btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    WhatsApp
-                </a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <a href="shop.html" class="btn btn-primary" style="width:fit-content">Shop the Sale</a>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content fade-in">
-            <h1>Discover Your Signature Scent</h1>
-            <p class="hero-subtitle">Premium Organic Attars, Perfume Oils & Ittars — Crafted in Pakistan</p>
-            <div class="hero-buttons">
-                <a href="shop.html" class="btn btn-primary">Shop Now</a>
-                <a href="https://wa.me/923001234567" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp Us</a>
-            </div>
+    <div class="deal-products-list">
+      <div class="deal-row">
+        <span class="deal-row-name">Mughal Oud</span>
+        <div class="deal-row-prices">
+          <span class="price-old">Rs. 3,500</span>
+          <span class="price-new">Rs. 2,100</span>
         </div>
-    </section>
-
-    <!-- Hot Deals Section -->
-    <section class="section deals-section" id="deals">
-        <div class="container">
-            <h2 class="section-title fade-in">🔥 Hot Deals</h2>
-            <p class="section-subtitle fade-in">Limited time offers — grab them before they're gone!</p>
-            <div class="products-grid">
-                <div class="product-card deal-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80" alt="Oud Al Shams" loading="lazy">
-                        <span class="discount-badge">40% OFF</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Oud Al Shams</h3>
-                        <p class="product-notes">Rich woody oud with warm spices</p>
-                        <p class="product-size">12ml Attar Oil</p>
-                        <div class="deal-price">
-                            <span class="price-old">Rs. 2,500</span>
-                            <span class="price-new">Rs. 1,500</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Oud Al Shams (Sale)', 1500)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Oud%20Al%20Shams%20(Sale)" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card deal-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Rose Taif" loading="lazy">
-                        <span class="discount-badge">33% OFF</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Rose Taif</h3>
-                        <p class="product-notes">Delicate floral rose with honey undertones</p>
-                        <p class="product-size">6ml Pure Rose Oil</p>
-                        <div class="deal-price">
-                            <span class="price-old">Rs. 1,800</span>
-                            <span class="price-new">Rs. 1,200</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Rose Taif (Sale)', 1200)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Rose%20Taif%20(Sale)" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card deal-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80" alt="Musk Al Haramain" loading="lazy">
-                        <span class="discount-badge">37% OFF</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Musk Al Haramain</h3>
-                        <p class="product-notes">Clean white musk with sandalwood base</p>
-                        <p class="product-size">15ml Musk Blend</p>
-                        <div class="deal-price">
-                            <span class="price-old">Rs. 3,200</span>
-                            <span class="price-new">Rs. 2,000</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Musk Al Haramain (Sale)', 2000)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Musk%20Al%20Haramain%20(Sale)" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card deal-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=600&q=80" alt="Amber Noir" loading="lazy">
-                        <span class="discount-badge">33% OFF</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Amber Noir</h3>
-                        <p class="product-notes">Deep amber with vanilla and smoky leather</p>
-                        <p class="product-size">20ml Luxury Amber</p>
-                        <div class="deal-price">
-                            <span class="price-old">Rs. 4,500</span>
-                            <span class="price-new">Rs. 2,999</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Amber Noir (Sale)', 2999)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Amber%20Noir%20(Sale)" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="deal-row">
+        <span class="deal-row-name">Night Rush</span>
+        <div class="deal-row-prices">
+          <span class="price-old">Rs. 2,800</span>
+          <span class="price-new">Rs. 1,680</span>
         </div>
-    </section>
-
-    <!-- Category Navigation -->
-    <section class="section category-nav-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Shop by Category</h2>
-            <div class="category-nav-grid">
-                <a href="shop.html" class="category-nav-card fade-in" style="background-image: url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&q=80')">
-                    <div class="category-nav-overlay"></div>
-                    <span class="category-nav-icon">🕌</span>
-                    <span class="category-nav-label">Perfumes Shop</span>
-                </a>
-                <a href="shop.html" class="category-nav-card fade-in" style="background-image: url('https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=400&q=80')">
-                    <div class="category-nav-overlay"></div>
-                    <span class="category-nav-icon">⭐</span>
-                    <span class="category-nav-label">Best Sellers</span>
-                </a>
-                <a href="shop.html" class="category-nav-card fade-in" style="background-image: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80')">
-                    <div class="category-nav-overlay"></div>
-                    <span class="category-nav-icon">✨</span>
-                    <span class="category-nav-label">New Arrivals</span>
-                </a>
-                <a href="shop.html" class="category-nav-card fade-in" style="background-image: url('https://images.unsplash.com/photo-1599446518626-ef0a8ad6f4db?w=400&q=80')">
-                    <div class="category-nav-overlay"></div>
-                    <span class="category-nav-icon">🪵</span>
-                    <span class="category-nav-label">Bakhoor</span>
-                </a>
-                <a href="shop.html" class="category-nav-card fade-in" style="background-image: url('https://images.unsplash.com/photo-1608834967573-37db8e89c5ac?w=400&q=80')">
-                    <div class="category-nav-overlay"></div>
-                    <span class="category-nav-icon">🌿</span>
-                    <span class="category-nav-label">Oud Attar</span>
-                </a>
-                <a href="shop.html" class="category-nav-card fade-in" style="background-image: url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=400&q=80')">
-                    <div class="category-nav-overlay"></div>
-                    <span class="category-nav-icon">🎁</span>
-                    <span class="category-nav-label">Gift Sets</span>
-                </a>
-            </div>
+      </div>
+      <div class="deal-row">
+        <span class="deal-row-name">Mukhalat Oud</span>
+        <div class="deal-row-prices">
+          <span class="price-old">Rs. 5,500</span>
+          <span class="price-new">Rs. 3,300</span>
         </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <section class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Fragrances</span>
-                </div>
-                <div class="stat-item fade-in">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Organic</span>
-                </div>
-                <div class="stat-item fade-in">
-                    <span class="stat-number">Nationwide</span>
-                    <span class="stat-label">Delivery</span>
-                </div>
-                <div class="stat-item fade-in">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-            </div>
+      </div>
+      <div class="deal-row">
+        <span class="deal-row-name">Saffron Gold</span>
+        <div class="deal-row-prices">
+          <span class="price-old">Rs. 6,500</span>
+          <span class="price-new">Rs. 3,900</span>
         </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section class="section featured-products" id="featured">
-        <div class="container">
-            <h2 class="section-title fade-in">Featured Products</h2>
-            <p class="section-subtitle fade-in">Our most loved fragrances, handpicked for you</p>
-            <div class="products-grid">
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80" alt="Oud Al Shams" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3>Oud Al Shams</h3>
-                        <p class="product-notes">Rich woody oud with warm spices</p>
-                        <p class="product-size">12ml Attar Oil</p>
-                        <p class="product-price">Rs. 2,500</p>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Oud Al Shams', 2500)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Oud%20Al%20Shams" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Rose Taif" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3>Rose Taif</h3>
-                        <p class="product-notes">Delicate floral rose with honey undertones</p>
-                        <p class="product-size">6ml Pure Rose Oil</p>
-                        <p class="product-price">Rs. 1,800</p>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Rose Taif', 1800)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Rose%20Taif" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80" alt="Musk Al Haramain" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3>Musk Al Haramain</h3>
-                        <p class="product-notes">Clean white musk with sandalwood base</p>
-                        <p class="product-size">15ml Musk Blend</p>
-                        <p class="product-price">Rs. 3,200</p>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Musk Al Haramain', 3200)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Musk%20Al%20Haramain" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=600&q=80" alt="Amber Noir" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <h3>Amber Noir</h3>
-                        <p class="product-notes">Deep amber with vanilla and smoky leather</p>
-                        <p class="product-size">20ml Luxury Amber</p>
-                        <p class="product-price">Rs. 4,500</p>
-                        <div class="product-actions">
-                            <button class="btn btn-cart" onclick="addToCart('Amber Noir', 4500)">Add to Cart</button>
-                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Amber%20Noir" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section why-choose-us">
-        <div class="container">
-            <h2 class="section-title fade-in">Why Choose Us</h2>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <h3>Pure & Organic</h3>
-                    <p>100% natural ingredients sourced from the finest regions worldwide</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Handcrafted</h3>
-                    <p>Each fragrance is carefully blended by master perfumers with decades of experience</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <h3>Long Lasting</h3>
-                    <p>Our concentrated formulas ensure your scent stays with you all day long</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-                    </div>
-                    <h3>Affordable</h3>
-                    <p>Premium quality fragrances at prices that won't break the bank</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Reviews -->
-    <section class="section reviews-section">
-        <div class="container">
-            <h2 class="section-title fade-in">What Our Customers Say</h2>
-            <div class="reviews-grid">
-                <div class="review-card fade-in">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Best attar I've ever used, lasts the whole day!"</p>
-                    <div class="review-author">
-                        <strong>Ahmed K.</strong>
-                        <span>Lahore</span>
-                    </div>
-                </div>
-                <div class="review-card fade-in">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"The rose oil is absolutely divine. Will order again."</p>
-                    <div class="review-author">
-                        <strong>Fatima R.</strong>
-                        <span>Karachi</span>
-                    </div>
-                </div>
-                <div class="review-card fade-in">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Fast delivery, beautiful packaging, amazing scent."</p>
-                    <div class="review-author">
-                        <strong>Bilal S.</strong>
-                        <span>Islamabad</span>
-                    </div>
-                </div>
-                <div class="review-card fade-in">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"100% natural, you can feel the difference immediately."</p>
-                    <div class="review-author">
-                        <strong>Sana M.</strong>
-                        <span>Peshawar</span>
-                    </div>
-                </div>
-                <div class="review-card fade-in">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Great prices for this quality. Highly recommended."</p>
-                    <div class="review-author">
-                        <strong>Usman T.</strong>
-                        <span>Faisalabad</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="logo">Fragrance<span>House</span></h3>
-                    <p>Premium Organic Attars & Perfume Oils — Crafted with love in Pakistan</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Get in Touch</h4>
-                    <p><a href="https://wa.me/923001234567" target="_blank" rel="noopener">WhatsApp: +92 300 1234567</a></p>
-                    <p>Email: info@fragrancebrand.pk</p>
-                    <p>Lahore, Pakistan</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
-                        <a href="#" aria-label="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .55.04.81.1v-3.5a6.37 6.37 0 00-.81-.05A6.34 6.34 0 003.15 15.7a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.18a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.61z"/></svg></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fragrance House. All rights reserved. | Lahore, Pakistan</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cart Drawer -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <button class="cart-close" id="cartClose">&times;</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <p class="cart-empty">Your cart is empty</p>
-        </div>
-        <div class="cart-footer" id="cartFooter" style="display:none;">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cartTotal">Rs. 0</span>
-            </div>
-            <a href="https://wa.me/923001234567?text=I%20want%20to%20place%20an%20order" class="btn btn-primary btn-full" target="_blank" rel="noopener">Order via WhatsApp</a>
-        </div>
+      </div>
     </div>
+  </div>
+  <div class="deal-right">
+    <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Premium Attar">
+    <div class="deal-image-glow"></div>
+  </div>
+</div>
 
-    <!-- Chatbot -->
-    <div class="chatbot-btn" id="chatbotBtn">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+<section class="section category-nav" id="categories">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <h2>Shop by Category</h2>
+      <p>Discover our curated fragrance collections</p>
     </div>
-    <div class="chatbot-window" id="chatbotWindow">
-        <div class="chatbot-header">
-            <h4>Fragrance House</h4>
-            <button class="chatbot-close" id="chatbotClose">&times;</button>
-        </div>
-        <div class="chatbot-messages" id="chatbotMessages"></div>
-        <div class="chatbot-quick-replies" id="chatbotQuickReplies"></div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbotInput" placeholder="Type a message...">
-            <button id="chatbotSend">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-            </button>
-        </div>
+    <div class="category-scroll">
+      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&q=80')">
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Perfumes</span>
+      </a>
+      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=400&q=80')">
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Best Sellers</span>
+      </a>
+      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80')">
+        <div class="cat-overlay"></div>
+        <span class="cat-label">New Arrivals</span>
+      </a>
+      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1599446518626-ef0a8ad6f4db?w=400&q=80')">
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Bakhoor</span>
+      </a>
+      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1608834967573-37db8e89c5ac?w=400&q=80')">
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Oud Attar</span>
+      </a>
+      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=400&q=80')">
+        <div class="cat-overlay"></div>
+        <span class="cat-label">Gift Sets</span>
+      </a>
     </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<section class="section" id="featured" style="background: var(--surface); padding-top: 80px; padding-bottom: 80px;">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <h2>Featured Fragrances</h2>
+      <p>Our most celebrated scents, loved by thousands</p>
+    </div>
+    <div class="products-grid-4">
+
+      <div class="product-card fade-up">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Mughal Oud" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Arabic Attar &bull; Woody</span>
+          <h3>Mughal Oud</h3>
+          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 3,500</p>
+          <p class="pc-price">Rs. 2,100</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Mughal Oud',2100)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Mughal+Oud" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Night Rush" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Men &bull; Fresh &bull; Strong</span>
+          <h3>Night Rush</h3>
+          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 2,800</p>
+          <p class="pc-price">Rs. 1,680</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Night Rush',1680)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Night+Rush" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Mukhalat Oud" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Premium Blend</span>
+          <h3>Mukhalat Oud</h3>
+          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 5,500</p>
+          <p class="pc-price">Rs. 3,300</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Mukhalat Oud',3300)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Mukhalat+Oud" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card fade-up">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Saffron Gold" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <span class="pc-badge">Pure Attar</span>
+          <h3>Saffron Gold</h3>
+          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 6,500</p>
+          <p class="pc-price">Rs. 3,900</p>
+          <div class="size-opts">
+            <button class="size-btn active">6ml</button>
+            <button class="size-btn">12ml</button>
+            <button class="size-btn">20ml</button>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Saffron Gold',3900)">Add to Cart</button>
+            <a href="https://wa.me/923001234567?text=I+want+to+order+Saffron+Gold" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="shop.html" class="btn btn-ghost">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <h2>What Our Customers Say</h2>
+      <p>Loved by fragrance enthusiasts across Pakistan</p>
+    </div>
+    <div class="reviews-scroll fade-up">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">AK</div>
+          <div class="reviewer-info"><h4>Ahmed K.</h4><span>Lahore</span></div>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Best attar I've ever used, lasts the whole day! The Mughal Oud is extraordinary.&rdquo;</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">FR</div>
+          <div class="reviewer-info"><h4>Fatima R.</h4><span>Karachi</span></div>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;The rose oil is absolutely divine. Will definitely order again and again.&rdquo;</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">BS</div>
+          <div class="reviewer-info"><h4>Bilal S.</h4><span>Islamabad</span></div>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Fast delivery, amazing scent, beautiful packaging. Parc de Faris is my go-to.&rdquo;</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">SM</div>
+          <div class="reviewer-info"><h4>Sana M.</h4><span>Peshawar</span></div>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">UT</div>
+          <div class="reviewer-info"><h4>Usman T.</h4><span>Faisalabad</span></div>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Great prices for premium quality. Highly recommended to all fragrance lovers.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="font-size:1.3rem;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
+            <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
+          </svg>
+          Parc de Faris
+        </a>
+        <p>Premium organic attars, oud oils &amp; perfume blends.<br>Crafted for those who appreciate true luxury.</p>
+        <p class="footer-tagline">L'art du parfum — The Art of Fragrance</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/923001234567" target="_blank" rel="noopener">+92 300 123 4567</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@pardefaris.pk">info@pardefaris.pk</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Lahore, Pakistan</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat, 10am–8pm PKT</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Parc de Faris. All rights reserved. &mdash; L'art du parfum</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header-row">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose">&times;</button>
+  </div>
+  <div class="cart-items-wrap" id="cartItemsList">
+    <p class="cart-empty">Your cart is empty</p>
+  </div>
+  <div class="cart-footer-row" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">Rs. 0</span>
+    </div>
+    <a href="https://wa.me/923001234567?text=I+want+to+place+an+order" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener">Order via WhatsApp</a>
+  </div>
+</div>
+
+<button class="chatbot-fab" id="chatbotFab" aria-label="Open chat">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+<div class="chatbot-win" id="chatbotWin">
+  <div class="chatbot-head">
+    <h4>Parc de Faris Assistant</h4>
+    <button class="chatbot-head-close" id="chatbotClose">&times;</button>
+  </div>
+  <div class="chatbot-msgs" id="chatbotMsgs"></div>
+  <div class="chatbot-qr" id="chatbotQR"></div>
+  <div class="chatbot-input-row">
+    <input type="text" id="chatbotInput" placeholder="Type a message...">
+    <button class="chatbot-send" id="chatbotSend">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
