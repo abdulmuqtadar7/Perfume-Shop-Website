@@ -381,8 +381,11 @@ function applySidebarFilters() {
 
         for (const [group, values] of Object.entries(activeFilters)) {
             const cardData = (card.dataset[group] || '').toLowerCase();
-            // Check if the card matches any of the selected values in this group
-            const matchGroup = values.some(val => cardData.includes(val));
+            // Split card data into individual tokens and match against selected values
+            const cardTokens = cardData.split(/\s+/).filter(Boolean);
+            const matchGroup = values.some(val =>
+                cardTokens.some(token => token === val)
+            );
             if (!matchGroup) {
                 matchAllFilters = false;
                 break;
