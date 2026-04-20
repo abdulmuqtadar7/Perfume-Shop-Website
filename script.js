@@ -276,8 +276,8 @@ let chatbotData = {};
 
 const chatbotFlow = [
   {
-    bot: "Bonjour! 🌙 Welcome to Parc de Faris.\n\nAre you looking for a fragrance for yourself or as a gift?",
-    replies: ["For Myself", "As a Gift", "Browse Collection", "Place Order"]
+    bot: "Hi! Looking for a fragrance? I can help you find your perfect scent. 🌸",
+    replies: ["For Myself", "As a Gift", "Browse", "Order on WhatsApp"]
   },
   {
     bot: "Wonderful! What type of scent do you prefer?",
@@ -320,11 +320,11 @@ function handleReply(text) {
   chatbotQR.innerHTML = '';
   chatbotStep++;
 
-  if (text === 'Browse Collection') {
+  if (text === 'Browse') {
     setTimeout(() => { addMsg("Sure! You can browse all our products on the shop page. Click here → shop.html", 'bot'); }, 600);
     return;
   }
-  if (text === 'Place Order') {
+  if (text === 'Order on WhatsApp') {
     setTimeout(() => {
       addMsg("To place an order, tap the WhatsApp button below and we'll assist you immediately! 🛍️", 'bot');
       const btn = document.createElement('a');

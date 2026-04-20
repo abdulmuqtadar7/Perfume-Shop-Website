@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parc de Faris — L'art du parfum</title>
+  <title>Parc de Faris — Premium Attars & Oud</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Announcement Bar -->
+<div class="announce-bar">
+  Free Delivery on Orders Above Rs. 2,000 &nbsp;|&nbsp; COD Available Nationwide
+</div>
+
+<!-- Navbar -->
 <nav class="navbar" id="navbar">
-  <a href="index.html" class="nav-logo">
-    <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
-      <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
-    </svg>
-    Parc de Faris
-  </a>
+  <a href="index.html" class="nav-logo">Parc de Faris</a>
   <nav class="nav-center">
     <a href="index.html" class="active">Home</a>
     <a href="shop.html">Shop</a>
@@ -26,8 +26,11 @@
     <a href="about.html#contact">Contact</a>
   </nav>
   <div class="nav-right">
-    <button class="nav-cart-btn" id="cartBtn" aria-label="Open cart">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <a href="https://wa.me/923001234567" class="nav-icon-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <button class="nav-icon-btn" id="cartBtn" aria-label="Open cart" style="position:relative;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       <span class="cart-badge" id="cartBadge">0</span>
     </button>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -36,6 +39,7 @@
   </div>
 </nav>
 
+<!-- Mobile Nav -->
 <nav class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
   <a href="shop.html">Shop</a>
@@ -43,27 +47,23 @@
   <a href="about.html#contact">Contact</a>
 </nav>
 
+<!-- Hero -->
 <section class="hero">
   <div class="hero-overlay"></div>
-  <div class="hero-content fade-up">
-    <span class="hero-label">New Collection 2026</span>
-    <h1>Parc de Faris</h1>
-    <p class="hero-subtitle">L'art du parfum — Crafted for the Exceptional</p>
-    <div class="hero-buttons">
-      <a href="shop.html" class="btn btn-primary">Explore Collection</a>
-      <a href="about.html" class="btn btn-ghost-light">Our Story</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-mouse"></div>
+  <div class="hero-content">
+    <span class="hero-tag">New Arrivals 2026</span>
+    <h1>Discover Your<br>Signature Scent</h1>
+    <p class="hero-sub">Premium Attars, Oud &amp; Perfumes — Delivered Across Pakistan</p>
+    <a href="shop.html" class="hero-btn">Shop Now</a>
   </div>
 </section>
 
-<div class="deal-section">
-  <div class="deal-left">
-    <span class="deal-badge">Limited Time Offer</span>
-    <h2>Ramadan Special &mdash;<br>Up to 40% Off</h2>
-    <p>Celebrate with the finest attars and oud blends. Offer ends when stock runs out.</p>
+<!-- Deals Section -->
+<div class="deals-section">
+  <div class="deals-left">
+    <span class="deal-badge">Ramadan Special</span>
+    <h2>Up to 40% Off — Limited Time</h2>
+    <p>Our finest attars and oud blends at special prices. Offer valid while stocks last.</p>
 
     <div class="countdown">
       <div class="countdown-unit">
@@ -84,84 +84,101 @@
       </div>
     </div>
 
-    <a href="shop.html" class="btn btn-primary" style="width:fit-content">Shop the Sale</a>
-
-    <div class="deal-products-list">
-      <div class="deal-row">
+    <div class="deal-list">
+      <div class="deal-list-row">
         <span class="deal-row-name">Mughal Oud</span>
-        <div class="deal-row-prices">
+        <div class="deal-prices">
           <span class="price-old">Rs. 3,500</span>
           <span class="price-new">Rs. 2,100</span>
+          <span style="font-size:11px;color:#888;margin-left:2px;">(40% off)</span>
         </div>
       </div>
-      <div class="deal-row">
+      <div class="deal-list-row">
         <span class="deal-row-name">Night Rush</span>
-        <div class="deal-row-prices">
+        <div class="deal-prices">
           <span class="price-old">Rs. 2,800</span>
           <span class="price-new">Rs. 1,680</span>
+          <span style="font-size:11px;color:#888;margin-left:2px;">(40% off)</span>
         </div>
       </div>
-      <div class="deal-row">
+      <div class="deal-list-row">
         <span class="deal-row-name">Mukhalat Oud</span>
-        <div class="deal-row-prices">
+        <div class="deal-prices">
           <span class="price-old">Rs. 5,500</span>
           <span class="price-new">Rs. 3,300</span>
+          <span style="font-size:11px;color:#888;margin-left:2px;">(40% off)</span>
         </div>
       </div>
-      <div class="deal-row">
+      <div class="deal-list-row">
         <span class="deal-row-name">Saffron Gold</span>
-        <div class="deal-row-prices">
+        <div class="deal-prices">
           <span class="price-old">Rs. 6,500</span>
           <span class="price-new">Rs. 3,900</span>
+          <span style="font-size:11px;color:#888;margin-left:2px;">(40% off)</span>
         </div>
       </div>
     </div>
+
+    <a href="shop.html" class="btn btn-primary" style="width:fit-content;">Shop the Sale</a>
   </div>
-  <div class="deal-right">
+  <div class="deals-right">
     <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Premium Attar">
-    <div class="deal-image-glow"></div>
   </div>
 </div>
 
-<section class="section category-nav" id="categories" style="background:#f7f7f7;">
+<!-- Categories -->
+<section class="section" id="categories">
   <div class="container">
     <div class="section-heading fade-up">
       <h2>Shop by Category</h2>
-      <p>Discover our curated fragrance collections</p>
+      <p>Browse our curated fragrance collections</p>
     </div>
-    <div class="category-scroll">
-      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&q=80')">
-        <div class="cat-overlay"></div>
-        <span class="cat-label">Perfumes</span>
+    <div class="cat-grid">
+      <a href="shop.html" class="cat-item fade-up">
+        <div class="cat-item-img">
+          <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=300&q=80" alt="Perfumes" loading="lazy">
+        </div>
+        <span class="cat-name">Perfumes</span>
       </a>
-      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=400&q=80')">
-        <div class="cat-overlay"></div>
-        <span class="cat-label">Best Sellers</span>
+      <a href="shop.html" class="cat-item fade-up">
+        <div class="cat-item-img">
+          <img src="https://images.unsplash.com/photo-1566977776052-6e61e35bf9be?w=300&q=80" alt="Best Sellers" loading="lazy">
+        </div>
+        <span class="cat-name">Best Sellers</span>
       </a>
-      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80')">
-        <div class="cat-overlay"></div>
-        <span class="cat-label">New Arrivals</span>
+      <a href="shop.html" class="cat-item fade-up">
+        <div class="cat-item-img">
+          <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=300&q=80" alt="New Arrivals" loading="lazy">
+        </div>
+        <span class="cat-name">New Arrivals</span>
       </a>
-      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1599446518626-ef0a8ad6f4db?w=400&q=80')">
-        <div class="cat-overlay"></div>
-        <span class="cat-label">Bakhoor</span>
+      <a href="shop.html" class="cat-item fade-up">
+        <div class="cat-item-img">
+          <img src="https://images.unsplash.com/photo-1599446518626-ef0a8ad6f4db?w=300&q=80" alt="Bakhoor" loading="lazy">
+        </div>
+        <span class="cat-name">Bakhoor</span>
       </a>
-      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1608834967573-37db8e89c5ac?w=400&q=80')">
-        <div class="cat-overlay"></div>
-        <span class="cat-label">Oud Attar</span>
+      <a href="shop.html" class="cat-item fade-up">
+        <div class="cat-item-img">
+          <img src="https://images.unsplash.com/photo-1608834967573-37db8e89c5ac?w=300&q=80" alt="Oud Attar" loading="lazy">
+        </div>
+        <span class="cat-name">Oud Attar</span>
       </a>
-      <a href="shop.html" class="cat-card fade-up" style="background-image: url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=400&q=80')">
-        <div class="cat-overlay"></div>
-        <span class="cat-label">Gift Sets</span>
+      <a href="shop.html" class="cat-item fade-up">
+        <div class="cat-item-img">
+          <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=300&q=80" alt="Gift Sets" loading="lazy">
+        </div>
+        <span class="cat-name">Gift Sets</span>
       </a>
     </div>
   </div>
 </section>
 
-<section class="section" id="featured" style="background:#f7f7f7; padding-top: 80px; padding-bottom: 80px;">
+<!-- Featured Products -->
+<section class="section" id="featured" style="border-top:1px solid #eeeeee;">
   <div class="container">
     <div class="section-heading fade-up">
-      <h2>Featured Fragrances</h2>
+      <h2>Featured Products</h2>
       <p>Our most celebrated scents, loved by thousands</p>
     </div>
     <div class="products-grid-4">
@@ -171,17 +188,16 @@
           <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Mughal Oud" loading="lazy">
         </div>
         <div class="pc-body">
-          <span class="pc-badge">Arabic Attar &bull; Woody</span>
+          <span class="pc-badge">Arabic Attar · Woody</span>
           <h3>Mughal Oud</h3>
-          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 3,500</p>
-          <p class="pc-price">Rs. 2,100</p>
+          <p class="pc-price">Rs. 3,500</p>
           <div class="size-opts">
             <button class="size-btn active">6ml</button>
             <button class="size-btn">12ml</button>
             <button class="size-btn">20ml</button>
           </div>
           <div class="pc-actions">
-            <button class="btn btn-primary btn-sm" onclick="addToCart('Mughal Oud',2100)">Add to Cart</button>
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Mughal Oud',3500)">Add to Cart</button>
             <a href="https://wa.me/923001234567?text=I+want+to+order+Mughal+Oud" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
@@ -192,17 +208,16 @@
           <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?q=80&w=699&auto=format&fit=crop" alt="Night Rush" loading="lazy">
         </div>
         <div class="pc-body">
-          <span class="pc-badge">Men &bull; Fresh &bull; Strong</span>
+          <span class="pc-badge">Men · Fresh · Strong</span>
           <h3>Night Rush</h3>
-          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 2,800</p>
-          <p class="pc-price">Rs. 1,680</p>
+          <p class="pc-price">Rs. 2,800</p>
           <div class="size-opts">
             <button class="size-btn active">6ml</button>
             <button class="size-btn">12ml</button>
             <button class="size-btn">20ml</button>
           </div>
           <div class="pc-actions">
-            <button class="btn btn-primary btn-sm" onclick="addToCart('Night Rush',1680)">Add to Cart</button>
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Night Rush',2800)">Add to Cart</button>
             <a href="https://wa.me/923001234567?text=I+want+to+order+Night+Rush" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
@@ -215,15 +230,14 @@
         <div class="pc-body">
           <span class="pc-badge">Premium Blend</span>
           <h3>Mukhalat Oud</h3>
-          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 5,500</p>
-          <p class="pc-price">Rs. 3,300</p>
+          <p class="pc-price">Rs. 5,500</p>
           <div class="size-opts">
             <button class="size-btn active">6ml</button>
             <button class="size-btn">12ml</button>
             <button class="size-btn">20ml</button>
           </div>
           <div class="pc-actions">
-            <button class="btn btn-primary btn-sm" onclick="addToCart('Mukhalat Oud',3300)">Add to Cart</button>
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Mukhalat Oud',5500)">Add to Cart</button>
             <a href="https://wa.me/923001234567?text=I+want+to+order+Mukhalat+Oud" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
@@ -236,88 +250,74 @@
         <div class="pc-body">
           <span class="pc-badge">Pure Attar</span>
           <h3>Saffron Gold</h3>
-          <p class="price-old" style="font-size:.82rem;color:var(--muted);">Rs. 6,500</p>
-          <p class="pc-price">Rs. 3,900</p>
+          <p class="pc-price">Rs. 6,500</p>
           <div class="size-opts">
             <button class="size-btn active">6ml</button>
             <button class="size-btn">12ml</button>
             <button class="size-btn">20ml</button>
           </div>
           <div class="pc-actions">
-            <button class="btn btn-primary btn-sm" onclick="addToCart('Saffron Gold',3900)">Add to Cart</button>
+            <button class="btn btn-primary btn-sm" onclick="addToCart('Saffron Gold',6500)">Add to Cart</button>
             <a href="https://wa.me/923001234567?text=I+want+to+order+Saffron+Gold" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
 
     </div>
-    <div style="text-align:center;margin-top:40px;">
+    <div style="text-align:center;margin-top:36px;">
       <a href="shop.html" class="btn btn-ghost">View All Products</a>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Customer Reviews -->
+<section class="section" style="border-top:1px solid #eeeeee;">
   <div class="container">
     <div class="section-heading fade-up">
-      <h2>What Our Customers Say</h2>
+      <h2>Customer Reviews</h2>
       <p>Loved by fragrance enthusiasts across Pakistan</p>
     </div>
-    <div class="reviews-scroll fade-up">
+    <div class="reviews-row fade-up">
       <div class="review-card">
-        <div class="review-header">
-          <div class="reviewer-avatar">AK</div>
-          <div class="reviewer-info"><h4>Ahmed K.</h4><span>Lahore</span></div>
-        </div>
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Best attar I've ever used, lasts the whole day! The Mughal Oud is extraordinary.&rdquo;</p>
+        <p class="review-text">"Best attar I've ever used, lasts the whole day! The Mughal Oud is extraordinary."</p>
+        <div class="reviewer-name">Ahmed K.</div>
+        <div class="reviewer-city">Lahore</div>
       </div>
       <div class="review-card">
-        <div class="review-header">
-          <div class="reviewer-avatar">FR</div>
-          <div class="reviewer-info"><h4>Fatima R.</h4><span>Karachi</span></div>
-        </div>
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;The rose oil is absolutely divine. Will definitely order again and again.&rdquo;</p>
+        <p class="review-text">"The rose oil is absolutely divine. Will definitely order again and again."</p>
+        <div class="reviewer-name">Fatima R.</div>
+        <div class="reviewer-city">Karachi</div>
       </div>
       <div class="review-card">
-        <div class="review-header">
-          <div class="reviewer-avatar">BS</div>
-          <div class="reviewer-info"><h4>Bilal S.</h4><span>Islamabad</span></div>
-        </div>
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Fast delivery, amazing scent, beautiful packaging. Parc de Faris is my go-to.&rdquo;</p>
+        <p class="review-text">"Fast delivery, amazing scent, beautiful packaging. Parc de Faris is my go-to."</p>
+        <div class="reviewer-name">Bilal S.</div>
+        <div class="reviewer-city">Islamabad</div>
       </div>
       <div class="review-card">
-        <div class="review-header">
-          <div class="reviewer-avatar">SM</div>
-          <div class="reviewer-info"><h4>Sana M.</h4><span>Peshawar</span></div>
-        </div>
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Saffron Gold is unreal — deep, rich, and long-lasting. Worth every rupee."</p>
+        <div class="reviewer-name">Sana M.</div>
+        <div class="reviewer-city">Peshawar</div>
       </div>
       <div class="review-card">
-        <div class="review-header">
-          <div class="reviewer-avatar">UT</div>
-          <div class="reviewer-info"><h4>Usman T.</h4><span>Faisalabad</span></div>
-        </div>
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Great prices for premium quality. Highly recommended to all fragrance lovers.&rdquo;</p>
+        <p class="review-text">"Great prices for premium quality. Highly recommended to all fragrance lovers."</p>
+        <div class="reviewer-name">Usman T.</div>
+        <div class="reviewer-city">Faisalabad</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="font-size:1.3rem;">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
-            <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
-          </svg>
-          Parc de Faris
-        </a>
+        <span class="footer-logo">Parc de Faris</span>
         <p>Premium organic attars, oud oils &amp; perfume blends.<br>Crafted for those who appreciate true luxury.</p>
         <p class="footer-tagline">L'art du parfum — The Art of Fragrance</p>
       </div>
@@ -331,31 +331,28 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact Us</h4>
+        <h4>Contact</h4>
         <div class="footer-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <a href="https://wa.me/923001234567" target="_blank" rel="noopener">+92 300 123 4567</a>
         </div>
         <div class="footer-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <a href="mailto:info@pardefaris.pk">info@pardefaris.pk</a>
         </div>
         <div class="footer-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>Lahore, Pakistan</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Mon–Sat, 10am–8pm PKT</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Parc de Faris. All rights reserved. &mdash; L'art du parfum</p>
+      <p>&copy; 2026 Parc de Faris. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
 
+<!-- Cart Drawer -->
 <div class="cart-overlay" id="cartOverlay"></div>
 <div class="cart-drawer" id="cartDrawer">
   <div class="cart-header-row">
@@ -374,12 +371,13 @@
   </div>
 </div>
 
+<!-- Chatbot -->
 <button class="chatbot-fab" id="chatbotFab" aria-label="Open chat">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
 </button>
 <div class="chatbot-win" id="chatbotWin">
   <div class="chatbot-head">
-    <h4>Parc de Faris Assistant</h4>
+    <h4>Parc de Faris — Fragrance Assistant</h4>
     <button class="chatbot-head-close" id="chatbotClose">&times;</button>
   </div>
   <div class="chatbot-msgs" id="chatbotMsgs"></div>
@@ -387,7 +385,7 @@
   <div class="chatbot-input-row">
     <input type="text" id="chatbotInput" placeholder="Type a message...">
     <button class="chatbot-send" id="chatbotSend">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
     </button>
   </div>
 </div>

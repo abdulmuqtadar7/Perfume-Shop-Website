@@ -6,19 +6,17 @@
   <title>Shop — Parc de Faris</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="announce-bar">
+  Free Delivery on Orders Above Rs. 2,000 &nbsp;|&nbsp; COD Available Nationwide
+</div>
+
 <nav class="navbar" id="navbar">
-  <a href="index.html" class="nav-logo">
-    <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
-      <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
-    </svg>
-    Parc de Faris
-  </a>
+  <a href="index.html" class="nav-logo">Parc de Faris</a>
   <nav class="nav-center">
     <a href="index.html">Home</a>
     <a href="shop.html" class="active">Shop</a>
@@ -26,8 +24,8 @@
     <a href="about.html#contact">Contact</a>
   </nav>
   <div class="nav-right">
-    <button class="nav-cart-btn" id="cartBtn" aria-label="Open cart">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <button class="nav-icon-btn" id="cartBtn" aria-label="Open cart" style="position:relative;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       <span class="cart-badge" id="cartBadge">0</span>
     </button>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -466,7 +464,7 @@
         </div>
       </div>
       </div>
-      <p id="noResults" style="display:none; text-align:center; color:var(--muted); padding:48px 0;">No products match your filters.</p>
+      <p id="noResults" style="display:none; text-align:center; color:#888888; padding:48px 0;">No products match your filters.</p>
     </div>
 
   </div>
@@ -590,13 +588,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="font-size:1.3rem;">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <path d="M16 4C9.373 4 4 9.373 4 16c0 3.728 1.606 7.083 4.166 9.434A12 12 0 0 1 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 0 1 9.96 9.02A10 10 0 0 0 9 10.14 9.977 9.977 0 0 1 16 6z" fill="#c9a225"/>
-            <path d="M22 10l1 2-2-1-2 1 1-2-2-1 2.5-.3L22 7l1 2.7L25.5 10z" fill="#c9a225"/>
-          </svg>
-          Parc de Faris
-        </a>
+        <span class="footer-logo">Parc de Faris</span>
         <p>Premium organic attars, oud oils &amp; perfume blends.</p>
         <p class="footer-tagline">L'art du parfum — The Art of Fragrance</p>
       </div>
@@ -652,7 +644,7 @@
 </button>
 <div class="chatbot-win" id="chatbotWin">
   <div class="chatbot-head">
-    <h4>Parc de Faris Assistant</h4>
+    <h4>Parc de Faris — Fragrance Assistant</h4>
     <button class="chatbot-head-close" id="chatbotClose">&times;</button>
   </div>
   <div class="chatbot-msgs" id="chatbotMsgs"></div>
