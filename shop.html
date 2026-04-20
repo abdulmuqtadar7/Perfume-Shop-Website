@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop — Fragrance House | Premium Attars & Perfume Oils</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Fragrance<span>House</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://wa.me/923001234567" class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <section class="page-header">
+        <h1>Our Collection</h1>
+        <p>Explore our premium range of organic attars, perfume oils, and ittars</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All</option>
+                        <option value="attars">Attars</option>
+                        <option value="oils">Oils</option>
+                        <option value="ittars">Ittars</option>
+                        <option value="caps">Caps</option>
+                        <option value="gift-sets">Gift Sets</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range: <span id="priceValue">Rs. 6,500</span></label>
+                    <input type="range" id="priceFilter" min="1200" max="6500" value="6500" step="100">
+                </div>
+                <div class="filter-group filter-search">
+                    <label>Search</label>
+                    <input type="text" id="searchFilter" placeholder="Search fragrances...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="section shop-products">
+        <div class="container">
+            <div class="products-grid shop-grid" id="shopGrid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in" data-category="attars" data-price="2500" data-name="Oud Al Shams" data-scent="woody">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=600&q=80" alt="Oud Al Shams" loading="lazy">
+                        <span class="product-tag">Woody</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Oud Al Shams</h3>
+                        <p class="product-notes"><strong>Top:</strong> Saffron, Bergamot | <strong>Mid:</strong> Rose, Oud | <strong>Base:</strong> Sandalwood, Musk</p>
+                        <p class="product-price">Rs. 2,500</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Oud Al Shams', 2500)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Oud%20Al%20Shams" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card fade-in" data-category="oils" data-price="1800" data-name="Rose Taif" data-scent="floral">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1595535873420-a599195b3f4a?w=600&q=80" alt="Rose Taif" loading="lazy">
+                        <span class="product-tag">Floral</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Taif</h3>
+                        <p class="product-notes"><strong>Top:</strong> Rose Petals | <strong>Mid:</strong> Jasmine, Honey | <strong>Base:</strong> Amber, Vanilla</p>
+                        <p class="product-price">Rs. 1,800</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Rose Taif', 1800)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Rose%20Taif" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card fade-in" data-category="attars" data-price="3200" data-name="Musk Al Haramain" data-scent="musky">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1580509239073-d72b47ebdc73?w=600&q=80" alt="Musk Al Haramain" loading="lazy">
+                        <span class="product-tag">Musky</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Musk Al Haramain</h3>
+                        <p class="product-notes"><strong>Top:</strong> White Musk | <strong>Mid:</strong> Cedarwood, Lavender | <strong>Base:</strong> Sandalwood, Vanilla</p>
+                        <p class="product-price">Rs. 3,200</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Musk Al Haramain', 3200)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Musk%20Al%20Haramain" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card fade-in" data-category="oils" data-price="4500" data-name="Amber Noir" data-scent="oriental">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&q=80" alt="Amber Noir" loading="lazy">
+                        <span class="product-tag">Oriental</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amber Noir</h3>
+                        <p class="product-notes"><strong>Top:</strong> Citrus, Spice | <strong>Mid:</strong> Amber, Incense | <strong>Base:</strong> Leather, Vanilla</p>
+                        <p class="product-price">Rs. 4,500</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Amber Noir', 4500)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Amber%20Noir" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card fade-in" data-category="ittars" data-price="1200" data-name="Jasmine Dreams" data-scent="floral">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1583243567269-f4c8a2ce4bc0?w=600&q=80" alt="Jasmine Dreams" loading="lazy">
+                        <span class="product-tag">Floral</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jasmine Dreams</h3>
+                        <p class="product-notes"><strong>Top:</strong> Night Jasmine | <strong>Mid:</strong> Tuberose, Ylang | <strong>Base:</strong> White Musk</p>
+                        <p class="product-price">Rs. 1,200</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Jasmine Dreams', 1200)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Jasmine%20Dreams" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card fade-in" data-category="oils" data-price="5500" data-name="Sandal Supreme" data-scent="woody">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Sandal Supreme" loading="lazy">
+                        <span class="product-tag">Woody</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sandal Supreme</h3>
+                        <p class="product-notes"><strong>Top:</strong> Cardamom | <strong>Mid:</strong> Sandalwood, Cedar | <strong>Base:</strong> Vetiver, Musk</p>
+                        <p class="product-price">Rs. 5,500</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Sandal Supreme', 5500)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Sandal%20Supreme" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="product-card fade-in" data-category="ittars" data-price="2800" data-name="Aqua Fresh" data-scent="fresh">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1590156206657-aec2e5f3aa40?w=600&q=80" alt="Aqua Fresh" loading="lazy">
+                        <span class="product-tag">Fresh</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Aqua Fresh</h3>
+                        <p class="product-notes"><strong>Top:</strong> Lime, Mint | <strong>Mid:</strong> Marine, Green Tea | <strong>Base:</strong> White Cedar</p>
+                        <p class="product-price">Rs. 2,800</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Aqua Fresh', 2800)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Aqua%20Fresh" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card fade-in" data-category="gift-sets" data-price="6500" data-name="Royal Gift Set" data-scent="oriental">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=600&q=80" alt="Royal Gift Set" loading="lazy">
+                        <span class="product-tag">Oriental</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Royal Gift Set</h3>
+                        <p class="product-notes"><strong>Top:</strong> Oud, Saffron | <strong>Mid:</strong> Rose, Amber | <strong>Base:</strong> Musk, Sandalwood</p>
+                        <p class="product-price">Rs. 6,500</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Royal Gift Set', 6500)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Royal%20Gift%20Set" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="product-card fade-in" data-category="attars" data-price="3800" data-name="Midnight Oud" data-scent="woody">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" alt="Midnight Oud" loading="lazy">
+                        <span class="product-tag">Woody</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Midnight Oud</h3>
+                        <p class="product-notes"><strong>Top:</strong> Black Pepper | <strong>Mid:</strong> Dark Oud, Patchouli | <strong>Base:</strong> Smoky Leather</p>
+                        <p class="product-price">Rs. 3,800</p>
+                        <div class="size-options">
+                            <button class="size-btn active">6ml</button>
+                            <button class="size-btn">12ml</button>
+                            <button class="size-btn">20ml</button>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-cart" onclick="addToCart('Midnight Oud', 3800)">Add to Cart</button>
+                            <a href="https://wa.me/923001234567?text=I%20want%20to%20order%20Midnight%20Oud" class="btn btn-wa-order" target="_blank" rel="noopener">WhatsApp Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="logo">Fragrance<span>House</span></h3>
+                    <p>Premium Organic Attars & Perfume Oils — Crafted with love in Pakistan</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p><a href="https://wa.me/923001234567" target="_blank" rel="noopener">WhatsApp: +92 300 1234567</a></p>
+                    <p>Email: info@fragrancebrand.pk</p>
+                    <p>Lahore, Pakistan</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                        <a href="#" aria-label="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .55.04.81.1v-3.5a6.37 6.37 0 00-.81-.05A6.34 6.34 0 003.15 15.7a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.18a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.61z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fragrance House. All rights reserved. | Lahore, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
+            </div>
+            <a href="https://wa.me/923001234567?text=I%20want%20to%20place%20an%20order" class="btn btn-primary btn-full" target="_blank" rel="noopener">Order via WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-btn" id="chatbotBtn">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+    </div>
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h4>Fragrance House</h4>
+            <button class="chatbot-close" id="chatbotClose">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type a message...">
+            <button id="chatbotSend">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
