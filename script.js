@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initCart();
     initChatbot();
-    initFilters();
+    initSidebarFilters();
     initContactForm();
     initSizeButtons();
 });
@@ -217,13 +217,13 @@ function processUserInput(text) {
     switch (chatbotState) {
         case 'greeting':
             if (lower.includes('attar')) {
-                addBotMessage("We have a wonderful collection of attars! Our best sellers are Oud Al Shams (Rs. 2,500) and Midnight Oud (Rs. 3,800). Would you like to visit our shop?");
+                addBotMessage("We have a wonderful collection of attars! Our best sellers are Mughal Oud (Rs. 3,500) and Oud Al Taif (Rs. 4,800). Would you like to visit our shop?");
                 showQuickReplies(['Visit Shop', 'Place Order', 'More Info']);
             } else if (lower.includes('oil')) {
-                addBotMessage("Our perfume oils are 100% organic! Try Rose Taif (Rs. 1,800) or Sandal Supreme (Rs. 5,500). Pure and long-lasting!");
+                addBotMessage("Our perfume oils are 100% organic! Try Office Musk (Rs. 1,800) or Saffron Gold (Rs. 6,500). Pure and long-lasting!");
                 showQuickReplies(['Visit Shop', 'Place Order', 'More Info']);
             } else if (lower.includes('gift')) {
-                addBotMessage("Looking for a gift? Our Royal Gift Set (Rs. 6,500) comes in beautiful packaging — perfect for any occasion! 🎁");
+                addBotMessage("Looking for a gift? Our Classic Burner Set (Rs. 1,800) comes in beautiful packaging — perfect for any occasion! 🎁");
                 showQuickReplies(['Order Gift Set', 'Browse More', 'Place Order']);
             } else if (lower.includes('order') || lower.includes('place')) {
                 chatbotState = 'ask_scent';
@@ -289,40 +289,107 @@ function processUserInput(text) {
     }
 }
 
-// ===== FILTERS (SHOP PAGE) =====
-function initFilters() {
-    const categoryFilter = document.getElementById('categoryFilter');
-    const priceFilter = document.getElementById('priceFilter');
+// ===== SIDEBAR FILTERS (SHOP PAGE) =====
+function initSidebarFilters() {
+    const sidebar = document.getElementById('filterSidebar');
+    if (!sidebar) return;
+
+    const filterToggleBtn = document.getElementById('filterToggleBtn');
+    const sidebarClose = document.getElementById('sidebarClose');
+    const filterOverlay = document.getElementById('filterOverlay');
+    const clearFilters = document.getElementById('clearFilters');
     const searchFilter = document.getElementById('searchFilter');
-    const priceValue = document.getElementById('priceValue');
+    const searchFilterMobile = document.getElementById('searchFilterMobile');
 
-    if (!categoryFilter) return; // Not on shop page
-
-    categoryFilter.addEventListener('change', applyFilters);
-    priceFilter.addEventListener('input', () => {
-        priceValue.textContent = `Rs. ${parseInt(priceFilter.value).toLocaleString()}`;
-        applyFilters();
+    // Toggle sections
+    sidebar.querySelectorAll('.filter-section-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            const icon = toggle.querySelector('.toggle-icon');
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            content.classList.toggle('collapsed');
+            icon.textContent = isExpanded ? '+' : '−';
+        });
     });
-    searchFilter.addEventListener('input', applyFilters);
+
+    // Checkbox filter changes
+    sidebar.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', applySidebarFilters);
+    });
+
+    // Search
+    if (searchFilter) {
+        searchFilter.addEventListener('input', applySidebarFilters);
+    }
+    if (searchFilterMobile) {
+        searchFilterMobile.addEventListener('input', () => {
+            if (searchFilter) searchFilter.value = searchFilterMobile.value;
+            applySidebarFilters();
+        });
+    }
+
+    // Mobile toggle
+    if (filterToggleBtn) {
+        filterToggleBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            filterOverlay.classList.add('active');
+        });
+    }
+
+    // Close sidebar
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        filterOverlay.classList.remove('active');
+    }
+
+    if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+    if (filterOverlay) filterOverlay.addEventListener('click', closeSidebar);
+
+    // Clear all
+    if (clearFilters) {
+        clearFilters.addEventListener('click', () => {
+            sidebar.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+            if (searchFilter) searchFilter.value = '';
+            if (searchFilterMobile) searchFilterMobile.value = '';
+            applySidebarFilters();
+        });
+    }
 }
 
-function applyFilters() {
-    const category = document.getElementById('categoryFilter').value;
-    const maxPrice = parseInt(document.getElementById('priceFilter').value);
-    const search = document.getElementById('searchFilter').value.toLowerCase();
+function applySidebarFilters() {
     const cards = document.querySelectorAll('#shopGrid .product-card');
+    const searchFilter = document.getElementById('searchFilter');
+    const search = searchFilter ? searchFilter.value.toLowerCase() : '';
+
+    // Gather all checked filters grouped by data-filter attribute
+    const activeFilters = {};
+    document.querySelectorAll('.filter-sidebar input[type="checkbox"]:checked').forEach(cb => {
+        const filterGroup = cb.dataset.filter;
+        const filterValue = cb.value;
+        if (!activeFilters[filterGroup]) activeFilters[filterGroup] = [];
+        activeFilters[filterGroup].push(filterValue);
+    });
 
     cards.forEach(card => {
-        const cardCategory = card.dataset.category;
-        const cardPrice = parseInt(card.dataset.price);
-        const cardName = card.dataset.name.toLowerCase();
-        const cardScent = card.dataset.scent.toLowerCase();
+        const cardName = (card.dataset.name || '').toLowerCase();
+        let matchSearch = !search || cardName.includes(search);
 
-        const matchCategory = category === 'all' || cardCategory === category;
-        const matchPrice = cardPrice <= maxPrice;
-        const matchSearch = !search || cardName.includes(search) || cardScent.includes(search);
+        let matchAllFilters = true;
 
-        card.style.display = (matchCategory && matchPrice && matchSearch) ? 'block' : 'none';
+        for (const [group, values] of Object.entries(activeFilters)) {
+            const cardData = (card.dataset[group] || '').toLowerCase();
+            // Check if the card matches any of the selected values in this group
+            const matchGroup = values.some(val => cardData.includes(val));
+            if (!matchGroup) {
+                matchAllFilters = false;
+                break;
+            }
+        }
+
+        card.style.display = (matchSearch && matchAllFilters) ? '' : 'none';
     });
 }
 
@@ -333,7 +400,6 @@ function initContactForm() {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = form.querySelector('#name').value;
         const formBtn = form.querySelector('button[type="submit"]');
 
         formBtn.textContent = 'Message Sent! ✓';
