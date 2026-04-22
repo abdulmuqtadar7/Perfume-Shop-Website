@@ -386,7 +386,7 @@ const botAnswer = (message) => {
 
   if (text.includes("hello") || text.includes("hi")) return assistantReplies.greeting;
   if (text.includes("ship") || text.includes("delivery")) return assistantReplies.shipping;
-  if (text.includes("pay") || text.includes("card") || text.includes("paypal")) return assistantReplies.payment;
+  if (text.includes("pay") || text.includes("card")) return assistantReplies.payment;
   if (text.includes("recommend") || text.includes("best") || text.includes("suggest")) {
     return assistantReplies.recommendation;
   }
