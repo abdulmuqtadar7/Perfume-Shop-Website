@@ -220,7 +220,7 @@ const renderProductCard = (product) => `
       <div class="price-row">
         <span class="price">${formatPrice(product.price)}</span>
         <div class="hero-actions">
-          <a class="btn btn-secondary" href="/home/runner/work/Perfume-Shop-Website/Perfume-Shop-Website/product.html?id=${product.id}">Details</a>
+          <a class="btn btn-secondary" href="./product.html?id=${product.id}">Details</a>
           <button class="btn btn-primary" type="button" data-add-product="${product.id}">Add</button>
         </div>
       </div>
