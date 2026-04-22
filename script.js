@@ -118,6 +118,9 @@ const storageKeys = {
   orders: "the_essence_orders",
   wishlist: "the_essence_wishlist",
 };
+const maxCartQuantity = 99;
+const defaultImage =
+  "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80";
 
 const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -136,7 +139,11 @@ const getSavedData = (key, fallback) => {
 let cart = getSavedData(storageKeys.cart, []);
 let orders = getSavedData(storageKeys.orders, []);
 let wishlist = getSavedData(storageKeys.wishlist, []);
-let fallbackOrderCounter = orders.length;
+let fallbackOrderCounter = orders.reduce((highest, order) => {
+  const match = String(order.id).match(/(\\d+)(?!.*\\d)/);
+  const value = match ? Number(match[1]) : 0;
+  return Number.isFinite(value) ? Math.max(highest, value) : highest;
+}, 0);
 const checkoutListenerState = { bound: false };
 const assistantListenerState = { bound: false };
 
@@ -185,7 +192,7 @@ const safeImageUrl = (value) => {
       return parsed.toString();
     }
   } catch {}
-  return products[0].image;
+  return products[0]?.image || defaultImage;
 };
 const escapeHTML = (value) =>
   String(value).replace(/[&<>"']/g, (character) => {
@@ -285,13 +292,15 @@ const updateCartQty = (productId, quantity) => {
   const parsed = Number(quantity);
   const cartInput = document.querySelector(`[data-qty-product="${productId}"]`);
   const existing = cart.find((item) => item.id === productId);
-  const maxQuantity = 99;
-
-  if (!Number.isFinite(parsed) || parsed < 1 || parsed > maxQuantity || !existing) {
+  if (!Number.isFinite(parsed) || parsed < 1 || parsed > maxCartQuantity || !existing) {
     if (cartInput instanceof HTMLInputElement && existing) {
       cartInput.value = String(existing.quantity);
     }
-    setStatus(document.querySelector("#cart-status"), `Quantity must be between 1 and ${maxQuantity}.`, "error");
+    setStatus(
+      document.querySelector("#cart-status"),
+      `Quantity must be between 1 and ${maxCartQuantity}.`,
+      "error"
+    );
     return;
   }
 
@@ -358,7 +367,7 @@ const getShopResults = () => {
     "name-asc": (a, b) => a.name.localeCompare(b.name),
   };
 
-  return [...filtered].sort(sorters[sort] || sorters["name-asc"]);
+  return [...filtered].sort(sorters[sort]);
 };
 
 const renderShopPage = () => {
