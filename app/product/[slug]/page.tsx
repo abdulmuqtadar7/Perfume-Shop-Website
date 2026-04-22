@@ -4,12 +4,16 @@ import { ProductCard } from "@/components/product-card";
 import { ProductActions } from "@/components/product-actions";
 import { products } from "@/data/products";
 
+export function generateStaticParams() {
+  return products.map((product) => ({ slug: product.slug }));
+}
+
 function currency(value: number) {
   return new Intl.NumberFormat("en-PK", { style: "currency", currency: "PKR", maximumFractionDigits: 0 }).format(value);
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default function ProductPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const product = products.find((item) => item.slug === slug);
   if (!product) return notFound();
 

@@ -5,9 +5,12 @@ import { ProductCard } from "@/components/product-card";
 import { useStore } from "@/context/store-context";
 import { tabs } from "@/data/products";
 
-export function ShopClient({ initialQuery = "" }: { initialQuery?: string }) {
+export function ShopClient() {
   const { products } = useStore();
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState(() => {
+    if (typeof window === "undefined") return "";
+    return new URLSearchParams(window.location.search).get("q") ?? "";
+  });
   const [activeTab, setActiveTab] = useState<string>("All");
   const [sort, setSort] = useState<"featured" | "low" | "high">("featured");
 

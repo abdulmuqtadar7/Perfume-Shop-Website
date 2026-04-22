@@ -4,7 +4,7 @@ A fully responsive premium e-commerce storefront built with **Next.js (App Route
 
 ## Implemented pages
 
-- `/` - Home storefront with hero, value propositions, tabbed product sections, category highlights, reviews, and physical store callout
+- `/` - Home storefront with premium hero, value propositions, trending products, category highlights, and rotating testimonials
 - `/shop` - Product listing with search, filters, tabs, and sort
 - `/product/[slug]` - Product detail with notes breakdown and related products
 - `/checkout` - Checkout form, payment options, cart summary, and order history
@@ -27,3 +27,11 @@ npm run dev
 ```
 
 Then open `http://localhost:3000`.
+
+## Deploy to GitHub Pages (branch workflow)
+
+- Workflow file: `.github/workflows/deploy-pages.yml`
+- Trigger: pushes to `copilot/add-items-to-shop` (and manual `workflow_dispatch`)
+- Output: static export from `out/` published to GitHub Pages
+
+Before first deployment, enable **Settings → Pages → Build and deployment → Source: GitHub Actions**.
