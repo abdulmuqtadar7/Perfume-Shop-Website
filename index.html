@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UB Fragrance | Premium Storefront</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8WcR2D6L8U8VYx04F0A2BfXkX0Xr5cw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-white text-neutral-900 antialiased">
+    <div class="bg-black text-[#D4AF37] text-center text-sm md:text-base py-2 px-4">
+      💥 Flat 38% OFF + Free Shipping on All Perfumes!
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-20 flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold tracking-wide">UB <span class="text-[#B48A54]">Fragrance</span></a>
+          <nav class="hidden md:flex items-center gap-8 font-medium">
+            <a href="#" class="hover:text-[#B48A54] transition">Men</a>
+            <a href="#" class="hover:text-[#B48A54] transition">Women</a>
+            <a href="#" class="hover:text-[#B48A54] transition">Premium Attars</a>
+            <a href="#" class="hover:text-[#B48A54] transition">Bakhoor</a>
+          </nav>
+          <div class="flex items-center gap-3 text-lg">
+            <button class="w-10 h-10 rounded-full border border-neutral-200 hover:bg-neutral-100 transition" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="w-10 h-10 rounded-full border border-neutral-200 hover:bg-neutral-100 transition" aria-label="User account"><i class="fa-regular fa-user"></i></button>
+            <button class="w-10 h-10 rounded-full border border-neutral-200 hover:bg-neutral-100 transition" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button id="cart-btn" class="relative w-10 h-10 rounded-full border border-neutral-200 hover:bg-neutral-100 transition" aria-label="Cart">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span id="cart-count" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-black text-white text-xs grid place-items-center">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="relative min-h-[75vh] bg-cover bg-center"
+      style="background-image: url('https://images.unsplash.com/photo-1594035910387-fea47714263f?q=80&w=1600&auto=format&fit=crop');"
+    >
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[75vh] flex items-center">
+        <div class="max-w-2xl text-white">
+          <p class="uppercase tracking-[0.3em] text-[#D4AF37] text-xs sm:text-sm font-semibold mb-4">Luxury Perfume Collection</p>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">Discover Your Signature Scent</h1>
+          <p class="mt-5 text-lg text-neutral-200">Shop timeless fragrances crafted for confidence, elegance, and unforgettable impressions.</p>
+          <a
+            href="#trending"
+            class="inline-block mt-8 bg-[#B48A54] text-white px-8 py-3 rounded-md font-semibold tracking-wide hover:bg-[#9c7443] hover:-translate-y-0.5 transition"
+          >
+            SHOP NOW
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-neutral-100 border-y border-neutral-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="flex items-center justify-center gap-3 text-sm sm:text-base">
+          <i class="fa-solid fa-arrow-right-arrow-left text-[#B48A54]"></i>
+          <span class="font-medium">15-Day Easy Exchange</span>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-sm sm:text-base">
+          <i class="fa-solid fa-truck-fast text-[#B48A54]"></i>
+          <span class="font-medium">Fast 4-5 Day Delivery</span>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-sm sm:text-base">
+          <i class="fa-solid fa-headset text-[#B48A54]"></i>
+          <span class="font-medium">24/7 Support</span>
+        </div>
+      </div>
+    </section>
+
+    <main id="trending" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold">Trending Now</h2>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="group rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-lg transition bg-white">
+          <div class="relative">
+            <span class="absolute top-3 left-3 z-10 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">-38%</span>
+            <img class="w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop" alt="Mughal Perfume" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Mughal Perfume</h3>
+            <div class="mt-2 text-amber-500 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="text-sm line-through text-neutral-400">Rs.5,000</span>
+              <span class="text-xl font-bold">Rs.3,100</span>
+            </div>
+            <button class="add-to-cart mt-4 w-full bg-black text-white py-2.5 rounded-md font-semibold hover:bg-neutral-800 transition">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-lg transition bg-white">
+          <div class="relative">
+            <span class="absolute top-3 left-3 z-10 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">-38%</span>
+            <img class="w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800&auto=format&fit=crop" alt="Velvet Bloom" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Velvet Bloom</h3>
+            <div class="mt-2 text-amber-500 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="text-sm line-through text-neutral-400">Rs.5,000</span>
+              <span class="text-xl font-bold">Rs.3,100</span>
+            </div>
+            <button class="add-to-cart mt-4 w-full bg-black text-white py-2.5 rounded-md font-semibold hover:bg-neutral-800 transition">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-lg transition bg-white">
+          <div class="relative">
+            <span class="absolute top-3 left-3 z-10 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">-38%</span>
+            <img class="w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800&auto=format&fit=crop" alt="Oud Royale" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Oud Royale</h3>
+            <div class="mt-2 text-amber-500 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="text-sm line-through text-neutral-400">Rs.5,000</span>
+              <span class="text-xl font-bold">Rs.3,100</span>
+            </div>
+            <button class="add-to-cart mt-4 w-full bg-black text-white py-2.5 rounded-md font-semibold hover:bg-neutral-800 transition">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-lg transition bg-white">
+          <div class="relative">
+            <span class="absolute top-3 left-3 z-10 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">-38%</span>
+            <img class="w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=800&auto=format&fit=crop" alt="French Attar" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">French Attar</h3>
+            <div class="mt-2 text-amber-500 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="mt-2 flex items-center gap-2">
+              <span class="text-sm line-through text-neutral-400">Rs.5,000</span>
+              <span class="text-xl font-bold">Rs.3,100</span>
+            </div>
+            <button class="add-to-cart mt-4 w-full bg-black text-white py-2.5 rounded-md font-semibold hover:bg-neutral-800 transition">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="bg-neutral-900 text-neutral-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-semibold text-lg mb-4">Contact Details</h3>
+          <p class="text-sm">UB Fragrance House</p>
+          <p class="text-sm mt-2">Lahore, Pakistan</p>
+          <p class="text-sm mt-2">+92 300 1234567</p>
+          <p class="text-sm mt-2">support@ubfragrance.com</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-lg mb-4">Shop By Category</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-[#D4AF37]">Men</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37]">Women</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37]">Premium Attars</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37]">Bakhoor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-lg mb-4">Customer Service</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-[#D4AF37]">Track Order</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37]">Return & Exchange</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37]">Shipping Policy</a></li>
+            <li><a href="#" class="hover:text-[#D4AF37]">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-lg mb-4">Newsletter Signup</h3>
+          <p class="text-sm mb-3">Get exclusive offers and perfume updates.</p>
+          <form id="newsletter-form" class="space-y-3">
+            <input id="newsletter-email" type="email" required placeholder="Enter your email" class="w-full h-11 rounded-md px-3 text-neutral-900 outline-none" />
+            <button type="submit" class="w-full h-11 rounded-md bg-[#B48A54] text-white font-semibold hover:bg-[#9c7443] transition">Subscribe</button>
+            <p id="newsletter-message" class="text-xs text-emerald-300 hidden">Thanks for subscribing!</p>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-neutral-700 text-center text-xs py-4 text-neutral-400">© 2026 UB Fragrance. All rights reserved.</div>
+    </footer>
+
+    <script>
+      const cartCount = document.getElementById("cart-count");
+      const addToCartButtons = document.querySelectorAll(".add-to-cart");
+      let count = 0;
+      addToCartButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          count += 1;
+          cartCount.textContent = String(count);
+        });
+      });
+
+      const newsletterForm = document.getElementById("newsletter-form");
+      const newsletterMessage = document.getElementById("newsletter-message");
+      newsletterForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        newsletterMessage.classList.remove("hidden");
+        newsletterForm.reset();
+      });
+    </script>
+  </body>
+</html>
