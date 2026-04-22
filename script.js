@@ -329,14 +329,17 @@ const getShopResults = () => {
     return queryMatch && categoryMatch;
   });
 
+  if (sort === "featured") {
+    return filtered;
+  }
+
   const sorters = {
-    "featured": () => 0,
     "price-asc": (a, b) => a.price - b.price,
     "price-desc": (a, b) => b.price - a.price,
     "name-asc": (a, b) => a.name.localeCompare(b.name),
   };
 
-  return [...filtered].sort(sorters[sort] || sorters.featured);
+  return [...filtered].sort(sorters[sort] || sorters["name-asc"]);
 };
 
 const renderShopPage = () => {
@@ -365,14 +368,20 @@ const renderProductPage = () => {
   if (!(detailContainer instanceof HTMLElement) || !(relatedGrid instanceof HTMLElement)) return;
 
   const params = new URLSearchParams(window.location.search);
-  const product = findProduct(params.get("id")) || products[0];
+  const requestedId = params.get("id");
+  const requestedProduct = findProduct(requestedId);
+  const product = requestedProduct || products[0];
   const related = products.filter((item) => item.id !== product.id).slice(0, 3);
+  const notFoundMessage = requestedId && !requestedProduct
+    ? `<p class="status-message error">Requested product was not found. Showing a featured fragrance instead.</p>`
+    : "";
 
   detailContainer.innerHTML = `
     <article class="card product-detail-media">
       <img src="${product.image}" alt="${escapeHTML(product.name)} perfume bottle" />
     </article>
     <article class="card product-detail-copy">
+      ${notFoundMessage}
       <p class="eyebrow">${escapeHTML(product.category)}</p>
       <h1>${escapeHTML(product.name)}</h1>
       <div class="product-detail-meta">
@@ -545,7 +554,9 @@ const assistantReply = (message) => {
   }
   if (text.includes("cart")) {
     if (!cart.length) return "Your cart is currently empty. Visit Shop to add perfumes you’d like to purchase.";
-    return `Your cart contains ${cart.map((item) => `${item.name} x${item.quantity}`).join(", ")}.`;
+    const preview = cart.slice(0, 3).map((item) => `${item.name} x${item.quantity}`).join(", ");
+    const remainder = cart.length > 3 ? ` and ${cart.length - 3} more item(s)` : "";
+    return `Your cart contains ${preview}${remainder}.`;
   }
   if (text.includes("wishlist")) {
     return wishlist.length
