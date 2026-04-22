@@ -140,7 +140,7 @@ let cart = getSavedData(storageKeys.cart, []);
 let orders = getSavedData(storageKeys.orders, []);
 let wishlist = getSavedData(storageKeys.wishlist, []);
 let fallbackOrderCounter = orders.reduce((highest, order) => {
-  const match = String(order.id).match(/(\\d+)(?!.*\\d)/);
+  const match = String(order.id).match(/(\d+)(?!.*\d)/);
   const value = match ? Number(match[1]) : 0;
   return Number.isFinite(value) ? Math.max(highest, value) : highest;
 }, 0);
@@ -178,7 +178,12 @@ const generateOrderId = () => {
     return crypto.randomUUID();
   }
   fallbackOrderCounter += 1;
-  return `essence-order-${Date.now()}-${fallbackOrderCounter}-${Math.floor(Math.random() * 100000)}`;
+  let randomChunk = "00000";
+  if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
+    const values = crypto.getRandomValues(new Uint32Array(1));
+    randomChunk = String(values[0]).slice(-5);
+  }
+  return `essence-order-${Date.now()}-${fallbackOrderCounter}-${randomChunk}`;
 };
 
 const findProduct = (id) => products.find((product) => product.id === id);
@@ -195,13 +200,15 @@ const safeImageUrl = (value) => {
   return products[0]?.image || defaultImage;
 };
 const escapeHTML = (value) =>
-  String(value).replace(/[&<>"']/g, (character) => {
+  String(value).replace(/[&<>"'`/]/g, (character) => {
     const replacements = {
       "&": "&amp;",
       "<": "&lt;",
       ">": "&gt;",
       '"': "&quot;",
       "'": "&#39;",
+      "`": "&#96;",
+      "/": "&#47;",
     };
     return replacements[character] || character;
   });
