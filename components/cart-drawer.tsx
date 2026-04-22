@@ -26,7 +26,7 @@ export function CartDrawer() {
           >
             <div className="h-16 px-5 border-b flex items-center justify-between">
               <h3 className="font-semibold">Your Cart</h3>
-              <button onClick={() => setCartOpen(false)}><X size={18} /></button>
+              <button onClick={() => setCartOpen(false)} aria-label="Close cart"><X size={18} /></button>
             </div>
             <div className="flex-1 overflow-y-auto p-5 space-y-4">
               {cart.length === 0 && <p className="text-neutral-500">Your cart is empty.</p>}

@@ -123,7 +123,7 @@ export function Header() {
             <Link href="/checkout" className="h-9 w-9 grid place-items-center border border-neutral-200 rounded-md">
               <User size={16} />
             </Link>
-            <button className="relative h-9 w-9 grid place-items-center border border-neutral-200 rounded-md" aria-label="wishlist">
+            <button className="relative h-9 w-9 grid place-items-center border border-neutral-200 rounded-md" aria-label="View wishlist">
               <Heart size={16} />
               {wishlistCount > 0 && (
                 <span className="absolute -top-2 -right-2 text-[10px] w-4 h-4 rounded-full bg-[#B48A54] text-white grid place-items-center">

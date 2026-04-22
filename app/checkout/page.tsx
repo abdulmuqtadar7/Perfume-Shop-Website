@@ -63,7 +63,7 @@ export default function CheckoutPage() {
             </div>
           </div>
           <button className="h-11 px-6 rounded-md bg-[#B48A54] text-white">Place Order</button>
-          {status && <p className="text-sm text-emerald-700">{status}</p>}
+          {status && <p className="text-sm text-emerald-700" role="status" aria-live="polite">{status}</p>}
         </form>
 
         <aside className="rounded-2xl border border-neutral-200 p-5 md:p-6 h-fit">

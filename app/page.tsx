@@ -78,8 +78,8 @@ export default function HomePage() {
           </div>
           <article className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
             <div className="mb-3 flex items-center gap-1 text-[#E8C998]">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={`${testimonials[reviewIndex].id}-${index}`} className="h-4 w-4 fill-current" />
+              {Array.from({ length: 5 }).map((_, starIndex) => (
+                <Star key={`${testimonials[reviewIndex].id}-${starIndex}`} className="h-4 w-4 fill-current" />
               ))}
             </div>
             <h3 className="text-lg font-semibold">{testimonials[reviewIndex].title}</h3>

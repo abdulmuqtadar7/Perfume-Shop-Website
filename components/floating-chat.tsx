@@ -40,7 +40,7 @@ export function FloatingChat() {
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 18 }} className="w-[330px] bg-white border border-neutral-200 shadow-2xl rounded-2xl overflow-hidden mb-3">
             <div className="h-12 px-4 bg-neutral-900 text-white flex items-center justify-between">
               <p className="text-sm">Live Chat</p>
-              <button onClick={() => setOpen(false)}><X size={16} /></button>
+              <button onClick={() => setOpen(false)} aria-label="Close chat"><X size={16} /></button>
             </div>
             <div className="h-72 overflow-y-auto p-3 space-y-2 bg-neutral-50">
               {messages.map((msg, i) => (

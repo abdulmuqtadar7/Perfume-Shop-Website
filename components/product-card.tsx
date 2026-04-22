@@ -39,7 +39,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
         <div className="space-y-2 p-4">
           <Link href={`/product/${product.slug}`} className="text-lg font-semibold text-neutral-900 transition hover:text-[#B48A54]">{product.name}</Link>
-          <div className="flex items-center gap-1 text-amber-500">
+          <div className="flex items-center gap-1 text-amber-500" aria-label={`${product.rating.toFixed(1)} out of 5 stars`}>
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} size={14} className={i < Math.floor(product.rating) ? "fill-current" : ""} />
             ))}
