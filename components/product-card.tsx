@@ -17,28 +17,28 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <>
-      <motion.article layout className="group rounded-2xl border border-neutral-200 bg-white overflow-hidden">
-        <div className="relative">
-          <span className="absolute top-3 left-3 z-10 bg-neutral-900 text-white text-xs px-2 py-1 rounded">-{product.discountPercent}%</span>
+      <motion.article layout className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_14px_42px_rgba(0,0,0,0.12)]">
+        <div className="relative overflow-hidden bg-neutral-100">
+          <span className="absolute left-3 top-3 z-10 rounded-full bg-neutral-900 px-2.5 py-1 text-xs font-semibold text-white shadow">-{product.discountPercent}%</span>
           <Link href={`/product/${product.slug}`}>
-            <img src={product.image} alt={product.name} className="w-full aspect-square object-cover group-hover:opacity-0 transition duration-300" />
+            <img src={product.image} alt={product.name} className="aspect-square w-full object-cover transition duration-300 group-hover:opacity-0 group-hover:scale-105" />
             <img
               src={product.hoverImage}
               alt={product.name}
-              className="w-full aspect-square object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300"
+              className="absolute inset-0 aspect-square w-full object-cover opacity-0 transition duration-300 group-hover:scale-105 group-hover:opacity-100"
             />
           </Link>
-          <div className="absolute top-3 right-3 z-10 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition">
-            <button onClick={() => toggleWishlist(product.id)} className="w-9 h-9 bg-white rounded-full grid place-items-center shadow">
+          <div className="absolute right-3 top-3 z-10 flex flex-col gap-2 opacity-0 transition group-hover:opacity-100">
+            <button onClick={() => toggleWishlist(product.id)} className="grid h-9 w-9 place-items-center rounded-full bg-white shadow">
               <Heart size={16} className={isInWishlist(product.id) ? "fill-current text-red-500" : ""} />
             </button>
-            <button onClick={() => setQuickViewOpen(true)} className="w-9 h-9 bg-white rounded-full grid place-items-center shadow">
+            <button onClick={() => setQuickViewOpen(true)} className="grid h-9 w-9 place-items-center rounded-full bg-white shadow">
               <Eye size={16} />
             </button>
           </div>
         </div>
-        <div className="p-4 space-y-2">
-          <Link href={`/product/${product.slug}`} className="font-semibold text-neutral-900 hover:text-[#B48A54]">{product.name}</Link>
+        <div className="space-y-2 p-4">
+          <Link href={`/product/${product.slug}`} className="text-lg font-semibold text-neutral-900 transition hover:text-[#B48A54]">{product.name}</Link>
           <div className="flex items-center gap-1 text-amber-500">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} size={14} className={i < Math.floor(product.rating) ? "fill-current" : ""} />
@@ -49,7 +49,7 @@ export function ProductCard({ product }: { product: Product }) {
             <span className="line-through text-neutral-400">{currency(product.originalPrice)}</span>
             <span className="font-bold text-neutral-900">{currency(product.price)}</span>
           </div>
-          <button onClick={() => addToCart(product.id)} className="w-full h-10 rounded-md bg-[#B48A54] text-white hover:bg-neutral-900 transition">
+          <button onClick={() => addToCart(product.id)} className="h-10 w-full rounded-md bg-[#B48A54] text-sm font-semibold tracking-wide text-white transition hover:bg-neutral-900">
             Add to Cart
           </button>
         </div>
