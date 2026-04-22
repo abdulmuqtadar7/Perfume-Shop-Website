@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velour Essence | Luxury Perfume House</title>
+    <meta
+      name="description"
+      content="Discover signature luxury fragrances crafted with rare ingredients and timeless artistry."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#" class="brand">Velour Essence</a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
+          <a href="#collections">Collections</a>
+          <a href="#story">Our Story</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+          <a href="#" class="btn btn-nav">Shop Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Fine Fragrance Maison</p>
+            <h1>Luxury perfume crafted for unforgettable presence.</h1>
+            <p>
+              Explore elevated scents composed with rare notes, balanced by modern
+              elegance, and designed for every mood.
+            </p>
+            <div class="hero-actions">
+              <a href="#collections" class="btn">Explore Collection</a>
+              <a href="#story" class="btn btn-ghost">View Story</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="bottle bottle-1"></div>
+            <div class="bottle bottle-2"></div>
+            <div class="bottle bottle-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Signature Collection</p>
+            <h2>Fragrances curated by master perfumers</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Noir Velvet</h3>
+              <p>Black rose, amber resin, and smoky cedar for deep evening allure.</p>
+              <span>$110</span>
+            </article>
+            <article class="card">
+              <h3>Golden Bloom</h3>
+              <p>White peony, saffron, and vanilla orchid layered in warm radiance.</p>
+              <span>$98</span>
+            </article>
+            <article class="card">
+              <h3>Azure Mist</h3>
+              <p>Bergamot, sea salt, and iris petal in a bright modern composition.</p>
+              <span>$102</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="section alt">
+        <div class="container story-grid">
+          <div>
+            <p class="eyebrow">Craftsmanship</p>
+            <h2>Where artistry meets contemporary luxury</h2>
+          </div>
+          <p>
+            At Velour Essence, each bottle is composed in small batches with globally
+            sourced botanicals. We design fragrances to evolve gracefully from first
+            spray to lasting trail, creating a personal signature that feels timeless.
+          </p>
+        </div>
+      </section>
+
+      <section id="reviews" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Client Notes</p>
+            <h2>Loved by fragrance connoisseurs</h2>
+          </div>
+          <div class="review-grid">
+            <blockquote>
+              “An instantly luxurious scent profile. The dry down is sophisticated and
+              lasts all day.”
+              <cite>— Sara M.</cite>
+            </blockquote>
+            <blockquote>
+              “Packaging feels premium and the fragrance itself is pure elegance.”
+              <cite>— Daniel R.</cite>
+            </blockquote>
+            <blockquote>
+              “Every note feels deliberate. This became my signature in one week.”
+              <cite>— Aisha K.</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta">
+        <div class="container cta-wrap">
+          <div>
+            <p class="eyebrow">Stay in Touch</p>
+            <h2>Get fragrance drops and private launch invites</h2>
+          </div>
+          <form class="newsletter" action="#" method="post">
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Velour Essence. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Journal</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
