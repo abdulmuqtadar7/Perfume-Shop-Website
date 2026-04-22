@@ -153,7 +153,7 @@ export const products: Product[] = [
 export const sections: Array<Product["section"]> = ["Trending Now", "Best Sellers", "New Arrivals"];
 
 export const categoryHighlights = [
-  { title: "Perfume's Spray", image: "https://picsum.photos/seed/cat-perfume/900/900" },
+  { title: "Perfume Spray", image: "https://picsum.photos/seed/cat-perfume/900/900" },
   { title: "Womens", image: "https://picsum.photos/seed/cat-women/900/900" },
   { title: "Oud Attar", image: "https://picsum.photos/seed/cat-oud/900/900" },
   { title: "Bakhoor Wood", image: "https://picsum.photos/seed/cat-bakhoor-wood/900/900" },
