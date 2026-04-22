@@ -9,11 +9,11 @@ if (menuToggle && nav) {
   });
 }
 
-document.querySelectorAll(".filter-tabs button").forEach((tab) => {
+const filterTabs = document.querySelectorAll(".filter-tabs button");
+
+filterTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    document
-      .querySelectorAll(".filter-tabs button")
-      .forEach((button) => button.classList.remove("active"));
+    filterTabs.forEach((button) => button.classList.remove("active"));
     tab.classList.add("active");
   });
 });
