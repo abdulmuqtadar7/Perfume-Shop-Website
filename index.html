@@ -3,205 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lueur Atelier | Perfume E-Commerce Store</title>
+    <title>The Essence | Luxury Perfume Store</title>
     <meta
       name="description"
-      content="Shop luxury perfumes, manage your cart, checkout with payment options, and get help from our AI fragrance assistant."
+      content="The Essence is a luxury perfume e-commerce store with curated fragrances, gift sets, fast checkout, and a dedicated AI shopping assistant."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
   </head>
-  <body>
-    <div class="site-shell">
-      <header class="header">
-        <a href="#" class="brand" aria-label="Lueur Atelier home">
-          <span class="brand-mark">L</span>
-          <span class="brand-text">Lueur Atelier</span>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="The Essence home">
+          <span class="brand-mark">E</span>
+          <span>
+            <strong>The Essence</strong>
+            <small>Luxury perfumery</small>
+          </span>
         </a>
-        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span></span><span></span><span></span>
         </button>
-        <nav class="nav" id="primary-nav" aria-label="Primary">
-          <a href="#shop">Shop</a>
-          <a href="#cart">Cart</a>
-          <a href="#checkout">Checkout</a>
-          <a href="#assistant">AI Assistant</a>
-          <a href="#contact">Contact</a>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="./index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./product.html?id=noir-amber">Product</a>
+          <a href="./checkout.html">Checkout <span class="count-pill" data-cart-count>0</span></a>
+          <a href="./assistant.html">AI Assistant</a>
         </nav>
       </header>
 
       <main>
-        <section class="hero section">
-          <div class="hero-content">
-            <p class="eyebrow">Luxury Perfume Marketplace</p>
-            <h1>Find your signature scent and order in minutes.</h1>
-            <p>
-              Browse curated fragrances, add to cart, complete secure checkout,
-              and get instant recommendations from our AI perfume assistant.
+        <section class="hero hero-home section">
+          <div class="hero-copy card glass-card">
+            <p class="eyebrow">Modern luxury fragrance house</p>
+            <h1>Perfume shopping reimagined for the modern collector.</h1>
+            <p class="hero-text">
+              Discover artisanal perfumes, exclusive discovery sets, gifting experiences,
+              and a concierge-grade AI assistant designed to help you find your signature scent.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#shop">Shop Perfumes</a>
-              <a class="btn btn-outline" href="#assistant">Ask AI Assistant</a>
+              <a class="btn btn-primary" href="./shop.html">Shop now</a>
+              <a class="btn btn-secondary" href="./assistant.html">Talk to AI concierge</a>
             </div>
-            <div class="hero-stats">
+            <div class="hero-metrics">
               <article>
-                <h2 id="product-count">0</h2>
-                <p>Perfumes Available</p>
+                <strong data-product-count>0</strong>
+                <span>Luxury fragrances</span>
               </article>
               <article>
-                <h2 id="cart-count">0</h2>
-                <p>Items in Cart</p>
+                <strong>24h</strong>
+                <span>Dispatch promise</span>
               </article>
               <article>
-                <h2 id="order-count">0</h2>
-                <p>Total orders placed</p>
+                <strong data-order-count>0</strong>
+                <span>Total orders placed</span>
               </article>
             </div>
           </div>
-          <div class="hero-media">
+          <div class="hero-visual card">
             <img
-              src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80"
-              alt="Luxury perfume bottle with flowers"
+              src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1400&q=80"
+              alt="Premium perfume bottle on silk fabric"
             />
-            <div class="hero-badge">
-              <p>Store Status</p>
-              <strong>Now accepting online payments</strong>
+            <div class="floating-card">
+              <span>Featured release</span>
+              <strong>Noir Amber Extrait</strong>
+              <p>Smoked vanilla, incense, saffron</p>
             </div>
           </div>
         </section>
 
-        <section class="section panel" id="shop">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Shop</p>
-              <h2>Fragrance Collection</h2>
-            </div>
-            <div class="shop-controls">
-              <label for="search" class="sr-only">Search perfumes</label>
-              <input type="search" id="search" placeholder="Search by name, note, or category" />
-              <select id="category-filter" aria-label="Filter by category">
-                <option value="all">All Categories</option>
-              </select>
-            </div>
-          </div>
-          <div class="product-grid" id="product-grid" aria-live="polite"></div>
-          <p class="status" id="catalog-status"></p>
-        </section>
-
-        <section class="section commerce-grid">
-          <article class="panel" id="cart">
-            <div class="section-heading tight">
-              <div>
-                <p class="eyebrow">Cart</p>
-                <h2>Your Selections</h2>
-              </div>
-              <button class="btn btn-ghost" id="clear-cart" type="button">Clear Cart</button>
-            </div>
-            <ul class="cart-list" id="cart-list"></ul>
-            <div class="cart-total">
-              <span>Subtotal</span>
-              <strong id="cart-subtotal">$0.00</strong>
-            </div>
-            <p class="status" id="cart-status" aria-live="polite"></p>
+        <section class="section trust-strip card soft-card">
+          <article>
+            <strong>Complimentary samples</strong>
+            <p>Every full-size order ships with two curated sample vials.</p>
           </article>
-
-          <article class="panel" id="checkout">
-            <div class="section-heading tight">
-              <div>
-                <p class="eyebrow">Checkout</p>
-                <h2>Secure Payment</h2>
-              </div>
-            </div>
-            <form id="checkout-form" class="checkout-form">
-              <label>
-                Full Name
-                <input type="text" name="name" required />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" required />
-              </label>
-              <label>
-                Shipping Address
-                <input type="text" name="address" required />
-              </label>
-              <label>
-                Phone Number
-                <input type="tel" name="phone" required />
-              </label>
-              <label>
-                Payment Method
-                <select name="paymentMethod" id="payment-method" required>
-                  <option value="">Select payment method</option>
-                  <option value="Card">Credit/Debit Card</option>
-                  <option value="PayPal">PayPal</option>
-                  <option value="Apple Pay">Apple Pay</option>
-                  <option value="Cash on Delivery">Cash on Delivery</option>
-                </select>
-              </label>
-              <label id="payment-detail-label">
-                <span id="payment-detail-text">Payment Details</span>
-                <input
-                  type="text"
-                  id="payment-detail"
-                  name="paymentDetail"
-                  placeholder="Card/Wallet info"
-                  required
-                />
-              </label>
-              <button class="btn btn-primary" type="submit">Place Order</button>
-            </form>
-            <p class="status" id="checkout-status" aria-live="polite"></p>
-            <div class="order-history" id="order-history"></div>
+          <article>
+            <strong>Global delivery</strong>
+            <p>Trackable shipping with carbon-conscious packaging.</p>
+          </article>
+          <article>
+            <strong>Flexible payments</strong>
+            <p>Secure checkout with cards, PayPal, Apple Pay, and COD.</p>
           </article>
         </section>
 
-        <section class="section panel" id="assistant">
-          <div class="section-heading tight">
-            <div>
-              <p class="eyebrow">AI Assistant</p>
-              <h2>Fragrance Help Bot</h2>
-            </div>
+        <section class="section section-head">
+          <div>
+            <p class="eyebrow">Featured collection</p>
+            <h2>Top picks from The Essence atelier</h2>
           </div>
-          <div class="chat-window" id="chat-window" aria-live="polite"></div>
-          <form class="chat-form" id="chat-form">
-            <label for="chat-input" class="sr-only">Ask assistant</label>
-            <input
-              type="text"
-              id="chat-input"
-              placeholder="Ask about perfumes, orders, shipping, or payments"
-              required
+          <a class="text-link" href="./shop.html">View full collection</a>
+        </section>
+        <section class="product-grid" id="home-featured"></section>
+
+        <section class="section lifestyle-grid">
+          <article class="card feature-card">
+            <p class="eyebrow">Why customers love us</p>
+            <h3>Designed like a flagship experience, built for online shopping.</h3>
+            <ul class="feature-list">
+              <li>Discovery-led browsing with notes, mood, and concentration details</li>
+              <li>Wishlist and cart persistence across pages</li>
+              <li>Gift-ready bundles and signature recommendations</li>
+              <li>AI-powered concierge support for payment, shipping, and selection help</li>
+            </ul>
+          </article>
+          <article class="card image-panel tall-image">
+            <img
+              src="https://images.unsplash.com/photo-1615634262417-d4f79f755511?auto=format&fit=crop&w=1200&q=80"
+              alt="Perfume bottle with floral styling"
             />
-            <button type="submit" class="btn btn-primary">Send</button>
+          </article>
+        </section>
+
+        <section class="section section-head">
+          <div>
+            <p class="eyebrow">Client reviews</p>
+            <h2>Trusted by perfume lovers worldwide</h2>
+          </div>
+        </section>
+        <section class="testimonial-grid">
+          <article class="card testimonial-card">
+            <p>“The UI is effortless, the checkout is smooth, and the scents feel incredibly premium.”</p>
+            <strong>— Hana, Dubai</strong>
+          </article>
+          <article class="card testimonial-card">
+            <p>“I found my everyday signature through the AI assistant in less than two minutes.”</p>
+            <strong>— Sarah, Toronto</strong>
+          </article>
+          <article class="card testimonial-card">
+            <p>“The Essence feels like a real luxury store, not just another catalog page.”</p>
+            <strong>— Adeel, London</strong>
+          </article>
+        </section>
+
+        <section class="section newsletter card glass-card">
+          <div>
+            <p class="eyebrow">Join the list</p>
+            <h2>Get launch alerts, rare drops, and gifting previews.</h2>
+          </div>
+          <form class="newsletter-form" data-newsletter-form>
+            <input type="email" name="email" placeholder="Enter your email" required />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
           </form>
-          <div class="quick-questions" id="quick-questions"></div>
-        </section>
-
-        <section class="section panel" id="contact">
-          <p class="eyebrow">Need support?</p>
-          <h2>Customer Care</h2>
-          <p>
-            Reach us at support@lueuratelier.com or chat with the assistant for instant help.
-            Orders are processed within 24 hours and tracked globally.
-          </p>
+          <p class="status-message" data-newsletter-status aria-live="polite"></p>
         </section>
       </main>
 
-      <footer class="footer">
-        <p>© 2026 Lueur Atelier. All rights reserved.</p>
+      <footer class="site-footer">
         <div>
-          <a href="#shop">Shop</a>
-          <a href="#checkout">Checkout</a>
-          <a href="#assistant">AI Assistant</a>
+          <strong>The Essence</strong>
+          <p>Luxury fragrances, intelligent shopping, and elevated gifting.</p>
+        </div>
+        <div class="footer-links">
+          <a href="./shop.html">Shop</a>
+          <a href="./checkout.html">Checkout</a>
+          <a href="./assistant.html">AI Assistant</a>
         </div>
       </footer>
     </div>
-
-    <script src="./script.js"></script>
   </body>
 </html>

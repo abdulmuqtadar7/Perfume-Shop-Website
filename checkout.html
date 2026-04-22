@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Essence | Checkout</title>
+    <meta name="description" content="Review your cart, select payment methods, and place your perfume order with The Essence." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body data-page="checkout">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">E</span>
+          <span><strong>The Essence</strong><small>Luxury perfumery</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="./index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./product.html?id=noir-amber">Product</a>
+          <a href="./checkout.html">Checkout <span class="count-pill" data-cart-count>0</span></a>
+          <a href="./assistant.html">AI Assistant</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="page-hero section card">
+          <p class="eyebrow">Checkout</p>
+          <h1>Complete your order with confidence.</h1>
+          <p>Review cart contents, choose your payment method, and place your order in a secure front-end flow.</p>
+        </section>
+
+        <section class="section checkout-layout">
+          <article class="card">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">Your cart</p>
+                <h2>Order summary</h2>
+              </div>
+              <button class="btn btn-secondary" type="button" id="clear-cart">Clear cart</button>
+            </div>
+            <ul class="cart-list" id="cart-list"></ul>
+            <div class="summary-stack">
+              <div><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+              <div><span>Shipping</span><strong>Free</strong></div>
+              <div class="total-row"><span>Total</span><strong id="cart-total">$0.00</strong></div>
+            </div>
+            <p class="status-message" id="cart-status" aria-live="polite"></p>
+          </article>
+
+          <article class="card">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">Payment & shipping</p>
+                <h2>Secure checkout</h2>
+              </div>
+            </div>
+            <form class="checkout-form" id="checkout-form">
+              <label>Full name<input type="text" name="name" required /></label>
+              <label>Email address<input type="email" name="email" required /></label>
+              <label>Shipping address<input type="text" name="address" required /></label>
+              <label>City<input type="text" name="city" required /></label>
+              <label>Phone number<input type="tel" name="phone" required /></label>
+              <label>
+                Payment method
+                <select name="paymentMethod" id="payment-method" required>
+                  <option value="">Select payment method</option>
+                  <option value="Card">Credit / Debit Card</option>
+                  <option value="PayPal">PayPal</option>
+                  <option value="Apple Pay">Apple Pay</option>
+                  <option value="Cash on Delivery">Cash on Delivery</option>
+                </select>
+              </label>
+              <label>
+                Delivery preference
+                <select name="deliveryWindow">
+                  <option value="Standard">Standard delivery</option>
+                  <option value="Express">Express delivery</option>
+                  <option value="Gift">Gift delivery</option>
+                </select>
+              </label>
+              <label id="payment-detail-label">
+                <span id="payment-detail-text">Payment details</span>
+                <input id="payment-detail" type="text" name="paymentDetail" placeholder="Card or wallet identifier" required />
+              </label>
+              <button class="btn btn-primary" type="submit">Place order</button>
+            </form>
+            <p class="status-message" id="checkout-status" aria-live="polite"></p>
+            <div class="order-history" id="order-history"></div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>The Essence</strong>
+          <p>Secure, flexible fragrance checkout with premium delivery options.</p>
+        </div>
+        <div class="footer-links">
+          <a href="./shop.html">Shop more</a>
+          <a href="./assistant.html">Ask assistant</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

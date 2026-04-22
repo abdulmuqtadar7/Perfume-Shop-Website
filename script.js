@@ -1,82 +1,124 @@
 const products = [
   {
-    id: "velour-elixir",
-    name: "Velour Elixir",
+    id: "noir-amber",
+    name: "Noir Amber Extrait",
     category: "Warm & Spicy",
-    notes: "Saffron, amber, vanilla",
-    price: 129,
+    mood: "Evening Signature",
+    concentration: "Extrait de Parfum",
+    price: 168,
+    size: "100ml",
+    notes: ["Saffron", "Incense", "Smoked Vanilla"],
+    description:
+      "A rich amber composition with glowing resins, dark spice, and soft sweetness for elegant evening wear.",
     image:
-      "https://images.unsplash.com/photo-1615634262417-d4f79f755511?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: "luna-petale",
-    name: "Luna Pétale",
-    category: "Floral Fresh",
-    notes: "Rose, peony, musk",
-    price: 114,
+    id: "velvet-rose",
+    name: "Velvet Rose Mist",
+    category: "Floral",
+    mood: "Romantic Daywear",
+    concentration: "Eau de Parfum",
+    price: 132,
+    size: "90ml",
+    notes: ["Rose", "Peony", "White Musk"],
+    description:
+      "A luminous floral perfume that layers velvet rose petals with airy musk and soft peony freshness.",
     image:
-      "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: "oud-minuit",
-    name: "Oud Minuit",
-    category: "Woody Intense",
-    notes: "Oud, cedar, patchouli",
-    price: 148,
+    id: "cedar-veil",
+    name: "Cedar Veil",
+    category: "Woody",
+    mood: "Minimal & Clean",
+    concentration: "Extrait de Parfum",
+    price: 154,
+    size: "100ml",
+    notes: ["Cedar", "Iris", "Suede"],
+    description:
+      "Smooth woods and powdery iris create a polished scent for professionals who prefer understated luxury.",
     image:
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: "aurore-citrus",
-    name: "Aurore Citrus",
-    category: "Citrus Aromatic",
-    notes: "Bergamot, neroli, green tea",
-    price: 102,
+    id: "citrus-halo",
+    name: "Citrus Halo",
+    category: "Fresh Citrus",
+    mood: "Bright Everyday",
+    concentration: "Eau de Parfum",
+    price: 118,
+    size: "100ml",
+    notes: ["Bergamot", "Neroli", "Green Tea"],
+    description:
+      "An uplifting citrus halo with sparkling neroli and a clean green tea dry-down.",
     image:
-      "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: "opal-bloom",
-    name: "Opal Bloom",
-    category: "Floral Fresh",
-    notes: "Jasmine, tuberose, pear",
-    price: 119,
+    id: "midnight-oud",
+    name: "Midnight Oud",
+    category: "Woody",
+    mood: "Bold Statement",
+    concentration: "Extrait de Parfum",
+    price: 179,
+    size: "100ml",
+    notes: ["Oud", "Leather", "Patchouli"],
+    description:
+      "A powerful oud leather composition crafted for collectors who love depth, projection, and drama.",
     image:
-      "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1610240644455-3edc55c375fe?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: "ember-atelier",
-    name: "Ember Atelier",
+    id: "pearl-bloom",
+    name: "Pearl Bloom",
+    category: "Floral",
+    mood: "Soft Luxury",
+    concentration: "Eau de Parfum",
+    price: 126,
+    size: "85ml",
+    notes: ["Jasmine", "Pear", "Cashmere"],
+    description:
+      "A silky floral-fruit composition with delicate jasmine and a clean cashmere finish.",
+    image:
+      "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "saffron-noir",
+    name: "Saffron Noir",
     category: "Warm & Spicy",
-    notes: "Tonka, cinnamon, incense",
-    price: 136,
+    mood: "Night Out",
+    concentration: "Extrait de Parfum",
+    price: 162,
+    size: "100ml",
+    notes: ["Saffron", "Plum", "Labdanum"],
+    description:
+      "A shadowy saffron perfume wrapped in juicy plum and resinous warmth.",
     image:
-      "https://images.unsplash.com/photo-1610240644455-3edc55c375fe?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1595425964073-0f04d40f2c4f?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    id: "sable-iris",
-    name: "Sable Iris",
-    category: "Woody Intense",
-    notes: "Iris, vetiver, suede",
-    price: 141,
+    id: "linen-neroli",
+    name: "Linen Neroli",
+    category: "Fresh Citrus",
+    mood: "Clean Summer",
+    concentration: "Eau de Parfum",
+    price: 112,
+    size: "90ml",
+    notes: ["Neroli", "Lemon", "Amberwood"],
+    description:
+      "A crisp citrus blend that feels like sunlit linen and a polished white shirt.",
     image:
-      "https://images.unsplash.com/photo-1595425964073-0f04d40f2c4f?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    id: "ciel-neroli",
-    name: "Ciel Neroli",
-    category: "Citrus Aromatic",
-    notes: "Neroli, lemon zest, amberwood",
-    price: 108,
-    image:
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
 const storageKeys = {
-  cart: "lueur_cart",
-  orders: "lueur_orders",
+  cart: "the_essence_cart",
+  orders: "the_essence_orders",
+  wishlist: "the_essence_wishlist",
 };
+
 const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -93,348 +135,218 @@ const getSavedData = (key, fallback) => {
 
 let cart = getSavedData(storageKeys.cart, []);
 let orders = getSavedData(storageKeys.orders, []);
-let orderFallbackCounter = 0;
+let wishlist = getSavedData(storageKeys.wishlist, []);
+let fallbackOrderCounter = orders.length;
 
+const page = document.body.dataset.page || "";
 const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav");
-const productGrid = document.querySelector("#product-grid");
-const searchInput = document.querySelector("#search");
-const categoryFilter = document.querySelector("#category-filter");
-const catalogStatus = document.querySelector("#catalog-status");
-const cartList = document.querySelector("#cart-list");
-const cartSubtotal = document.querySelector("#cart-subtotal");
-const cartStatus = document.querySelector("#cart-status");
-const checkoutForm = document.querySelector("#checkout-form");
-const checkoutStatus = document.querySelector("#checkout-status");
-const clearCartButton = document.querySelector("#clear-cart");
-const paymentMethod = document.querySelector("#payment-method");
-const paymentDetail = document.querySelector("#payment-detail");
-const paymentDetailText = document.querySelector("#payment-detail-text");
-const orderHistory = document.querySelector("#order-history");
-const productCount = document.querySelector("#product-count");
-const cartCount = document.querySelector("#cart-count");
-const orderCount = document.querySelector("#order-count");
-const chatWindow = document.querySelector("#chat-window");
-const chatForm = document.querySelector("#chat-form");
-const chatInput = document.querySelector("#chat-input");
-const quickQuestions = document.querySelector("#quick-questions");
+const siteNav = document.querySelector(".site-nav");
+
+const saveStore = () => {
+  localStorage.setItem(storageKeys.cart, JSON.stringify(cart));
+  localStorage.setItem(storageKeys.orders, JSON.stringify(orders));
+  localStorage.setItem(storageKeys.wishlist, JSON.stringify(wishlist));
+};
 
 const formatPrice = (value) => currencyFormatter.format(value);
-const generateOrderId = () => {
-  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
-    return crypto.randomUUID();
-  }
-  orderFallbackCounter += 1;
-  return `order-${Date.now()}-${orderFallbackCounter}`;
-};
 
 const setStatus = (element, message, type = "") => {
   if (!(element instanceof HTMLElement)) return;
   element.textContent = message;
   element.classList.remove("success", "error");
-  if (type) {
-    element.classList.add(type);
+  if (type) element.classList.add(type);
+};
+
+const generateOrderId = () => {
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
   }
+  fallbackOrderCounter += 1;
+  return `essence-order-${Date.now()}-${fallbackOrderCounter}`;
 };
 
-const persistData = () => {
-  localStorage.setItem(storageKeys.cart, JSON.stringify(cart));
-  localStorage.setItem(storageKeys.orders, JSON.stringify(orders));
-};
+const findProduct = (id) => products.find((product) => product.id === id);
+const cartItemCount = () => cart.reduce((sum, item) => sum + item.quantity, 0);
+const cartSubtotal = () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+const isWishlisted = (productId) => wishlist.includes(productId);
+const escapeHTML = (value) =>
+  String(value).replace(/[&<>"']/g, (character) => {
+    const replacements = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return replacements[character] || character;
+  });
 
-const updateStats = () => {
-  if (productCount) productCount.textContent = String(products.length);
-  if (cartCount) {
-    const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCount.textContent = String(totalCount);
-  }
-  if (orderCount) orderCount.textContent = String(orders.length);
-};
-
-const getFilteredProducts = () => {
-  const query = searchInput instanceof HTMLInputElement ? searchInput.value.trim().toLowerCase() : "";
-  const category = categoryFilter instanceof HTMLSelectElement ? categoryFilter.value : "all";
-
-  return products.filter((product) => {
-    const queryMatches =
-      !query ||
-      product.name.toLowerCase().includes(query) ||
-      product.notes.toLowerCase().includes(query) ||
-      product.category.toLowerCase().includes(query);
-    const categoryMatches = category === "all" || product.category === category;
-    return queryMatches && categoryMatches;
+const renderSharedCounts = () => {
+  document.querySelectorAll("[data-cart-count]").forEach((node) => {
+    node.textContent = String(cartItemCount());
+  });
+  document.querySelectorAll("[data-wishlist-count]").forEach((node) => {
+    node.textContent = String(wishlist.length);
+  });
+  document.querySelectorAll("[data-product-count]").forEach((node) => {
+    node.textContent = String(products.length);
+  });
+  document.querySelectorAll("[data-order-count]").forEach((node) => {
+    node.textContent = String(orders.length);
   });
 };
 
-const renderProducts = () => {
-  if (!(productGrid instanceof HTMLElement)) return;
-
-  const filteredProducts = getFilteredProducts();
-  if (!filteredProducts.length) {
-    productGrid.innerHTML = "";
-    setStatus(catalogStatus, "No perfumes found. Try a different filter.", "error");
-    return;
-  }
-
-  setStatus(catalogStatus, `${filteredProducts.length} perfume(s) available.`, "success");
-  productGrid.innerHTML = filteredProducts
-    .map(
-      (product) => `
-      <article class="product-card">
-        <img src="${product.image}" alt="${product.name} perfume bottle" />
-        <div class="product-card-body">
-          <p class="label">${product.category}</p>
-          <h3>${product.name}</h3>
-          <p>${product.notes}</p>
-          <div class="price-row">
-            <span class="price">${formatPrice(product.price)}</span>
-            <button class="btn btn-primary" type="button" data-add-product="${product.id}">Add to Cart</button>
-          </div>
+const renderProductCard = (product) => `
+  <article class="product-card card">
+    <div class="product-card-image">
+      <img src="${product.image}" alt="${escapeHTML(product.name)} perfume bottle" />
+      <div class="product-actions-top">
+        <span class="badge">${escapeHTML(product.category)}</span>
+        <button
+          class="icon-btn ${isWishlisted(product.id) ? "active" : ""}"
+          type="button"
+          aria-label="Toggle wishlist"
+          data-toggle-wishlist="${product.id}"
+        >♥</button>
+      </div>
+    </div>
+    <div class="product-card-body">
+      <div class="product-meta">
+        <span>${escapeHTML(product.mood)}</span>
+        <span>${escapeHTML(product.concentration)}</span>
+      </div>
+      <h3>${escapeHTML(product.name)}</h3>
+      <p>${escapeHTML(product.description)}</p>
+      <div class="price-row">
+        <span class="price">${formatPrice(product.price)}</span>
+        <div class="hero-actions">
+          <a class="btn btn-secondary" href="/home/runner/work/Perfume-Shop-Website/Perfume-Shop-Website/product.html?id=${product.id}">Details</a>
+          <button class="btn btn-primary" type="button" data-add-product="${product.id}">Add</button>
         </div>
-      </article>
-      `
-    )
-    .join("");
-};
+      </div>
+    </div>
+  </article>
+`;
 
-const renderCart = () => {
-  if (!(cartList instanceof HTMLElement) || !(cartSubtotal instanceof HTMLElement)) return;
-
-  if (!cart.length) {
-    cartList.innerHTML = '<li class="cart-item"><p>Your cart is empty.</p></li>';
-    cartSubtotal.textContent = formatPrice(0);
-    updateStats();
-    return;
-  }
-
-  const rows = cart
-    .map(
-      (item) => `
-      <li class="cart-item">
-        <div>
-          <p class="item-name">${item.name}</p>
-          <p>${formatPrice(item.price)} each</p>
-        </div>
-        <label>
-          Qty
-          <input type="number" min="1" value="${item.quantity}" data-qty-product="${item.id}" />
-        </label>
-        <button class="btn btn-ghost" type="button" data-remove-product="${item.id}">Remove</button>
-      </li>
-      `
-    )
-    .join("");
-
-  cartList.innerHTML = rows;
-  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  cartSubtotal.textContent = formatPrice(subtotal);
-  updateStats();
-};
-
-const renderOrders = () => {
-  if (!(orderHistory instanceof HTMLElement)) return;
-
-  if (!orders.length) {
-    orderHistory.innerHTML = "";
-    return;
-  }
-
-  const latestOrders = orders.slice(-3).reverse();
-  orderHistory.innerHTML = latestOrders
-    .map(
-      (order) => `
-      <article>
-        <strong>Order #${order.id}</strong>
-        <p>${order.name} • ${order.paymentMethod}</p>
-        <p>${order.items.length} item(s) • ${formatPrice(order.total)}</p>
-      </article>
-      `
-    )
-    .join("");
+const toggleWishlist = (productId) => {
+  wishlist = isWishlisted(productId)
+    ? wishlist.filter((id) => id !== productId)
+    : [...wishlist, productId];
+  saveStore();
+  renderSharedCounts();
+  if (page === "home") renderHomePage();
+  if (page === "shop") renderShopPage();
+  if (page === "product") renderProductPage();
 };
 
 const addToCart = (productId) => {
-  const product = products.find((item) => item.id === productId);
+  const product = findProduct(productId);
   if (!product) return;
-
   const existing = cart.find((item) => item.id === productId);
   if (existing) {
     existing.quantity += 1;
   } else {
-    cart.push({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      quantity: 1,
-    });
+    cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
   }
-
-  setStatus(cartStatus, `${product.name} added to cart.`, "success");
-  persistData();
-  renderCart();
+  saveStore();
+  renderSharedCounts();
+  const targetStatus = document.querySelector("#catalog-status") || document.querySelector("#cart-status");
+  setStatus(targetStatus, `${product.name} added to cart.`, "success");
+  if (page === "checkout") renderCheckoutPage();
 };
 
 const removeFromCart = (productId) => {
-  const existing = cart.find((item) => item.id === productId);
   cart = cart.filter((item) => item.id !== productId);
-  if (existing) {
-    setStatus(cartStatus, `${existing.name} removed from cart.`, "success");
-  }
-  persistData();
-  renderCart();
+  saveStore();
+  renderSharedCounts();
+  renderCheckoutPage();
+  setStatus(document.querySelector("#cart-status"), "Item removed from cart.", "success");
 };
 
-const updateQuantity = (productId, value) => {
-  const quantity = Number(value);
-  const existingItem = cart.find((item) => item.id === productId);
-  if (!Number.isFinite(quantity) || quantity < 1) {
-    setStatus(cartStatus, "Quantity must be at least 1.", "error");
-    const input = cartList?.querySelector(`input[data-qty-product="${productId}"]`);
-    if (input instanceof HTMLInputElement && existingItem) {
-      input.value = String(existingItem.quantity);
+const updateCartQty = (productId, quantity) => {
+  const parsed = Number(quantity);
+  const cartInput = document.querySelector(`[data-qty-product="${productId}"]`);
+  const existing = cart.find((item) => item.id === productId);
+
+  if (!Number.isFinite(parsed) || parsed < 1 || !existing) {
+    if (cartInput instanceof HTMLInputElement && existing) {
+      cartInput.value = String(existing.quantity);
     }
+    setStatus(document.querySelector("#cart-status"), "Quantity must be at least 1.", "error");
     return;
   }
 
-  cart = cart.map((item) => (item.id === productId ? { ...item, quantity } : item));
-  persistData();
-  renderCart();
+  existing.quantity = parsed;
+  saveStore();
+  renderSharedCounts();
+  renderCheckoutPage();
 };
 
 const clearCart = () => {
   cart = [];
-  persistData();
-  renderCart();
-  setStatus(cartStatus, "Cart has been cleared.", "success");
+  saveStore();
+  renderSharedCounts();
+  renderCheckoutPage();
+  setStatus(document.querySelector("#cart-status"), "Cart cleared successfully.", "success");
 };
 
-const updatePaymentDetailLabel = () => {
-  if (!(paymentMethod instanceof HTMLSelectElement)) return;
-  if (!(paymentDetail instanceof HTMLInputElement)) return;
-  if (!(paymentDetailText instanceof HTMLElement)) return;
+const handleNewsletter = () => {
+  const newsletterForm = document.querySelector("[data-newsletter-form]");
+  const newsletterStatus = document.querySelector("[data-newsletter-status]");
 
-  const method = paymentMethod.value;
-
-  if (method === "Cash on Delivery") {
-    paymentDetail.placeholder = "Optional delivery instructions";
-    paymentDetail.required = false;
-    paymentDetailText.textContent = "Delivery Notes";
-    return;
-  }
-
-  paymentDetail.required = true;
-  if (method === "PayPal") {
-    paymentDetail.placeholder = "PayPal email";
-    paymentDetailText.textContent = "PayPal Account";
-    return;
-  }
-
-  if (method === "Apple Pay") {
-    paymentDetail.placeholder = "Apple Pay ID";
-    paymentDetailText.textContent = "Apple Pay Details";
-    return;
-  }
-
-  paymentDetail.placeholder = "Card number ending in...";
-  paymentDetailText.textContent = "Card Details";
+  newsletterForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!(newsletterForm instanceof HTMLFormElement)) return;
+    newsletterForm.reset();
+    setStatus(newsletterStatus, "You're subscribed to The Essence launch list.", "success");
+  });
 };
 
-const createOrder = (formData) => {
-  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const newOrder = {
-    id: generateOrderId(),
-    name: formData.get("name"),
-    email: formData.get("email"),
-    address: formData.get("address"),
-    phone: formData.get("phone"),
-    paymentMethod: formData.get("paymentMethod"),
-    total: subtotal,
-    items: cart,
+const renderHomePage = () => {
+  const featuredGrid = document.querySelector("#home-featured");
+  if (!(featuredGrid instanceof HTMLElement)) return;
+  featuredGrid.innerHTML = products.slice(0, 3).map(renderProductCard).join("");
+};
+
+const getShopResults = () => {
+  const searchInput = document.querySelector("#search");
+  const categoryFilter = document.querySelector("#category-filter");
+  const sortFilter = document.querySelector("#sort-filter");
+
+  const query = searchInput instanceof HTMLInputElement ? searchInput.value.trim().toLowerCase() : "";
+  const category = categoryFilter instanceof HTMLSelectElement ? categoryFilter.value : "all";
+  const sort = sortFilter instanceof HTMLSelectElement ? sortFilter.value : "featured";
+  const matchesQuery = (text) => text.toLowerCase().includes(query);
+
+  const filtered = products.filter((product) => {
+    const queryMatch =
+      !query ||
+      matchesQuery(product.name) ||
+      matchesQuery(product.category) ||
+      matchesQuery(product.mood) ||
+      product.notes.some((note) => matchesQuery(note));
+    const categoryMatch = category === "all" || product.category === category;
+    return queryMatch && categoryMatch;
+  });
+
+  const sorters = {
+    "featured": () => 0,
+    "price-asc": (a, b) => a.price - b.price,
+    "price-desc": (a, b) => b.price - a.price,
+    "name-asc": (a, b) => a.name.localeCompare(b.name),
   };
 
-  orders.push(newOrder);
-  cart = [];
-  persistData();
-  renderCart();
-  renderOrders();
-  updateStats();
-  setStatus(
-    checkoutStatus,
-    `Order #${newOrder.id} placed successfully. Payment method: ${newOrder.paymentMethod}.`,
-    "success"
-  );
+  return [...filtered].sort(sorters[sort] || sorters.featured);
 };
 
-const assistantReplies = {
-  greeting:
-    "Hi! I'm your Lueur AI assistant. I can suggest perfumes, explain payment options, and help with your cart.",
-  shipping: "We dispatch within 24 hours and share tracking details by email once your order is placed.",
-  payment:
-    "We support Card, PayPal, Apple Pay, and Cash on Delivery. Choose a method during checkout.",
-  order: "To place an order: add items to cart, fill checkout details, choose payment method, and submit.",
-  recommendation:
-    "If you like warm scents, try Velour Elixir or Ember Atelier. For fresh daytime wear, pick Ciel Neroli.",
-  cart: () => {
-    if (!cart.length) return "Your cart is empty right now. Browse perfumes and click Add to Cart.";
-    const summary = cart.map((item) => `${item.name} x${item.quantity}`).join(", ");
-    return `Your cart currently has: ${summary}.`;
-  },
-};
+const renderShopPage = () => {
+  const shopGrid = document.querySelector("#shop-grid");
+  const categoryFilter = document.querySelector("#category-filter");
+  const status = document.querySelector("#catalog-status");
+  if (!(shopGrid instanceof HTMLElement)) return;
 
-const botAnswer = (message) => {
-  const text = message.toLowerCase();
-
-  if (text.includes("hello") || text.includes("hi")) return assistantReplies.greeting;
-  if (text.includes("ship") || text.includes("delivery")) return assistantReplies.shipping;
-  if (text.includes("pay") || text.includes("card")) return assistantReplies.payment;
-  if (text.includes("recommend") || text.includes("best") || text.includes("suggest")) {
-    return assistantReplies.recommendation;
-  }
-  if (text.includes("order") || text.includes("checkout")) return assistantReplies.order;
-  if (text.includes("cart")) {
-    return typeof assistantReplies.cart === "function" ? assistantReplies.cart() : "";
-  }
-
-  return "I can help with recommendations, cart details, shipping, and payments. Ask me anything about your shopping journey.";
-};
-
-const appendChatMessage = (content, role) => {
-  if (!(chatWindow instanceof HTMLElement)) return;
-
-  const message = document.createElement("div");
-  message.className = `chat-message ${role}`;
-  message.textContent = content;
-  chatWindow.appendChild(message);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-};
-
-const setQuickQuestions = () => {
-  if (!(quickQuestions instanceof HTMLElement)) return;
-
-  const prompts = [
-    "Recommend a perfume",
-    "What payment methods do you support?",
-    "How fast is shipping?",
-    "Show my cart status",
-  ];
-
-  quickQuestions.innerHTML = prompts
-    .map((prompt) => `<button type="button" data-prompt="${prompt}">${prompt}</button>`)
-    .join("");
-};
-
-const bootstrap = () => {
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!expanded));
-      nav.classList.toggle("open");
-    });
-  }
-
-  if (categoryFilter instanceof HTMLSelectElement) {
-    const categories = [...new Set(products.map((product) => product.category))];
-    categories.forEach((category) => {
+  if (categoryFilter instanceof HTMLSelectElement && categoryFilter.options.length === 1) {
+    [...new Set(products.map((product) => product.category))].forEach((category) => {
       const option = document.createElement("option");
       option.value = category;
       option.textContent = category;
@@ -442,88 +354,333 @@ const bootstrap = () => {
     });
   }
 
-  productGrid?.addEventListener("click", (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLElement)) return;
-    const productId = target.getAttribute("data-add-product");
-    if (productId) addToCart(productId);
-  });
+  const results = getShopResults();
+  shopGrid.innerHTML = results.map(renderProductCard).join("");
+  setStatus(status, `${results.length} fragrance(s) ready to shop.`, results.length ? "success" : "error");
+};
 
-  cartList?.addEventListener("click", (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLElement)) return;
-    const productId = target.getAttribute("data-remove-product");
-    if (productId) removeFromCart(productId);
-  });
+const renderProductPage = () => {
+  const detailContainer = document.querySelector("#product-detail");
+  const relatedGrid = document.querySelector("#related-grid");
+  if (!(detailContainer instanceof HTMLElement) || !(relatedGrid instanceof HTMLElement)) return;
 
-  cartList?.addEventListener("change", (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLInputElement)) return;
-    const productId = target.getAttribute("data-qty-product");
-    if (productId) updateQuantity(productId, target.value);
-  });
+  const params = new URLSearchParams(window.location.search);
+  const product = findProduct(params.get("id")) || products[0];
+  const related = products.filter((item) => item.id !== product.id).slice(0, 3);
 
-  clearCartButton?.addEventListener("click", clearCart);
+  detailContainer.innerHTML = `
+    <article class="card product-detail-media">
+      <img src="${product.image}" alt="${escapeHTML(product.name)} perfume bottle" />
+    </article>
+    <article class="card product-detail-copy">
+      <p class="eyebrow">${escapeHTML(product.category)}</p>
+      <h1>${escapeHTML(product.name)}</h1>
+      <div class="product-detail-meta">
+        <span>${escapeHTML(product.mood)}</span>
+        <span>${escapeHTML(product.concentration)}</span>
+        <span>${escapeHTML(product.size)}</span>
+      </div>
+      <p>${escapeHTML(product.description)}</p>
+      <div class="note-list">
+        ${product.notes.map((note) => `<span class="note-chip">${escapeHTML(note)}</span>`).join("")}
+      </div>
+      <div class="size-selector">
+        <span class="size-chip">50ml travel edition</span>
+        <span class="size-chip">${escapeHTML(product.size)} full bottle</span>
+        <span class="size-chip">Discovery duo available</span>
+      </div>
+      <div class="product-detail-actions">
+        <span class="price">${formatPrice(product.price)}</span>
+        <div class="hero-actions">
+          <button class="btn btn-secondary ${isWishlisted(product.id) ? "active" : ""}" type="button" data-toggle-wishlist="${product.id}">
+            ${isWishlisted(product.id) ? "Wishlisted" : "Save to wishlist"}
+          </button>
+          <button class="btn btn-primary" type="button" data-add-product="${product.id}">Add to cart</button>
+        </div>
+      </div>
+    </article>
+  `;
 
-  searchInput?.addEventListener("input", renderProducts);
-  categoryFilter?.addEventListener("change", renderProducts);
+  relatedGrid.innerHTML = related.map(renderProductCard).join("");
+};
 
-  paymentMethod?.addEventListener("change", updatePaymentDetailLabel);
+const updatePaymentField = () => {
+  const paymentMethod = document.querySelector("#payment-method");
+  const paymentDetail = document.querySelector("#payment-detail");
+  const paymentText = document.querySelector("#payment-detail-text");
+
+  if (!(paymentMethod instanceof HTMLSelectElement)) return;
+  if (!(paymentDetail instanceof HTMLInputElement)) return;
+  if (!(paymentText instanceof HTMLElement)) return;
+
+  const method = paymentMethod.value;
+  paymentDetail.required = method !== "Cash on Delivery";
+
+  if (method === "PayPal") {
+    paymentText.textContent = "PayPal account";
+    paymentDetail.placeholder = "PayPal email";
+    return;
+  }
+
+  if (method === "Apple Pay") {
+    paymentText.textContent = "Apple Pay details";
+    paymentDetail.placeholder = "Apple Pay identifier";
+    return;
+  }
+
+  if (method === "Cash on Delivery") {
+    paymentText.textContent = "Delivery note";
+    paymentDetail.placeholder = "Optional instructions for delivery";
+    return;
+  }
+
+  paymentText.textContent = "Payment details";
+  paymentDetail.placeholder = "Card or wallet identifier";
+};
+
+const renderCheckoutPage = () => {
+  const cartList = document.querySelector("#cart-list");
+  const subtotalNode = document.querySelector("#cart-subtotal");
+  const totalNode = document.querySelector("#cart-total");
+  const orderHistory = document.querySelector("#order-history");
+  if (!(cartList instanceof HTMLElement) || !(subtotalNode instanceof HTMLElement) || !(totalNode instanceof HTMLElement)) {
+    return;
+  }
+
+  if (!cart.length) {
+    cartList.innerHTML = `<li class="cart-item"><div class="cart-item-info"><strong>Your cart is empty</strong><span>Visit the shop page to add fragrances.</span></div></li>`;
+  } else {
+    cartList.innerHTML = cart
+      .map(
+        (item) => `
+          <li class="cart-item">
+            <div class="cart-item-info">
+              <strong>${escapeHTML(item.name)}</strong>
+              <span>${formatPrice(item.price)} each</span>
+            </div>
+            <input class="qty-input" type="number" min="1" value="${item.quantity}" data-qty-product="${item.id}" aria-label="Quantity for ${escapeHTML(item.name)}" />
+            <button class="btn btn-secondary" type="button" data-remove-product="${item.id}">Remove</button>
+          </li>
+        `
+      )
+      .join("");
+  }
+
+  subtotalNode.textContent = formatPrice(cartSubtotal());
+  totalNode.textContent = formatPrice(cartSubtotal());
+
+  if (orderHistory instanceof HTMLElement) {
+    orderHistory.innerHTML = orders.length
+      ? orders
+          .slice(-3)
+          .reverse()
+          .map(
+            (order) => `
+              <article>
+                <strong>Order ${escapeHTML(order.id)}</strong>
+                <p>${escapeHTML(order.name)} • ${escapeHTML(order.paymentMethod)} • ${escapeHTML(order.deliveryWindow)}</p>
+                <p>${order.items.length} item(s) • ${formatPrice(order.total)}</p>
+              </article>
+            `
+          )
+          .join("")
+      : "";
+  }
+};
+
+const handleCheckoutSubmit = () => {
+  const checkoutForm = document.querySelector("#checkout-form");
+  const checkoutStatus = document.querySelector("#checkout-status");
 
   checkoutForm?.addEventListener("submit", (event) => {
     event.preventDefault();
-
     if (!cart.length) {
-      setStatus(checkoutStatus, "Add at least one item to cart before checkout.", "error");
+      setStatus(checkoutStatus, "Add at least one product before checkout.", "error");
       return;
     }
-
     if (!(checkoutForm instanceof HTMLFormElement)) return;
+
     const formData = new FormData(checkoutForm);
-    const payment = String(formData.get("paymentMethod") || "").trim();
-    const detail = String(formData.get("paymentDetail") || "").trim();
+    const paymentMethod = String(formData.get("paymentMethod") || "").trim();
+    const paymentDetail = String(formData.get("paymentDetail") || "").trim();
 
-    if (!payment) {
-      setStatus(checkoutStatus, "Please select a payment method.", "error");
+    if (!paymentMethod) {
+      setStatus(checkoutStatus, "Please choose a payment method.", "error");
       return;
     }
 
-    if (payment !== "Cash on Delivery" && !detail) {
-      setStatus(checkoutStatus, "Please provide valid payment details.", "error");
+    if (paymentMethod !== "Cash on Delivery" && !paymentDetail) {
+      setStatus(checkoutStatus, "Please provide payment details.", "error");
       return;
     }
 
-    createOrder(formData);
+    const order = {
+      id: generateOrderId(),
+      name: String(formData.get("name") || "Guest"),
+      paymentMethod,
+      deliveryWindow: String(formData.get("deliveryWindow") || "Standard"),
+      total: cartSubtotal(),
+      items: cart.map((item) => ({ ...item })),
+    };
+
+    orders.push(order);
+    cart = [];
+    saveStore();
+    renderSharedCounts();
+    renderCheckoutPage();
     checkoutForm.reset();
-    updatePaymentDetailLabel();
+    updatePaymentField();
+    setStatus(checkoutStatus, `Order ${order.id} placed successfully.`, "success");
   });
+};
+
+const assistantReply = (message) => {
+  const text = message.toLowerCase();
+
+  if (text.includes("hello") || text.includes("hi")) {
+    return "Hello — I’m The Essence AI concierge. I can help with product recommendations, shipping, payments, and your cart.";
+  }
+  if (text.includes("recommend") || text.includes("best") || text.includes("suggest")) {
+    return "For a rich evening scent, try Noir Amber Extrait or Midnight Oud. For fresh everyday wear, Citrus Halo and Linen Neroli are excellent picks.";
+  }
+  if (text.includes("cart")) {
+    if (!cart.length) return "Your cart is currently empty. Visit Shop to add perfumes you’d like to purchase.";
+    return `Your cart contains ${cart.map((item) => `${item.name} x${item.quantity}`).join(", ")}.`;
+  }
+  if (text.includes("wishlist")) {
+    return wishlist.length
+      ? `You currently have ${wishlist.length} saved fragrance(s) in your wishlist.`
+      : "Your wishlist is empty at the moment.";
+  }
+  if (text.includes("ship") || text.includes("delivery")) {
+    return "We dispatch most orders within 24 hours and offer Standard, Express, and Gift delivery options at checkout.";
+  }
+  if (text.includes("pay") || text.includes("card") || text.includes("paypal") || text.includes("apple")) {
+    return "We support Credit/Debit Card, PayPal, Apple Pay, and Cash on Delivery depending on your location.";
+  }
+  if (text.includes("gift")) {
+    return "Pearl Bloom and Velvet Rose Mist are top gift choices, and every full-size order can be paired with luxury packaging.";
+  }
+  return "Ask me about scent recommendations, payment methods, delivery timing, cart status, or the best perfume for a specific mood.";
+};
+
+const appendChatMessage = (message, role) => {
+  const chatWindow = document.querySelector("#chat-window");
+  if (!(chatWindow instanceof HTMLElement)) return;
+  const bubble = document.createElement("div");
+  bubble.className = `chat-message ${role}`;
+  bubble.textContent = message;
+  chatWindow.appendChild(bubble);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+};
+
+const renderAssistantPage = () => {
+  const quickQuestions = document.querySelector("#quick-questions");
+  const chatWindow = document.querySelector("#chat-window");
+  if (!(quickQuestions instanceof HTMLElement) || !(chatWindow instanceof HTMLElement)) return;
+
+  if (!chatWindow.childElementCount) {
+    appendChatMessage(
+      "Welcome to The Essence AI concierge. I’m here to help you choose fragrances and complete your order.",
+      "bot"
+    );
+  }
+
+  quickQuestions.innerHTML = [
+    "Recommend a warm fragrance",
+    "What payment methods are available?",
+    "How fast is shipping?",
+    "Show my cart status",
+    "Best perfume for gifting",
+  ]
+    .map((prompt) => `<button type="button" data-chat-prompt="${escapeHTML(prompt)}">${escapeHTML(prompt)}</button>`)
+    .join("");
+};
+
+const bindAssistantEvents = () => {
+  const chatForm = document.querySelector("#chat-form");
+  const chatInput = document.querySelector("#chat-input");
+  const quickQuestions = document.querySelector("#quick-questions");
 
   chatForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!(chatInput instanceof HTMLInputElement)) return;
-    const message = chatInput.value.trim();
-    if (!message) return;
-    appendChatMessage(message, "user");
-    appendChatMessage(botAnswer(message), "bot");
+    const question = chatInput.value.trim();
+    if (!question) return;
+    appendChatMessage(question, "user");
+    appendChatMessage(assistantReply(question), "bot");
     chatInput.value = "";
   });
 
   quickQuestions?.addEventListener("click", (event) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) return;
-    const prompt = target.getAttribute("data-prompt");
+    const prompt = target.getAttribute("data-chat-prompt");
     if (!prompt) return;
     appendChatMessage(prompt, "user");
-    appendChatMessage(botAnswer(prompt), "bot");
+    appendChatMessage(assistantReply(prompt), "bot");
   });
-
-  renderProducts();
-  renderCart();
-  renderOrders();
-  updateStats();
-  updatePaymentDetailLabel();
-  setQuickQuestions();
-  appendChatMessage(assistantReplies.greeting, "bot");
 };
 
-bootstrap();
+const bindGlobalEvents = () => {
+  menuToggle?.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+    siteNav?.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+
+    const addId = target.getAttribute("data-add-product");
+    if (addId) addToCart(addId);
+
+    const wishlistId = target.getAttribute("data-toggle-wishlist");
+    if (wishlistId) toggleWishlist(wishlistId);
+
+    const removeId = target.getAttribute("data-remove-product");
+    if (removeId) removeFromCart(removeId);
+  });
+
+  document.addEventListener("change", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+
+    if (target.matches("#search") || target.matches("#category-filter") || target.matches("#sort-filter")) {
+      renderShopPage();
+    }
+
+    if (target.matches("#payment-method")) {
+      updatePaymentField();
+    }
+
+    if (target instanceof HTMLInputElement) {
+      const productId = target.getAttribute("data-qty-product");
+      if (productId) updateCartQty(productId, target.value);
+    }
+  });
+
+  document.querySelector("#clear-cart")?.addEventListener("click", clearCart);
+};
+
+const initPage = () => {
+  renderSharedCounts();
+  handleNewsletter();
+  bindGlobalEvents();
+
+  if (page === "home") renderHomePage();
+  if (page === "shop") renderShopPage();
+  if (page === "product") renderProductPage();
+  if (page === "checkout") {
+    renderCheckoutPage();
+    handleCheckoutSubmit();
+    updatePaymentField();
+  }
+  if (page === "assistant") {
+    renderAssistantPage();
+    bindAssistantEvents();
+  }
+};
+
+initPage();

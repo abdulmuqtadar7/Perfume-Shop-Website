@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Essence | Product Details</title>
+    <meta name="description" content="View fragrance details, notes, size options, and related perfumes from The Essence." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body data-page="product">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">E</span>
+          <span><strong>The Essence</strong><small>Luxury perfumery</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="./index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./product.html?id=noir-amber">Product</a>
+          <a href="./checkout.html">Checkout <span class="count-pill" data-cart-count>0</span></a>
+          <a href="./assistant.html">AI Assistant</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section product-layout" id="product-detail"></section>
+
+        <section class="section detail-panels">
+          <article class="card">
+            <p class="eyebrow">Included with every order</p>
+            <h3>Luxury packaging & concierge support</h3>
+            <ul class="feature-list">
+              <li>Complimentary sample duo with every 100ml bottle</li>
+              <li>Gift-ready box and message card option</li>
+              <li>Insured shipping and order tracking</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="eyebrow">Fragrance promise</p>
+            <h3>Crafted for longevity and projection</h3>
+            <p class="muted-copy">
+              Our extrait and eau de parfum compositions are formulated to deliver elegant wear from day to evening.
+            </p>
+          </article>
+        </section>
+
+        <section class="section section-head">
+          <div>
+            <p class="eyebrow">Related scents</p>
+            <h2>Continue exploring</h2>
+          </div>
+        </section>
+        <section class="product-grid" id="related-grid"></section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>The Essence</strong>
+          <p>Shop refined scent stories with seamless online luxury service.</p>
+        </div>
+        <div class="footer-links">
+          <a href="./shop.html">Shop</a>
+          <a href="./assistant.html">AI Assistant</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
