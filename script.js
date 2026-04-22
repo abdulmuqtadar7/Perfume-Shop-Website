@@ -137,6 +137,8 @@ let cart = getSavedData(storageKeys.cart, []);
 let orders = getSavedData(storageKeys.orders, []);
 let wishlist = getSavedData(storageKeys.wishlist, []);
 let fallbackOrderCounter = orders.length;
+const checkoutListenerState = { bound: false };
+const assistantListenerState = { bound: false };
 
 const page = document.body.dataset.page || "";
 const menuToggle = document.querySelector(".menu-toggle");
@@ -149,6 +151,13 @@ const saveStore = () => {
 };
 
 const formatPrice = (value) => currencyFormatter.format(value);
+const paymentLabels = {
+  card: "Credit / Debit Card",
+  paypal: "PayPal",
+  "apple-pay": "Apple Pay",
+  "cash-on-delivery": "Cash on Delivery",
+};
+const getPaymentLabel = (value) => paymentLabels[value] || "Payment";
 
 const setStatus = (element, message, type = "") => {
   if (!(element instanceof HTMLElement)) return;
@@ -162,13 +171,22 @@ const generateOrderId = () => {
     return crypto.randomUUID();
   }
   fallbackOrderCounter += 1;
-  return `essence-order-${Date.now()}-${fallbackOrderCounter}`;
+  return `essence-order-${Date.now()}-${fallbackOrderCounter}-${Math.floor(Math.random() * 100000)}`;
 };
 
 const findProduct = (id) => products.find((product) => product.id === id);
 const cartItemCount = () => cart.reduce((sum, item) => sum + item.quantity, 0);
 const cartSubtotal = () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 const isWishlisted = (productId) => wishlist.includes(productId);
+const safeImageUrl = (value) => {
+  try {
+    const parsed = new URL(value);
+    if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+      return parsed.toString();
+    }
+  } catch {}
+  return products[0].image;
+};
 const escapeHTML = (value) =>
   String(value).replace(/[&<>"']/g, (character) => {
     const replacements = {
@@ -199,7 +217,7 @@ const renderSharedCounts = () => {
 const renderProductCard = (product) => `
   <article class="product-card card">
     <div class="product-card-image">
-      <img src="${product.image}" alt="${escapeHTML(product.name)} perfume bottle" />
+      <img src="${safeImageUrl(product.image)}" alt="${escapeHTML(product.name)} perfume bottle" />
       <div class="product-actions-top">
         <span class="badge">${escapeHTML(product.category)}</span>
         <button
@@ -267,12 +285,13 @@ const updateCartQty = (productId, quantity) => {
   const parsed = Number(quantity);
   const cartInput = document.querySelector(`[data-qty-product="${productId}"]`);
   const existing = cart.find((item) => item.id === productId);
+  const maxQuantity = 99;
 
-  if (!Number.isFinite(parsed) || parsed < 1 || !existing) {
+  if (!Number.isFinite(parsed) || parsed < 1 || parsed > maxQuantity || !existing) {
     if (cartInput instanceof HTMLInputElement && existing) {
       cartInput.value = String(existing.quantity);
     }
-    setStatus(document.querySelector("#cart-status"), "Quantity must be at least 1.", "error");
+    setStatus(document.querySelector("#cart-status"), `Quantity must be between 1 and ${maxQuantity}.`, "error");
     return;
   }
 
@@ -378,7 +397,7 @@ const renderProductPage = () => {
 
   detailContainer.innerHTML = `
     <article class="card product-detail-media">
-      <img src="${product.image}" alt="${escapeHTML(product.name)} perfume bottle" />
+      <img src="${safeImageUrl(product.image)}" alt="${escapeHTML(product.name)} perfume bottle" />
     </article>
     <article class="card product-detail-copy">
       ${notFoundMessage}
@@ -423,21 +442,21 @@ const updatePaymentField = () => {
   if (!(paymentText instanceof HTMLElement)) return;
 
   const method = paymentMethod.value;
-  paymentDetail.required = method !== "Cash on Delivery";
+  paymentDetail.required = method !== "cash-on-delivery";
 
-  if (method === "PayPal") {
+  if (method === "paypal") {
     paymentText.textContent = "PayPal account";
     paymentDetail.placeholder = "PayPal email";
     return;
   }
 
-  if (method === "Apple Pay") {
+  if (method === "apple-pay") {
     paymentText.textContent = "Apple Pay details";
     paymentDetail.placeholder = "Apple Pay identifier";
     return;
   }
 
-  if (method === "Cash on Delivery") {
+  if (method === "cash-on-delivery") {
     paymentText.textContent = "Delivery note";
     paymentDetail.placeholder = "Optional instructions for delivery";
     return;
@@ -487,7 +506,7 @@ const renderCheckoutPage = () => {
             (order) => `
               <article>
                 <strong>Order ${escapeHTML(order.id)}</strong>
-                <p>${escapeHTML(order.name)} • ${escapeHTML(order.paymentMethod)} • ${escapeHTML(order.deliveryWindow)}</p>
+                <p>${escapeHTML(order.name)} • ${escapeHTML(getPaymentLabel(order.paymentMethod))} • ${escapeHTML(order.deliveryWindow)}</p>
                 <p>${order.items.length} item(s) • ${formatPrice(order.total)}</p>
               </article>
             `
@@ -500,14 +519,14 @@ const renderCheckoutPage = () => {
 const handleCheckoutSubmit = () => {
   const checkoutForm = document.querySelector("#checkout-form");
   const checkoutStatus = document.querySelector("#checkout-status");
+  if (checkoutListenerState.bound || !(checkoutForm instanceof HTMLFormElement)) return;
 
-  checkoutForm?.addEventListener("submit", (event) => {
+  checkoutForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!cart.length) {
       setStatus(checkoutStatus, "Add at least one product before checkout.", "error");
       return;
     }
-    if (!(checkoutForm instanceof HTMLFormElement)) return;
 
     const formData = new FormData(checkoutForm);
     const paymentMethod = String(formData.get("paymentMethod") || "").trim();
@@ -518,7 +537,7 @@ const handleCheckoutSubmit = () => {
       return;
     }
 
-    if (paymentMethod !== "Cash on Delivery" && !paymentDetail) {
+    if (paymentMethod !== "cash-on-delivery" && !paymentDetail) {
       setStatus(checkoutStatus, "Please provide payment details.", "error");
       return;
     }
@@ -541,6 +560,8 @@ const handleCheckoutSubmit = () => {
     updatePaymentField();
     setStatus(checkoutStatus, `Order ${order.id} placed successfully.`, "success");
   });
+
+  checkoutListenerState.bound = true;
 };
 
 const assistantReply = (message) => {
@@ -612,8 +633,11 @@ const bindAssistantEvents = () => {
   const chatForm = document.querySelector("#chat-form");
   const chatInput = document.querySelector("#chat-input");
   const quickQuestions = document.querySelector("#quick-questions");
+  if (assistantListenerState.bound || !(chatForm instanceof HTMLFormElement) || !(quickQuestions instanceof HTMLElement)) {
+    return;
+  }
 
-  chatForm?.addEventListener("submit", (event) => {
+  chatForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!(chatInput instanceof HTMLInputElement)) return;
     const question = chatInput.value.trim();
@@ -623,7 +647,7 @@ const bindAssistantEvents = () => {
     chatInput.value = "";
   });
 
-  quickQuestions?.addEventListener("click", (event) => {
+  quickQuestions.addEventListener("click", (event) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) return;
     const prompt = target.getAttribute("data-chat-prompt");
@@ -631,6 +655,8 @@ const bindAssistantEvents = () => {
     appendChatMessage(prompt, "user");
     appendChatMessage(assistantReply(prompt), "bot");
   });
+
+  assistantListenerState.bound = true;
 };
 
 const bindGlobalEvents = () => {
@@ -669,6 +695,14 @@ const bindGlobalEvents = () => {
     if (target instanceof HTMLInputElement) {
       const productId = target.getAttribute("data-qty-product");
       if (productId) updateCartQty(productId, target.value);
+    }
+  });
+
+  document.addEventListener("input", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    if (target.matches("#search")) {
+      renderShopPage();
     }
   });
 
