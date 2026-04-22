@@ -77,6 +77,10 @@ const storageKeys = {
   cart: "lueur_cart",
   orders: "lueur_orders",
 };
+const currencyFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
 const getSavedData = (key, fallback) => {
   try {
@@ -114,8 +118,13 @@ const chatForm = document.querySelector("#chat-form");
 const chatInput = document.querySelector("#chat-input");
 const quickQuestions = document.querySelector("#quick-questions");
 
-const formatPrice = (value) => `$${value.toFixed(2)}`;
-const generateOrderId = () => `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+const formatPrice = (value) => currencyFormatter.format(value);
+const generateOrderId = () => {
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
+  }
+  return `${Date.now()}-${Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)}`;
+};
 
 const setStatus = (element, message, type = "") => {
   if (!(element instanceof HTMLElement)) return;
@@ -275,9 +284,13 @@ const removeFromCart = (productId) => {
 
 const updateQuantity = (productId, value) => {
   const quantity = Number(value);
+  const existingItem = cart.find((item) => item.id === productId);
   if (!Number.isFinite(quantity) || quantity < 1) {
     setStatus(cartStatus, "Quantity must be at least 1.", "error");
-    renderCart();
+    const input = cartList?.querySelector(`input[data-qty-product="${productId}"]`);
+    if (input instanceof HTMLInputElement && existingItem) {
+      input.value = String(existingItem.quantity);
+    }
     return;
   }
 
