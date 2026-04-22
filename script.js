@@ -104,7 +104,7 @@ const checkoutStatus = document.querySelector("#checkout-status");
 const clearCartButton = document.querySelector("#clear-cart");
 const paymentMethod = document.querySelector("#payment-method");
 const paymentDetail = document.querySelector("#payment-detail");
-const paymentDetailLabel = document.querySelector("#payment-detail-label");
+const paymentDetailText = document.querySelector("#payment-detail-text");
 const orderHistory = document.querySelector("#order-history");
 const productCount = document.querySelector("#product-count");
 const cartCount = document.querySelector("#cart-count");
@@ -115,6 +115,7 @@ const chatInput = document.querySelector("#chat-input");
 const quickQuestions = document.querySelector("#quick-questions");
 
 const formatPrice = (value) => `$${value.toFixed(2)}`;
+const generateOrderId = () => `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
 
 const setStatus = (element, message, type = "") => {
   if (!(element instanceof HTMLElement)) return;
@@ -295,38 +296,38 @@ const clearCart = () => {
 const updatePaymentDetailLabel = () => {
   if (!(paymentMethod instanceof HTMLSelectElement)) return;
   if (!(paymentDetail instanceof HTMLInputElement)) return;
-  if (!(paymentDetailLabel instanceof HTMLLabelElement)) return;
+  if (!(paymentDetailText instanceof HTMLElement)) return;
 
   const method = paymentMethod.value;
 
   if (method === "Cash on Delivery") {
     paymentDetail.placeholder = "Optional delivery instructions";
     paymentDetail.required = false;
-    paymentDetailLabel.childNodes[0].textContent = "Delivery Notes";
+    paymentDetailText.textContent = "Delivery Notes";
     return;
   }
 
   paymentDetail.required = true;
   if (method === "PayPal") {
     paymentDetail.placeholder = "PayPal email";
-    paymentDetailLabel.childNodes[0].textContent = "PayPal Account";
+    paymentDetailText.textContent = "PayPal Account";
     return;
   }
 
   if (method === "Apple Pay") {
     paymentDetail.placeholder = "Apple Pay ID";
-    paymentDetailLabel.childNodes[0].textContent = "Apple Pay Details";
+    paymentDetailText.textContent = "Apple Pay Details";
     return;
   }
 
   paymentDetail.placeholder = "Card number ending in...";
-  paymentDetailLabel.childNodes[0].textContent = "Card Details";
+  paymentDetailText.textContent = "Card Details";
 };
 
 const createOrder = (formData) => {
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const newOrder = {
-    id: Date.now(),
+    id: generateOrderId(),
     name: formData.get("name"),
     email: formData.get("email"),
     address: formData.get("address"),
