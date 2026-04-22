@@ -93,6 +93,7 @@ const getSavedData = (key, fallback) => {
 
 let cart = getSavedData(storageKeys.cart, []);
 let orders = getSavedData(storageKeys.orders, []);
+let orderFallbackCounter = 0;
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
@@ -123,7 +124,8 @@ const generateOrderId = () => {
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
     return crypto.randomUUID();
   }
-  return `${Date.now()}-${Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)}`;
+  orderFallbackCounter += 1;
+  return `order-${Date.now()}-${orderFallbackCounter}`;
 };
 
 const setStatus = (element, message, type = "") => {
@@ -237,7 +239,7 @@ const renderOrders = () => {
     return;
   }
 
-  const latestOrders = [...orders].reverse().slice(0, 3);
+  const latestOrders = orders.slice(-3).reverse();
   orderHistory.innerHTML = latestOrders
     .map(
       (order) => `
@@ -346,7 +348,6 @@ const createOrder = (formData) => {
     address: formData.get("address"),
     phone: formData.get("phone"),
     paymentMethod: formData.get("paymentMethod"),
-    paymentDetail: formData.get("paymentDetail"),
     total: subtotal,
     items: cart,
   };
