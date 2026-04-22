@@ -21,7 +21,9 @@ document.querySelectorAll(".filter-tabs button").forEach((tab) => {
 document.querySelector(".newsletter-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const input = document.querySelector("#email");
+  const status = document.querySelector("#newsletter-status");
   if (!(input instanceof HTMLInputElement)) return;
+  if (!(status instanceof HTMLParagraphElement)) return;
   input.value = "";
-  input.placeholder = "Thanks for subscribing!";
+  status.textContent = "Thank you for subscribing. You are now on the insider list.";
 });
