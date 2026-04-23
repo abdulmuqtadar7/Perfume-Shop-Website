@@ -24,7 +24,7 @@ export default function StoreCallout() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="relative min-h-[320px] md:min-h-[460px]"
+          className="relative min-h-[440px] md:min-h-[480px]"
           style={{
             background:
               "linear-gradient(150deg,#1a120a 0%,#402310 45%,#8a5a2a 100%)",
@@ -51,16 +51,16 @@ export default function StoreCallout() {
                     <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[44%] h-[11%] bg-[#0f0f0f] rounded-b-[2px]" />
                     {/* label */}
                     <div className="absolute left-[10%] right-[10%] top-[22%] bottom-[14%] rounded-[2px] bg-[rgba(250,247,242,.95)] flex flex-col items-center justify-center px-[4%] py-[6%] text-center gap-[2px] shadow-[inset_0_0_0_1px_rgba(0,0,0,.1)]">
-                      <p className="text-[6px] tracking-[0.2em] uppercase text-[#8a6a3c] font-semibold leading-none">
+                      <p className="hidden md:block text-[6px] tracking-[0.2em] uppercase text-[#8a6a3c] font-semibold leading-none">
                         U.B.
                       </p>
-                      <p className="serif text-[10px] leading-[1.05] text-[#1a120a] w-full">
+                      <p className="serif text-[11px] md:text-[10px] leading-[1.05] text-[#1a120a] w-full">
                         {b.name}
                       </p>
-                      <p className="text-[6px] tracking-[0.12em] uppercase text-[#a6773c] w-full leading-[1.15]">
+                      <p className="hidden md:block text-[6px] tracking-[0.12em] uppercase text-[#a6773c] w-full leading-[1.15]">
                         {b.line}
                       </p>
-                      <p className="text-[5.5px] tracking-[0.2em] uppercase text-[#8a6a3c] pt-[2px] mt-[2px] border-t border-black/10 w-full leading-none">
+                      <p className="text-[6px] md:text-[5.5px] tracking-[0.18em] uppercase text-[#8a6a3c] pt-[2px] mt-[2px] border-t border-black/10 w-full leading-none">
                         N° {String(i + 1).padStart(2, "0")}
                       </p>
                     </div>

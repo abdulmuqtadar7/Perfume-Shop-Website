@@ -126,4 +126,13 @@ body {
   white-space: nowrap;
   text-align: center;
 }
+/* On narrow (mobile) cards the bottle label gets too crowded — hide the middle
+   note line and the bottom tag so only the critical info shows. */
+@media (max-width: 639px) {
+  .ub-label__brand { letter-spacing: 0.14em; font-size: clamp(6px, 2.2cqw, 9px); }
+  .ub-label__name  { font-size: clamp(11px, 4cqw, 16px); }
+  .ub-label__line  { font-size: clamp(8px, 2.6cqw, 11px); grid-template-columns: 28% 1fr; gap: 3%; }
+  .ub-label__line--heart { display: none; }
+  .ub-label__tag   { display: none; }
+}
 .group:hover .ub-bottle { transform: translate(-50%, -54%); }

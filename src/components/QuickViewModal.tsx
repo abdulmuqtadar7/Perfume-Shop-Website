@@ -61,7 +61,7 @@ export default function QuickViewModal() {
               if (e.target === e.currentTarget) setQuickView(null);
             }}
           >
-            <div className="relative bg-white w-full max-w-4xl rounded-2xl overflow-hidden shadow-card-hover grid md:grid-cols-2 max-h-[90vh]">
+            <div className="relative bg-white w-full max-w-4xl rounded-2xl overflow-hidden shadow-card-hover grid md:grid-cols-2 gap-0 md:gap-6 max-h-[90vh]">
               <button
                 onClick={() => setQuickView(null)}
                 className="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur grid place-items-center border border-ink/10 hover:bg-ink hover:text-white transition"
@@ -71,10 +71,16 @@ export default function QuickViewModal() {
               </button>
 
               <div
-                className="relative min-h-[260px] md:min-h-[460px]"
+                className="relative min-h-[280px] md:min-h-[480px]"
                 style={{ background: p.art }}
               >
-                <div className="ub-bottle" style={{ ["--bot" as string]: p.art }} />
+                <div className="ub-bottle" style={{ ["--bot" as string]: p.art }}>
+                  <div className="ub-label">
+                    <p className="ub-label__brand">USMAN BAIG</p>
+                    <p className="ub-label__name serif">{p.name}</p>
+                    <p className="ub-label__tag">{p.category}</p>
+                  </div>
+                </div>
                 <span className="absolute top-4 left-4 bg-ink text-white text-[11px] font-semibold tracking-wide px-2 py-1 rounded">
                   -{p.discountPct}%
                 </span>
@@ -147,7 +153,14 @@ export default function QuickViewModal() {
                   </div>
                 )}
 
-                <div className="mt-6 flex items-center gap-3">
+                <div className="mt-6 flex items-center justify-between text-sm border-t border-ink/10 pt-4">
+                  <span className="text-ink-muted uppercase tracking-[0.18em] text-[11px]">
+                    Line total
+                  </span>
+                  <span className="serif text-xl text-ink">{rs(p.price * qty)}</span>
+                </div>
+
+                <div className="mt-4 flex items-center gap-3">
                   <div className="inline-flex items-center border border-ink/15 rounded-full">
                     <button
                       onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -172,9 +185,9 @@ export default function QuickViewModal() {
                       setCartOpen(true);
                       pushToast(`${p.name} added to cart`);
                     }}
-                    className="flex-1 py-3 rounded-full bg-ink text-white text-sm font-medium hover:bg-gold hover:text-ink transition-colors duration-300"
+                    className="flex-1 px-6 py-3 rounded-full bg-ink text-white text-sm font-semibold tracking-wide hover:bg-gold hover:text-ink hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
                   >
-                    ADD TO CART · {rs(p.price * qty)}
+                    Add to Cart
                   </button>
                   <button
                     onClick={() => {

@@ -55,7 +55,7 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
                 <span>Top</span>
                 <span>{p.notes.top}</span>
               </p>
-              <p className="ub-label__line">
+              <p className="ub-label__line ub-label__line--heart">
                 <span>Heart</span>
                 <span>{p.notes.heart}</span>
               </p>
@@ -97,27 +97,27 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
         </div>
       </div>
 
-      <div className="p-4 flex flex-col gap-1.5 flex-1">
-        <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-          <span>{p.category}</span>
-          <span className="flex items-center gap-1 text-amber-500">
+      <div className="p-3 md:p-4 flex flex-col gap-1 md:gap-1.5 flex-1">
+        <div className="flex items-center justify-between text-[10px] md:text-[11px] uppercase tracking-[0.16em] md:tracking-[0.18em] text-ink-muted">
+          <span className="truncate">{p.category}</span>
+          <span className="flex items-center gap-1 text-amber-500 shrink-0">
             <Star size={12} fill="currentColor" className="stroke-0" />
             <span className="text-ink-muted">{p.rating.toFixed(1)}</span>
           </span>
         </div>
-        <h3 className="serif text-lg leading-snug">{p.name}</h3>
-        <p className="text-xs text-ink-muted italic line-clamp-1">
+        <h3 className="serif text-base md:text-lg leading-snug line-clamp-1">{p.name}</h3>
+        <p className="hidden md:block text-xs text-ink-muted italic line-clamp-1">
           {p.notes.top} · {p.notes.heart}
         </p>
 
-        <div className="mt-1 flex items-baseline">
-          <span className="price-strike">{rs(p.originalPrice)}</span>
-          <span className="price-now">{rs(p.price)}</span>
+        <div className="mt-1 flex items-baseline flex-wrap gap-x-2">
+          <span className="price-strike whitespace-nowrap">{rs(p.originalPrice)}</span>
+          <span className="price-now whitespace-nowrap">{rs(p.price)}</span>
         </div>
 
         <button
           onClick={onAdd}
-          className="mt-3 w-full py-3 rounded-full text-sm font-medium bg-ink text-white hover:bg-gold hover:text-ink hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+          className="mt-2 md:mt-3 w-full px-4 md:px-6 py-2.5 md:py-3 rounded-full text-[13px] md:text-sm font-semibold tracking-wide bg-ink text-white hover:bg-gold hover:text-ink hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
         >
           {p.variants && p.variants.length > 0 ? "Choose Options" : "Add to Cart"}
         </button>

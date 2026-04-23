@@ -123,7 +123,7 @@ export default function Testimonials() {
                   </div>
                 </div>
               </div>
-              <div className="relative w-[160px] md:w-[240px] aspect-square rounded-xl overflow-hidden border border-ink/10" style={{ background: r.grad }}>
+              <div className="relative w-[220px] sm:w-[240px] aspect-square rounded-xl overflow-hidden border border-ink/10 shrink-0" style={{ background: r.grad }}>
                 <div className="ub-bottle" style={{ ["--bot" as string]: r.grad }}>
                   <div className="ub-label">
                     <p className="ub-label__brand">USMAN BAIG</p>
@@ -133,7 +133,7 @@ export default function Testimonials() {
                         <span>Top</span>
                         <span>{r.notes.top}</span>
                       </p>
-                      <p className="ub-label__line">
+                      <p className="ub-label__line ub-label__line--heart">
                         <span>Heart</span>
                         <span>{r.notes.heart}</span>
                       </p>
