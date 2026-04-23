@@ -50,18 +50,20 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
           <div className="ub-label">
             <p className="ub-label__brand">USMAN BAIG</p>
             <p className="ub-label__name serif">{p.name}</p>
-            <p className="ub-label__line">
-              <span>Top</span>
-              {p.notes.top.split(",")[0]}
-            </p>
-            <p className="ub-label__line">
-              <span>Heart</span>
-              {p.notes.heart.split(",")[0]}
-            </p>
-            <p className="ub-label__line">
-              <span>Base</span>
-              {p.notes.base.split(",")[0]}
-            </p>
+            <div className="ub-label__notes">
+              <p className="ub-label__line">
+                <span>Top</span>
+                <span>{p.notes.top}</span>
+              </p>
+              <p className="ub-label__line">
+                <span>Heart</span>
+                <span>{p.notes.heart}</span>
+              </p>
+              <p className="ub-label__line">
+                <span>Base</span>
+                <span>{p.notes.base}</span>
+              </p>
+            </div>
             <p className="ub-label__tag">Lasts 12–14 hrs</p>
           </div>
         </div>

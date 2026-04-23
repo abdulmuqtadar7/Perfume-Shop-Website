@@ -4,7 +4,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const REVIEWS = [
+type Review = {
+  rating: number;
+  headline: string;
+  body: string;
+  name: string;
+  date: string;
+  product: string;
+  grad: string;
+  notes: { top: string; heart: string; base: string };
+};
+
+const REVIEWS: Review[] = [
   {
     rating: 5,
     headline: "Mughal Perfume truly stands out",
@@ -14,6 +25,7 @@ const REVIEWS = [
     date: "Mar 12, 2026",
     product: "Mughal",
     grad: "linear-gradient(155deg,#e7cfa4,#6b3e1b)",
+    notes: { top: "Saffron, pink pepper", heart: "Oud, Bulgarian rose", base: "Amber, sandalwood" },
   },
   {
     rating: 5,
@@ -24,6 +36,7 @@ const REVIEWS = [
     date: "Feb 28, 2026",
     product: "Hajj Perfume",
     grad: "linear-gradient(155deg,#f3e6cc,#9a7a48)",
+    notes: { top: "Rose, citrus zest", heart: "Oud, musk", base: "Sandalwood, amber" },
   },
   {
     rating: 5,
@@ -34,6 +47,7 @@ const REVIEWS = [
     date: "Jan 19, 2026",
     product: "Citrus Breeze",
     grad: "linear-gradient(155deg,#fff2b3,#cdbd4f)",
+    notes: { top: "Bergamot, yuzu", heart: "Neroli", base: "White musk" },
   },
   {
     rating: 5,
@@ -44,6 +58,7 @@ const REVIEWS = [
     date: "Dec 04, 2025",
     product: "Bakhoor Wood",
     grad: "linear-gradient(155deg,#7a4a23,#2b130a)",
+    notes: { top: "Oud wood", heart: "Smoked amber", base: "Agarwood resin" },
   },
 ];
 
@@ -108,11 +123,28 @@ export default function Testimonials() {
                   </div>
                 </div>
               </div>
-              <div className="relative w-[160px] md:w-[220px] aspect-square rounded-xl overflow-hidden border border-ink/10" style={{ background: r.grad }}>
-                <div className="ub-bottle" style={{ ["--bot" as string]: r.grad }} />
-                <span className="absolute bottom-3 left-3 text-white/90 text-xs uppercase tracking-widest">
-                  {r.product}
-                </span>
+              <div className="relative w-[160px] md:w-[240px] aspect-square rounded-xl overflow-hidden border border-ink/10" style={{ background: r.grad }}>
+                <div className="ub-bottle" style={{ ["--bot" as string]: r.grad }}>
+                  <div className="ub-label">
+                    <p className="ub-label__brand">USMAN BAIG</p>
+                    <p className="ub-label__name serif">{r.product}</p>
+                    <div className="ub-label__notes">
+                      <p className="ub-label__line">
+                        <span>Top</span>
+                        <span>{r.notes.top}</span>
+                      </p>
+                      <p className="ub-label__line">
+                        <span>Heart</span>
+                        <span>{r.notes.heart}</span>
+                      </p>
+                      <p className="ub-label__line">
+                        <span>Base</span>
+                        <span>{r.notes.base}</span>
+                      </p>
+                    </div>
+                    <p className="ub-label__tag">Lasts 12–14 hrs</p>
+                  </div>
+                </div>
               </div>
             </motion.article>
           </AnimatePresence>

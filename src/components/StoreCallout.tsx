@@ -3,6 +3,18 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 
+const SHELF = [
+  { name: "Mughal", line: "Extrait de Parfum", grad: "linear-gradient(155deg,#e7cfa4,#6b3e1b)" },
+  { name: "Hajj", line: "Attar · 12ml", grad: "linear-gradient(155deg,#f3e6cc,#9a7a48)" },
+  { name: "Sultan", line: "Oud Extrait", grad: "linear-gradient(155deg,#caa06b,#3f2110)" },
+  { name: "Noor", line: "Eau de Parfum", grad: "linear-gradient(155deg,#f4c9ce,#b26676)" },
+  { name: "Shahi", line: "Oud Attar", grad: "linear-gradient(155deg,#d8a967,#5a3212)" },
+  { name: "Oud Royale", line: "Mukhalat", grad: "linear-gradient(155deg,#b8935a,#3a1f0b)" },
+  { name: "Bakhoor", line: "Oud Wood", grad: "linear-gradient(155deg,#7a4a23,#2b130a)" },
+  { name: "Citrus", line: "Eau Fraîche", grad: "linear-gradient(155deg,#fff2b3,#cdbd4f)" },
+  { name: "Rose Oud", line: "Parfum", grad: "linear-gradient(155deg,#d49ba0,#5a2a2a)" },
+];
+
 export default function StoreCallout() {
   return (
     <section className="container-x py-14 md:py-20">
@@ -20,21 +32,41 @@ export default function StoreCallout() {
         >
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,.25),transparent_40%)]" />
           <div className="absolute inset-6 md:inset-10 rounded-lg border border-gold/25">
-            <div className="absolute left-10 right-10 top-10 bottom-10 grid grid-cols-3 gap-3">
-              {Array.from({ length: 9 }).map((_, i) => (
+            <div className="absolute left-10 right-10 top-10 bottom-14 grid grid-cols-3 gap-3">
+              {SHELF.map((b, i) => (
                 <div
                   key={i}
-                  className="rounded-md border border-gold/20 bg-black/20 relative overflow-hidden"
+                  className="rounded-md border border-gold/20 bg-black/25 relative overflow-hidden flex items-end justify-center pb-1.5"
                 >
+                  {/* mini bottle */}
                   <div
-                    className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[60%] h-[60%] rounded-sm"
+                    className="relative w-[72%] h-[82%] rounded-[3px_3px_6px_6px] overflow-hidden"
                     style={{
-                      background:
-                        "linear-gradient(155deg,rgba(255,255,255,.22),rgba(184,147,90,.65),rgba(55,34,16,.9))",
+                      background: b.grad,
                       boxShadow:
-                        "inset 0 0 0 1px rgba(255,255,255,.1), 0 4px 8px rgba(0,0,0,.35)",
+                        "inset 0 0 0 1px rgba(255,255,255,.18), inset 0 6px 10px rgba(255,255,255,.12), inset 0 -8px 12px rgba(0,0,0,.3), 0 6px 10px rgba(0,0,0,.4)",
                     }}
-                  />
+                  >
+                    {/* cap */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[44%] h-[11%] bg-[#0f0f0f] rounded-b-[2px]" />
+                    {/* label */}
+                    <div className="absolute left-[14%] right-[14%] top-[22%] bottom-[16%] rounded-[2px] bg-[rgba(250,247,242,.95)] flex flex-col items-center justify-center px-[6%] text-center shadow-[inset_0_0_0_1px_rgba(0,0,0,.1)]">
+                      <p
+                        className="text-[6px] tracking-[0.2em] uppercase text-[#8a6a3c] font-semibold leading-none"
+                      >
+                        U.B.
+                      </p>
+                      <p className="serif text-[9px] leading-[1.05] mt-0.5 text-[#1a120a] line-clamp-1 w-full">
+                        {b.name}
+                      </p>
+                      <p className="text-[5.5px] tracking-[0.16em] uppercase text-[#a6773c] mt-0.5 line-clamp-1 w-full">
+                        {b.line}
+                      </p>
+                      <p className="text-[5px] tracking-[0.2em] uppercase text-[#8a6a3c] mt-auto pt-0.5 border-t border-black/10 w-full">
+                        N° {String(i + 1).padStart(2, "0")}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
