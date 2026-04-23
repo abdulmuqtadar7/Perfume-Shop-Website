@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UB Fragrance – Discover Your Signature Scent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A84C',
+            'gold-light': '#F0D080',
+            'gold-dark': '#A07830',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background-image: linear-gradient(to right, rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.35) 100%),
+        url('https://images.unsplash.com/photo-1594035910387-fea47714263f?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-img-wrap { position: relative; overflow: hidden; }
+    .card-img-wrap img { transition: transform 0.4s ease; }
+    .card-img-wrap:hover img { transform: scale(1.06); }
+    .btn-cart {
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .btn-shop {
+      transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn-shop:hover {
+      background-color: transparent;
+      color: #C9A84C;
+      border-color: #C9A84C;
+    }
+    nav { transition: box-shadow 0.3s; }
+    .announcement-bar { background-color: #111111; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+  <!-- ═══════════════════════════════════════════
+       ANNOUNCEMENT BAR
+  ═══════════════════════════════════════════ -->
+  <div class="announcement-bar text-center py-2 px-4 text-sm font-medium tracking-wide" style="color: #C9A84C;">
+    💥 Flat 38% OFF + Free Shipping on All Perfumes! &nbsp;|&nbsp; 🚚 Free Shipping Above Rs.&nbsp;3,999 – Shop Now!
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STICKY NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="#" class="font-serif font-bold text-2xl tracking-wide text-gray-900 flex-shrink-0">
+          UB <span style="color: #C9A84C;">Fragrance</span>
+        </a>
+
+        <!-- Center nav links (desktop) -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 transition-colors">Men</a>
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 transition-colors">Women</a>
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 transition-colors">Premium Attars</a>
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 transition-colors">Bakhoor</a>
+        </div>
+
+        <!-- Right icons -->
+        <div class="flex items-center gap-5 text-gray-700">
+          <button class="hover:text-yellow-700 transition-colors" title="Search">
+            <i class="fa-solid fa-magnifying-glass text-base"></i>
+          </button>
+          <button class="hover:text-yellow-700 transition-colors" title="Account">
+            <i class="fa-regular fa-user text-base"></i>
+          </button>
+          <button class="relative hover:text-yellow-700 transition-colors" title="Wishlist">
+            <i class="fa-regular fa-heart text-base"></i>
+            <span class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
+          </button>
+          <button class="relative hover:text-yellow-700 transition-colors" title="Cart">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full cart-count">0</span>
+          </button>
+          <!-- Hamburger (mobile) -->
+          <button id="menu-btn" class="md:hidden hover:text-yellow-700 transition-colors ml-1" title="Menu">
+            <i class="fa-solid fa-bars text-base"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100 mt-1">
+        <div class="flex flex-col gap-3 pt-3">
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 px-1">Men</a>
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 px-1">Women</a>
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 px-1">Premium Attars</a>
+          <a href="#" class="text-sm font-medium text-gray-700 hover:text-yellow-700 px-1">Bakhoor</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="hero-bg min-h-[88vh] flex items-center">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-24">
+      <div class="max-w-xl">
+        <p class="uppercase tracking-[0.25em] text-sm mb-4" style="color: #C9A84C;">New Collection 2026</p>
+        <h1 class="font-serif font-black text-5xl sm:text-6xl lg:text-7xl leading-tight text-white mb-6">
+          Discover Your<br />
+          <span style="color: #C9A84C;">Signature</span> Scent
+        </h1>
+        <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-sm">
+          Premium fragrances crafted for the discerning connoisseur. Long-lasting, luxurious, unforgettable.
+        </p>
+        <a href="#trending"
+           class="btn-shop inline-block bg-gold text-black font-semibold text-sm uppercase tracking-widest px-10 py-4 border-2 border-gold"
+           style="background-color: #C9A84C; border-color: #C9A84C;">
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VALUE PROPOSITION BAR
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 text-center">
+
+      <!-- Exchange -->
+      <div class="flex flex-col items-center gap-2 py-6 sm:py-4 sm:px-8">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-1" style="background-color: #FDF6E3;">
+          <i class="fa-solid fa-rotate-left text-xl" style="color: #C9A84C;"></i>
+        </div>
+        <p class="font-semibold text-gray-800 text-base">15-Day Easy Exchange</p>
+        <p class="text-gray-500 text-sm">Hassle-free exchange policy</p>
+      </div>
+
+      <!-- Delivery -->
+      <div class="flex flex-col items-center gap-2 py-6 sm:py-4 sm:px-8">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-1" style="background-color: #FDF6E3;">
+          <i class="fa-solid fa-truck-fast text-xl" style="color: #C9A84C;"></i>
+        </div>
+        <p class="font-semibold text-gray-800 text-base">Fast 4–5 Day Delivery</p>
+        <p class="text-gray-500 text-sm">Delivered right to your door</p>
+      </div>
+
+      <!-- Support -->
+      <div class="flex flex-col items-center gap-2 py-6 sm:py-4 sm:px-8">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-1" style="background-color: #FDF6E3;">
+          <i class="fa-solid fa-headset text-xl" style="color: #C9A84C;"></i>
+        </div>
+        <p class="font-semibold text-gray-800 text-base">24/7 Support</p>
+        <p class="text-gray-500 text-sm">Always here to help you</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TRENDING NOW – PRODUCT GRID
+  ═══════════════════════════════════════════ -->
+  <section id="trending" class="max-w-7xl mx-auto px-6 py-20">
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <p class="uppercase tracking-[0.2em] text-xs font-medium mb-2" style="color: #C9A84C;">Bestsellers</p>
+      <h2 class="font-serif font-bold text-4xl text-gray-900">Trending Now</h2>
+      <div class="mx-auto mt-4 w-16 h-0.5" style="background-color: #C9A84C;"></div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-7">
+
+      <!-- ─── Card 1 ─── -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+        <div class="card-img-wrap relative">
+          <img src="https://images.unsplash.com/photo-1541643600914-78b084683702?q=80&w=600&auto=format&fit=crop"
+               alt="Mughal Perfume" class="w-full aspect-square object-cover" />
+          <!-- Discount badge -->
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">-38%</span>
+        </div>
+        <div class="p-4 flex flex-col flex-1">
+          <h3 class="font-semibold text-gray-800 text-base mb-1">Mughal</h3>
+          <!-- Stars -->
+          <div class="flex gap-0.5 text-yellow-400 text-xs mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <!-- Prices -->
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-gray-400 line-through text-sm">Rs.5,000</span>
+            <span class="font-bold text-gray-900 text-base">Rs.3,100</span>
+          </div>
+          <button onclick="addToCart(this)" class="btn-cart mt-auto w-full bg-gray-900 hover:bg-yellow-700 text-white text-xs font-semibold uppercase tracking-wider py-2.5 rounded">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- ─── Card 2 ─── -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+        <div class="card-img-wrap relative">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600&auto=format&fit=crop"
+               alt="Hajj Perfume" class="w-full aspect-square object-cover" />
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">-38%</span>
+        </div>
+        <div class="p-4 flex flex-col flex-1">
+          <h3 class="font-semibold text-gray-800 text-base mb-1">Hajj Perfume</h3>
+          <div class="flex gap-0.5 text-yellow-400 text-xs mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-gray-400 line-through text-sm">Rs.5,000</span>
+            <span class="font-bold text-gray-900 text-base">Rs.3,100</span>
+          </div>
+          <button onclick="addToCart(this)" class="btn-cart mt-auto w-full bg-gray-900 hover:bg-yellow-700 text-white text-xs font-semibold uppercase tracking-wider py-2.5 rounded">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- ─── Card 3 ─── -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+        <div class="card-img-wrap relative">
+          <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=600&auto=format&fit=crop"
+               alt="Rose Oud" class="w-full aspect-square object-cover" />
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">-38%</span>
+        </div>
+        <div class="p-4 flex flex-col flex-1">
+          <h3 class="font-semibold text-gray-800 text-base mb-1">Rose Oud</h3>
+          <div class="flex gap-0.5 text-yellow-400 text-xs mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-gray-400 line-through text-sm">Rs.5,000</span>
+            <span class="font-bold text-gray-900 text-base">Rs.3,100</span>
+          </div>
+          <button onclick="addToCart(this)" class="btn-cart mt-auto w-full bg-gray-900 hover:bg-yellow-700 text-white text-xs font-semibold uppercase tracking-wider py-2.5 rounded">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- ─── Card 4 ─── -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 group flex flex-col">
+        <div class="card-img-wrap relative">
+          <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop"
+               alt="Summer Breeze" class="w-full aspect-square object-cover" />
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">-38%</span>
+        </div>
+        <div class="p-4 flex flex-col flex-1">
+          <h3 class="font-semibold text-gray-800 text-base mb-1">Summer Breeze</h3>
+          <div class="flex gap-0.5 text-yellow-400 text-xs mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-gray-400 line-through text-sm">Rs.5,000</span>
+            <span class="font-bold text-gray-900 text-base">Rs.3,100</span>
+          </div>
+          <button onclick="addToCart(this)" class="btn-cart mt-auto w-full bg-gray-900 hover:bg-yellow-700 text-white text-xs font-semibold uppercase tracking-wider py-2.5 rounded">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- View All CTA -->
+    <div class="text-center mt-12">
+      <a href="#" class="inline-block border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold text-sm uppercase tracking-widest px-10 py-3 transition-colors duration-200">
+        View All Products
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="bg-gray-900 text-gray-300">
+
+    <!-- Main footer columns -->
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Column 1: Contact Details -->
+      <div>
+        <h4 class="font-serif font-bold text-white text-lg mb-5">Contact Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex gap-3">
+            <i class="fa-solid fa-location-dot mt-0.5 flex-shrink-0" style="color: #C9A84C;"></i>
+            <span>Bahria Orchard, Lahore, Pakistan</span>
+          </li>
+          <li class="flex gap-3">
+            <i class="fa-solid fa-phone mt-0.5 flex-shrink-0" style="color: #C9A84C;"></i>
+            <a href="tel:+923001234567" class="hover:text-white transition-colors">+92 300 123 4567</a>
+          </li>
+          <li class="flex gap-3">
+            <i class="fa-solid fa-envelope mt-0.5 flex-shrink-0" style="color: #C9A84C;"></i>
+            <a href="mailto:info@ubfragrance.com" class="hover:text-white transition-colors">info@ubfragrance.com</a>
+          </li>
+          <li class="flex gap-3 pt-2">
+            <i class="fa-brands fa-facebook text-lg hover:text-white cursor-pointer transition-colors" style="color: #C9A84C;"></i>
+            <i class="fa-brands fa-youtube text-lg hover:text-white cursor-pointer transition-colors" style="color: #C9A84C;"></i>
+            <i class="fa-brands fa-x-twitter text-lg hover:text-white cursor-pointer transition-colors" style="color: #C9A84C;"></i>
+            <i class="fa-brands fa-instagram text-lg hover:text-white cursor-pointer transition-colors" style="color: #C9A84C;"></i>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Shop By Category -->
+      <div>
+        <h4 class="font-serif font-bold text-white text-lg mb-5">Shop By</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Affordable Perfumes</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Premium Perfumes</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Men's Collection</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Women's Collection</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Summer Fragrances</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Premium Attars</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Bakhoor</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Customer Service -->
+      <div>
+        <h4 class="font-serif font-bold text-white text-lg mb-5">Customer Service</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Blogs</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Contact Us</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Shipping Policy</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">Refund Policy</a></li>
+          <li><a href="#" class="hover:text-white hover:pl-1 transition-all">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div>
+        <h4 class="font-serif font-bold text-white text-lg mb-2">Member's Benefit</h4>
+        <p class="text-sm text-gray-400 mb-5 leading-relaxed">
+          Receive our latest updates, exclusive offers, and fragrance tips straight to your inbox.
+        </p>
+        <form onsubmit="subscribeNewsletter(event)" class="flex flex-col gap-3">
+          <input type="email" placeholder="Your email address" required
+                 class="w-full bg-gray-800 text-white text-sm placeholder-gray-500 border border-gray-700 focus:border-yellow-600 focus:outline-none px-4 py-3 rounded" />
+          <button type="submit"
+                  class="w-full text-black text-sm font-bold uppercase tracking-widest py-3 rounded transition-opacity hover:opacity-90"
+                  style="background-color: #C9A84C;">
+            Sign Up
+          </button>
+        </form>
+        <p id="newsletter-msg" class="text-green-400 text-xs mt-2 hidden">✓ Thank you for subscribing!</p>
+      </div>
+
+    </div><!-- /columns -->
+
+    <!-- Bottom bar -->
+    <div class="border-t border-gray-700">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <p>© 2026 <span class="font-semibold text-gray-400">UB Fragrance</span>. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <span>We accept:</span>
+          <span class="border border-gray-600 rounded px-2 py-0.5 text-gray-400 text-[10px] font-semibold">VISA</span>
+          <span class="border border-gray-600 rounded px-2 py-0.5 text-gray-400 text-[10px] font-semibold">MASTERCARD</span>
+          <span class="border border-gray-600 rounded px-2 py-0.5 text-gray-400 text-[10px] font-semibold">JAZZ CASH</span>
+          <span class="border border-gray-600 rounded px-2 py-0.5 text-gray-400 text-[10px] font-semibold">EASYPAISA</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Cart counter
+    let cartCount = 0;
+    function addToCart(btn) {
+      cartCount++;
+      document.querySelectorAll('.cart-count').forEach(el => el.textContent = cartCount);
+      btn.textContent = '✓ Added';
+      btn.classList.replace('bg-gray-900', 'bg-green-700');
+      setTimeout(() => {
+        btn.textContent = 'Add to Cart';
+        btn.classList.replace('bg-green-700', 'bg-gray-900');
+      }, 1500);
+    }
+
+    // Newsletter
+    function subscribeNewsletter(e) {
+      e.preventDefault();
+      e.target.querySelector('input').value = '';
+      document.getElementById('newsletter-msg').classList.remove('hidden');
+      setTimeout(() => document.getElementById('newsletter-msg').classList.add('hidden'), 4000);
+    }
+  </script>
+</body>
+</html>
