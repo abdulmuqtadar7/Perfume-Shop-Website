@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 
 const SHELF = [
-  { name: "Mughal", line: "Extrait de Parfum", grad: "linear-gradient(155deg,#e7cfa4,#6b3e1b)" },
+  { name: "Mughal", line: "EDP · 100ml", grad: "linear-gradient(155deg,#e7cfa4,#6b3e1b)" },
   { name: "Hajj", line: "Attar · 12ml", grad: "linear-gradient(155deg,#f3e6cc,#9a7a48)" },
-  { name: "Sultan", line: "Oud Extrait", grad: "linear-gradient(155deg,#caa06b,#3f2110)" },
-  { name: "Noor", line: "Eau de Parfum", grad: "linear-gradient(155deg,#f4c9ce,#b26676)" },
-  { name: "Shahi", line: "Oud Attar", grad: "linear-gradient(155deg,#d8a967,#5a3212)" },
-  { name: "Oud Royale", line: "Mukhalat", grad: "linear-gradient(155deg,#b8935a,#3a1f0b)" },
-  { name: "Bakhoor", line: "Oud Wood", grad: "linear-gradient(155deg,#7a4a23,#2b130a)" },
-  { name: "Citrus", line: "Eau Fraîche", grad: "linear-gradient(155deg,#fff2b3,#cdbd4f)" },
-  { name: "Rose Oud", line: "Parfum", grad: "linear-gradient(155deg,#d49ba0,#5a2a2a)" },
+  { name: "Sultan", line: "Oud · 50ml", grad: "linear-gradient(155deg,#caa06b,#3f2110)" },
+  { name: "Noor", line: "EDP · 100ml", grad: "linear-gradient(155deg,#f4c9ce,#b26676)" },
+  { name: "Shahi", line: "Attar · 12ml", grad: "linear-gradient(155deg,#d8a967,#5a3212)" },
+  { name: "Royale", line: "Mukhalat · 6ml", grad: "linear-gradient(155deg,#b8935a,#3a1f0b)" },
+  { name: "Bakhoor", line: "Wood · 40g", grad: "linear-gradient(155deg,#7a4a23,#2b130a)" },
+  { name: "Citrus", line: "EDT · 75ml", grad: "linear-gradient(155deg,#fff2b3,#cdbd4f)" },
+  { name: "Rose Oud", line: "Parfum · 50ml", grad: "linear-gradient(155deg,#d49ba0,#5a2a2a)" },
 ];
 
 export default function StoreCallout() {
@@ -50,19 +50,17 @@ export default function StoreCallout() {
                     {/* cap */}
                     <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[44%] h-[11%] bg-[#0f0f0f] rounded-b-[2px]" />
                     {/* label */}
-                    <div className="absolute left-[14%] right-[14%] top-[22%] bottom-[16%] rounded-[2px] bg-[rgba(250,247,242,.95)] flex flex-col items-center justify-center px-[6%] text-center shadow-[inset_0_0_0_1px_rgba(0,0,0,.1)]">
-                      <p
-                        className="text-[6px] tracking-[0.2em] uppercase text-[#8a6a3c] font-semibold leading-none"
-                      >
+                    <div className="absolute left-[10%] right-[10%] top-[22%] bottom-[14%] rounded-[2px] bg-[rgba(250,247,242,.95)] flex flex-col items-center justify-center px-[4%] py-[6%] text-center gap-[2px] shadow-[inset_0_0_0_1px_rgba(0,0,0,.1)]">
+                      <p className="text-[6px] tracking-[0.2em] uppercase text-[#8a6a3c] font-semibold leading-none">
                         U.B.
                       </p>
-                      <p className="serif text-[9px] leading-[1.05] mt-0.5 text-[#1a120a] line-clamp-1 w-full">
+                      <p className="serif text-[10px] leading-[1.05] text-[#1a120a] w-full">
                         {b.name}
                       </p>
-                      <p className="text-[5.5px] tracking-[0.16em] uppercase text-[#a6773c] mt-0.5 line-clamp-1 w-full">
+                      <p className="text-[6px] tracking-[0.12em] uppercase text-[#a6773c] w-full leading-[1.15]">
                         {b.line}
                       </p>
-                      <p className="text-[5px] tracking-[0.2em] uppercase text-[#8a6a3c] mt-auto pt-0.5 border-t border-black/10 w-full">
+                      <p className="text-[5.5px] tracking-[0.2em] uppercase text-[#8a6a3c] pt-[2px] mt-[2px] border-t border-black/10 w-full leading-none">
                         N° {String(i + 1).padStart(2, "0")}
                       </p>
                     </div>
