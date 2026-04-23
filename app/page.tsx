@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col justify-center gap-5 bg-neutral-900 p-8 md:p-12">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#E8C998]">Visit Us In Person</p>
-              <h2 className="text-3xl font-semibold text-white md:text-4xl">Visit Usman Baig</h2>
+              <h2 className="text-3xl font-semibold text-white md:text-4xl">Visit Usman Baig Fragrance</h2>
               <p className="text-sm leading-relaxed text-white/80 md:text-base">
                 Step into the world of luxury scents at our physical store. Experience our full fragrance collection
                 first-hand, receive personalised consultations, and discover your perfect signature scent surrounded by
