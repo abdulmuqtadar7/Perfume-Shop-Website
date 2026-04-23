@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: #0f0f0f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .container-x { @apply max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8; }
+  .serif       { font-family: var(--font-serif), "Cormorant Garamond", serif; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Utility: price strike + gold currency */
+.price-strike { @apply text-ink-muted line-through text-sm mr-2; }
+.price-now    { @apply text-ink font-semibold; }
+
+/* Global focus ring */
+*:focus-visible { outline: 2px solid #b8935a; outline-offset: 2px; border-radius: 4px; }
+
+/* Product "mini bottle" placeholder graphic */
+.ub-bottle {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 42%; aspect-ratio: 2 / 3;
+  border-radius: 8px 8px 18px 18px;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.18), rgba(0,0,0,.18)),
+    var(--bot, linear-gradient(155deg, #d8b883, #8a6338));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.2),
+    inset 6px 8px 20px rgba(255,255,255,.18),
+    inset -6px -10px 26px rgba(20,18,15,.28),
+    0 24px 40px -16px rgba(20,18,15,.45);
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+.ub-bottle::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: -14%;
+  transform: translateX(-50%);
+  width: 36%; height: 12%;
+  background: #0f0f0f;
+  border-radius: 4px 4px 2px 2px;
+}
+.ub-bottle::after {
+  content: "";
+  position: absolute;
+  inset: 34% 18% 22%;
+  border-radius: 3px;
+  background: rgba(250,247,242,.92);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+}
+.group:hover .ub-bottle { transform: translate(-50%, -54%); }
