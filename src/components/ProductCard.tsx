@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Eye, Heart, Star } from "lucide-react";
 import clsx from "clsx";
 import type { Product } from "@/lib/types";
@@ -28,13 +27,13 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
     pushToast(`${p.name} added to cart`);
   };
 
+  const staggerDelay = (index % 4) * 100;
+
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.25) }}
-      className="group relative bg-white border border-ink/10 rounded-xl overflow-hidden flex flex-col hover:shadow-card-hover hover:border-transparent transition-all"
+    <article
+      data-aos="zoom-in-up"
+      data-aos-delay={staggerDelay}
+      className="group relative bg-white border border-ink/10 rounded-xl overflow-hidden flex flex-col hover:shadow-2xl hover:-translate-y-1 hover:border-transparent transition-all duration-300"
     >
       <div className="relative aspect-square overflow-hidden">
         <div
@@ -45,19 +44,26 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
           className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           style={{ background: p.artHover }}
         />
-        <div className="ub-bottle" style={{ ["--bot" as string]: p.art }} />
 
-        {/* Hover description overlay */}
-        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center p-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <p className="serif text-white text-base mb-2">{p.name}</p>
-          <p className="text-white text-sm leading-relaxed">
-            <span className="font-medium">Top:</span> {p.notes.top}.{" "}
-            <span className="font-medium">Middle:</span> {p.notes.heart}.{" "}
-            <span className="font-medium">Base:</span> {p.notes.base}.
-          </p>
-          <p className="mt-2 text-white/80 text-xs uppercase tracking-[0.18em]">
-            Lasts 12–14 hours
-          </p>
+        {/* Bottle with a real label that always shows the product details */}
+        <div className="ub-bottle" style={{ ["--bot" as string]: p.art }}>
+          <div className="ub-label">
+            <p className="ub-label__brand">USMAN BAIG</p>
+            <p className="ub-label__name serif">{p.name}</p>
+            <p className="ub-label__line">
+              <span>Top</span>
+              {p.notes.top.split(",")[0]}
+            </p>
+            <p className="ub-label__line">
+              <span>Heart</span>
+              {p.notes.heart.split(",")[0]}
+            </p>
+            <p className="ub-label__line">
+              <span>Base</span>
+              {p.notes.base.split(",")[0]}
+            </p>
+            <p className="ub-label__tag">Lasts 12–14 hrs</p>
+          </div>
         </div>
 
         <span className="absolute top-3 left-3 z-10 bg-ink text-white text-[11px] font-semibold tracking-wide px-2 py-1 rounded">
@@ -109,11 +115,11 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
 
         <button
           onClick={onAdd}
-          className="mt-3 w-full py-3 rounded-full text-sm font-medium bg-ink text-white hover:bg-gold hover:text-ink transition-colors duration-300"
+          className="mt-3 w-full py-3 rounded-full text-sm font-medium bg-ink text-white hover:bg-gold hover:text-ink hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
         >
           {p.variants && p.variants.length > 0 ? "Choose Options" : "Add to Cart"}
         </button>
       </div>
-    </motion.article>
+    </article>
   );
 }

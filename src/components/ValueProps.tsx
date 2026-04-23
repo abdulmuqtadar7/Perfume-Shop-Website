@@ -1,7 +1,6 @@
 "use client";
 
 import { RotateCcw, Truck, Headphones } from "lucide-react";
-import { motion } from "framer-motion";
 
 const ITEMS = [
   {
@@ -26,12 +25,10 @@ export default function ValueProps() {
     <section aria-label="Why shop with us" className="border-y border-ink/10 bg-cream/60">
       <div className="container-x grid md:grid-cols-3 gap-4 md:gap-0 py-6">
         {ITEMS.map(({ icon: Icon, title, body }, i) => (
-          <motion.div
+          <div
             key={title}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.45, delay: i * 0.08 }}
+            data-aos="fade-right"
+            data-aos-delay={(i + 1) * 100}
             className="flex items-start gap-4 md:px-6 md:border-r last:border-r-0 border-ink/10"
           >
             <span className="mt-0.5 w-11 h-11 grid place-items-center rounded-full bg-white border border-ink/10 text-gold shadow-sm">
@@ -41,7 +38,7 @@ export default function ValueProps() {
               <p className="font-medium text-ink">{title}</p>
               <p className="text-sm text-ink-muted mt-0.5">{body}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

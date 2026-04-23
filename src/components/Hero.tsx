@@ -24,38 +24,35 @@ export default function Hero() {
             Signature Collection · 2026
           </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="0"
             className="serif mt-4 text-[clamp(2.4rem,6vw,5.2rem)] leading-[1.02] tracking-tight"
           >
             Where heritage
             <br />
             meets <span className="italic text-gold">silage.</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+          <p
+            data-aos="fade-up"
+            data-aos-delay="150"
             className="mt-5 max-w-[48ch] text-ink-soft text-[15px] leading-relaxed"
           >
             Premium Attars, Bakhoors and modern perfumes blended in the tradition
             of the subcontinent. Flat <b className="text-ink">38% off</b> + free
             shipping on all perfumes — for a limited time.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
             className="mt-8 flex flex-wrap gap-3"
           >
             <a
               href="#shop"
               className="group inline-flex items-center gap-2 bg-ink text-white px-6 py-3.5 rounded-full text-sm font-medium tracking-wide
-                         hover:bg-gold hover:text-ink transition-colors duration-300"
+                         hover:bg-gold hover:text-ink hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               SHOP NOW
               <ArrowRight
@@ -65,11 +62,11 @@ export default function Hero() {
             </a>
             <a
               href="#categories"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium border border-ink/20 hover:border-ink text-ink-soft hover:text-ink transition"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium border border-ink/20 hover:border-ink text-ink-soft hover:text-ink hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               Explore Attars
             </a>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0 }}

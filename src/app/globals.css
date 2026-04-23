@@ -41,6 +41,7 @@ body {
     inset -6px -10px 26px rgba(20,18,15,.28),
     0 24px 40px -16px rgba(20,18,15,.45);
   transition: transform .6s cubic-bezier(.22,1,.36,1);
+  container-type: inline-size;
 }
 .ub-bottle::before {
   content: "";
@@ -51,12 +52,55 @@ body {
   background: #0f0f0f;
   border-radius: 4px 4px 2px 2px;
 }
-.ub-bottle::after {
-  content: "";
+.ub-label {
   position: absolute;
-  inset: 34% 18% 22%;
+  inset: 28% 12% 16%;
   border-radius: 3px;
-  background: rgba(250,247,242,.92);
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+  background: rgba(250,247,242,.94);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  padding: 6% 6% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #2b2118;
+  overflow: hidden;
+}
+.ub-label__brand {
+  font-size: clamp(7px, 1.05cqw, 10px);
+  letter-spacing: 0.24em;
+  color: #8a6a3c;
+  font-weight: 600;
+}
+.ub-label__name {
+  font-size: clamp(13px, 2.2cqw, 22px);
+  line-height: 1.05;
+  margin: 2% 0 4%;
+  color: #1a120a;
+}
+.ub-label__line {
+  font-size: clamp(8px, 1.15cqw, 11px);
+  line-height: 1.35;
+  color: #4a3a26;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+.ub-label__line span {
+  color: #a6773c;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82em;
+  font-weight: 600;
+}
+.ub-label__tag {
+  margin-top: 4%;
+  padding-top: 4%;
+  border-top: 1px solid rgba(0,0,0,.08);
+  font-size: clamp(7px, 1cqw, 10px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a6a3c;
 }
 .group:hover .ub-bottle { transform: translate(-50%, -54%); }
