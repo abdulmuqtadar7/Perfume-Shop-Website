@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative isolate min-h-[78vh] overflow-hidden">
       <img
-        src="https://picsum.photos/seed/luxury-perfume-hero/1920/1100"
+        src="https://images.unsplash.com/photo-1594035910387-fea47714263f?q=80&w=1920&auto=format&fit=crop"
         alt="Premium fragrance hero"
         className="absolute inset-0 h-full w-full object-cover"
       />

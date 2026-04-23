@@ -33,8 +33,8 @@ export const products: Product[] = [
     price: 3100,
     rating: 4.9,
     discountPercent: 38,
-    image: "https://picsum.photos/seed/mughal-front/900/900",
-    hoverImage: "https://picsum.photos/seed/mughal-hover/900/900",
+    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1594035910387-fea47714263f?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "hajj-perfume",
@@ -49,8 +49,8 @@ export const products: Product[] = [
     price: 2399,
     rating: 4.8,
     discountPercent: 33,
-    image: "https://picsum.photos/seed/hajj-front/900/900",
-    hoverImage: "https://picsum.photos/seed/hajj-hover/900/900",
+    image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "oud-royale",
@@ -65,8 +65,8 @@ export const products: Product[] = [
     price: 4200,
     rating: 4.7,
     discountPercent: 28,
-    image: "https://picsum.photos/seed/oud-front/900/900",
-    hoverImage: "https://picsum.photos/seed/oud-hover/900/900",
+    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "velvet-bloom",
@@ -81,8 +81,8 @@ export const products: Product[] = [
     price: 3490,
     rating: 4.8,
     discountPercent: 29,
-    image: "https://picsum.photos/seed/velvet-front/900/900",
-    hoverImage: "https://picsum.photos/seed/velvet-hover/900/900",
+    image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1594035910387-fea47714263f?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "bakhoor-wood",
@@ -97,8 +97,8 @@ export const products: Product[] = [
     price: 2190,
     rating: 4.6,
     discountPercent: 31,
-    image: "https://picsum.photos/seed/bakhoor-wood-front/900/900",
-    hoverImage: "https://picsum.photos/seed/bakhoor-wood-hover/900/900",
+    image: "https://images.unsplash.com/photo-1628191139872-5bae3f4c3ea2?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "daily-fresh",
@@ -113,8 +113,8 @@ export const products: Product[] = [
     price: 1699,
     rating: 4.5,
     discountPercent: 39,
-    image: "https://picsum.photos/seed/daily-fresh-front/900/900",
-    hoverImage: "https://picsum.photos/seed/daily-fresh-hover/900/900",
+    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "french-attar",
@@ -129,8 +129,8 @@ export const products: Product[] = [
     price: 2999,
     rating: 4.7,
     discountPercent: 30,
-    image: "https://picsum.photos/seed/french-attar-front/900/900",
-    hoverImage: "https://picsum.photos/seed/french-attar-hover/900/900",
+    image: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "burner-pro",
@@ -145,21 +145,21 @@ export const products: Product[] = [
     price: 3350,
     rating: 4.6,
     discountPercent: 26,
-    image: "https://picsum.photos/seed/burner-front/900/900",
-    hoverImage: "https://picsum.photos/seed/burner-hover/900/900",
+    image: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=800&auto=format&fit=crop",
+    hoverImage: "https://images.unsplash.com/photo-1628191139872-5bae3f4c3ea2?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
 export const sections: Array<Product["section"]> = ["Trending Now", "Best Sellers", "New Arrivals"];
 
 export const categoryHighlights = [
-  { title: "Perfume Spray", image: "https://picsum.photos/seed/cat-perfume/900/900" },
-  { title: "Womens", image: "https://picsum.photos/seed/cat-women/900/900" },
-  { title: "Oud Attar", image: "https://picsum.photos/seed/cat-oud/900/900" },
-  { title: "Bakhoor Wood", image: "https://picsum.photos/seed/cat-bakhoor-wood/900/900" },
-  { title: "Bakhoor Burner", image: "https://picsum.photos/seed/cat-bakhoor-burner/900/900" },
-  { title: "French Attars", image: "https://picsum.photos/seed/cat-french-attar/900/900" },
-  { title: "Arabic Attars", image: "https://picsum.photos/seed/cat-arabic-attar/900/900" },
+  { title: "Perfume Spray", image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop" },
+  { title: "Womens", image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800&auto=format&fit=crop" },
+  { title: "Oud Attar", image: "https://images.unsplash.com/photo-1628191139872-5bae3f4c3ea2?q=80&w=800&auto=format&fit=crop" },
+  { title: "Bakhoor Wood", image: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=800&auto=format&fit=crop" },
+  { title: "Bakhoor Burner", image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800&auto=format&fit=crop" },
+  { title: "French Attars", image: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=800&auto=format&fit=crop" },
+  { title: "Arabic Attars", image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800&auto=format&fit=crop" },
 ];
 
 export const testimonials = [

@@ -50,6 +50,10 @@ export default function HomePage() {
 
         <ProductTabsSection title="Trending Now" products={products.filter((item) => item.section === "Trending Now")} />
 
+        <ProductTabsSection title="Best Sellers" products={products.filter((item) => item.section === "Best Sellers")} />
+
+        <ProductTabsSection title="New Arrivals" products={products.filter((item) => item.section === "New Arrivals")} />
+
         <section className="mt-16">
           <div className="mb-6 flex items-end justify-between gap-4">
             <div>
@@ -67,6 +71,41 @@ export default function HomePage() {
                 </p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-16 overflow-hidden rounded-3xl border border-neutral-200">
+          <div className="grid md:grid-cols-2">
+            <div className="relative min-h-[320px]">
+              <img
+                src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200&auto=format&fit=crop"
+                alt="Usman Baig physical store interior"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/25" />
+            </div>
+            <div className="flex flex-col justify-center gap-5 bg-neutral-900 p-8 md:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#E8C998]">Visit Us In Person</p>
+              <h2 className="text-3xl font-semibold text-white md:text-4xl">Visit Usman Baig</h2>
+              <p className="text-sm leading-relaxed text-white/80 md:text-base">
+                Step into the world of luxury scents at our physical store. Experience our full fragrance collection
+                first-hand, receive personalised consultations, and discover your perfect signature scent surrounded by
+                the finest attars, perfumes, and bakhoor.
+              </p>
+              <ul className="space-y-1 text-sm text-white/70">
+                <li>📍 Bahria Orchard, Lahore</li>
+                <li>🕐 Mon – Sat: 11 AM – 9 PM</li>
+                <li>📞 +92 300 0000000</li>
+              </ul>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 w-max items-center rounded-md border border-[#B48A54] bg-[#B48A54] px-6 text-sm font-semibold tracking-wide text-white transition hover:bg-transparent hover:text-[#f2dcc0]"
+              >
+                Get Direction
+              </a>
+            </div>
           </div>
         </section>
 
