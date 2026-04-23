@@ -17,21 +17,36 @@
       storyBottle.innerHTML = bottleSVG(products[7], { className: "bottle" });
     }
 
-    // Featured grid: first 6 products
+    // Featured grid: first 6 products, each with staggered AOS zoom-in-up
     const grid = document.getElementById("featured-grid");
     if (grid) {
       grid.innerHTML = products
         .slice(0, 6)
-        .map((p) => renderCard(p))
+        .map((p, i) => renderCard(p, i * 100))
         .join("");
+      // Cards are injected after DOMContentLoaded. Defer one tick so AOS has
+      // finished its initial scan, then refresh it so the new cards animate.
+      const refreshAOS = () => {
+        if (!window.AOS) return;
+        try {
+          if (typeof window.AOS.refreshHard === "function") {
+            window.AOS.refreshHard();
+          } else {
+            window.AOS.refresh();
+          }
+        } catch (_) { /* AOS not yet initialised */ }
+      };
+      setTimeout(refreshAOS, 0);
+      window.addEventListener("load", refreshAOS, { once: true });
     }
 
-    function renderCard(p) {
+    function renderCard(p, aosDelay) {
       const priceBlock = p.oldPrice
         ? `<span>${fmtPrice(p.price)}</span><span class="old">${fmtPrice(p.oldPrice)}</span>`
         : `<span>${fmtPrice(p.price)}</span>`;
       return `
-      <a class="product-card" href="product.html?id=${p.id}" aria-label="${p.name}">
+      <a class="product-card" href="product.html?id=${p.id}" aria-label="${p.name}"
+         data-aos="zoom-in-up" data-aos-delay="${aosDelay}">
         <div class="media">
           ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
           ${bottleSVG(p)}

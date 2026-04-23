@@ -88,9 +88,9 @@
       <div class="cart-footer">
         <div class="cart-subtotal">
           <span>Subtotal</span>
-          <span class="total">$0</span>
+          <span class="total">Rs 0</span>
         </div>
-        <p class="note">Complimentary shipping on orders over $120 · Samples with every order</p>
+        <p class="note">Complimentary shipping on orders over Rs 30,000 · Samples with every order</p>
         <a class="btn btn-primary cart-checkout" href="cart.html">Checkout</a>
       </div>
     </aside>

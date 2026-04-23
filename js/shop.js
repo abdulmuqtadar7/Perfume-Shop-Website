@@ -42,6 +42,13 @@
       )
       .join("");
 
+    priceUl.innerHTML = (window.PRICE_BUCKETS || [])
+      .map(
+        (b) =>
+          `<li><button data-price="${b.value}" class="${b.value === state.price ? "active" : ""}">${b.label}</button></li>`
+      )
+      .join("");
+
     // Click handlers
     catUl.addEventListener("click", (e) => {
       const btn = e.target.closest("button[data-category]");

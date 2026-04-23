@@ -16,11 +16,10 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
+  // Prices are stored and displayed in Pakistani Rupees (PKR).
   const fmtPrice = (n) =>
-    new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
+    "Rs " +
+    new Intl.NumberFormat("en-PK", {
       maximumFractionDigits: 0,
     }).format(n);
 

@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="icon"
@@ -30,18 +31,18 @@
     <section class="hero">
       <div class="hero-bg"></div>
       <div class="container hero-inner">
-        <div class="hero-copy reveal-stagger">
-          <span class="eyebrow">New Collection · Autumn 25</span>
-          <h1>
+        <div class="hero-copy">
+          <span class="eyebrow" data-aos="fade-up" data-aos-delay="0">New Collection · Autumn 25</span>
+          <h1 data-aos="fade-up" data-aos-delay="0">
             Scent <span class="italic">of a quiet</span><br />
             revolution.
           </h1>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="150">
             Slow-made perfume from rare botanicals, distilled in Grasse and
             bottled by hand. Fragrance as a form of memory — worn close to the
             skin, carried like an heirloom.
           </p>
-          <div class="hero-cta">
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
             <a href="shop.html" class="btn btn-primary">Discover the Collection</a>
             <a href="about.html" class="btn btn-ghost">Our Story</a>
           </div>
@@ -98,7 +99,7 @@
             fall for. Complimentary samples with every order.
           </p>
         </div>
-        <div class="product-grid reveal-stagger" id="featured-grid"></div>
+        <div class="product-grid" id="featured-grid"></div>
         <div style="text-align:center; margin-top:3rem">
           <a href="shop.html" class="btn btn-ghost">View all fragrances</a>
         </div>
@@ -207,8 +208,8 @@
             </h2>
           </div>
         </div>
-        <div class="notes-grid reveal-stagger">
-          <div class="note-card">
+        <div class="notes-grid">
+          <div class="note-card" data-aos="fade-right" data-aos-delay="100">
             <div class="icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 3C7 8 7 13 12 21 17 13 17 8 12 3Z"/>
@@ -219,7 +220,7 @@
               Up to 92% naturally derived. No phthalates, no animal musks, ever.
             </p>
           </div>
-          <div class="note-card">
+          <div class="note-card" data-aos="fade-right" data-aos-delay="200">
             <div class="icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="9"/>
@@ -231,7 +232,7 @@
               Micro-batches of 300 bottles — signed, numbered, and traceable.
             </p>
           </div>
-          <div class="note-card">
+          <div class="note-card" data-aos="fade-right" data-aos-delay="300">
             <div class="icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M4 21h16M6 21V8l6-4 6 4v13M10 14h4M10 17h4"/>
@@ -242,7 +243,7 @@
               Distilled in the perfume capital of the world. Always.
             </p>
           </div>
-          <div class="note-card">
+          <div class="note-card" data-aos="fade-right" data-aos-delay="400">
             <div class="icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M4 7h16v10H4z"/>
@@ -286,5 +287,9 @@
     <script src="js/layout.js"></script>
     <script src="js/app.js"></script>
     <script src="js/home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
   </body>
 </html>

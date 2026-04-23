@@ -8,8 +8,8 @@
 
     function render() {
       const { cart, items, subtotal } = window.MV.cartTotals();
-      const shipping = items === 0 ? 0 : subtotal >= 120 ? 0 : 12;
-      const tax = Math.round(subtotal * 0.08);
+      const shipping = items === 0 ? 0 : subtotal >= 30000 ? 0 : 1500;
+      const tax = Math.round(subtotal * 0.17); // Pakistan GST ~17%
       const total = subtotal + shipping + tax;
 
       if (items === 0) {

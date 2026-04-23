@@ -85,7 +85,7 @@
               </svg>
             </span>
             <strong>Free shipping</strong>
-            <span>on orders over $120, worldwide.</span>
+            <span>on orders over Rs 30,000, within Pakistan.</span>
           </div>
           <div class="cell">
             <span class="icon">
