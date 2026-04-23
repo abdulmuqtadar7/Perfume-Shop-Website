@@ -11,6 +11,7 @@ type Review = {
   name: string;
   date: string;
   product: string;
+  subtitle: string;
   grad: string;
   notes: { top: string; heart: string; base: string };
 };
@@ -24,6 +25,7 @@ const REVIEWS: Review[] = [
     name: "Hassan A.",
     date: "Mar 12, 2026",
     product: "Mughal",
+    subtitle: "Extrait de Parfum",
     grad: "linear-gradient(155deg,#e7cfa4,#6b3e1b)",
     notes: { top: "Saffron, pink pepper", heart: "Oud, Bulgarian rose", base: "Amber, sandalwood" },
   },
@@ -35,6 +37,7 @@ const REVIEWS: Review[] = [
     name: "Sumaira K.",
     date: "Feb 28, 2026",
     product: "Hajj Perfume",
+    subtitle: "Attar · 12 ml",
     grad: "linear-gradient(155deg,#f3e6cc,#9a7a48)",
     notes: { top: "Rose, citrus zest", heart: "Oud, musk", base: "Sandalwood, amber" },
   },
@@ -46,6 +49,7 @@ const REVIEWS: Review[] = [
     name: "Ayesha R.",
     date: "Jan 19, 2026",
     product: "Citrus Breeze",
+    subtitle: "Eau de Toilette · 75 ml",
     grad: "linear-gradient(155deg,#fff2b3,#cdbd4f)",
     notes: { top: "Bergamot, yuzu", heart: "Neroli", base: "White musk" },
   },
@@ -57,6 +61,7 @@ const REVIEWS: Review[] = [
     name: "Bilal S.",
     date: "Dec 04, 2025",
     product: "Bakhoor Wood",
+    subtitle: "Oud Wood · 40 g",
     grad: "linear-gradient(155deg,#7a4a23,#2b130a)",
     notes: { top: "Oud wood", heart: "Smoked amber", base: "Agarwood resin" },
   },
@@ -125,24 +130,10 @@ export default function Testimonials() {
               </div>
               <div className="relative w-[220px] sm:w-[240px] aspect-square rounded-xl overflow-hidden border border-ink/10 shrink-0" style={{ background: r.grad }}>
                 <div className="ub-bottle" style={{ ["--bot" as string]: r.grad }}>
-                  <div className="ub-label">
+                  <div className="ub-label ub-label--minimal">
                     <p className="ub-label__brand">USMAN BAIG</p>
                     <p className="ub-label__name serif">{r.product}</p>
-                    <div className="ub-label__notes">
-                      <p className="ub-label__line">
-                        <span>Top</span>
-                        <span>{r.notes.top}</span>
-                      </p>
-                      <p className="ub-label__line ub-label__line--heart">
-                        <span>Heart</span>
-                        <span>{r.notes.heart}</span>
-                      </p>
-                      <p className="ub-label__line">
-                        <span>Base</span>
-                        <span>{r.notes.base}</span>
-                      </p>
-                    </div>
-                    <p className="ub-label__tag">Lasts 12–14 hrs</p>
+                    <p className="ub-label__tag">{r.subtitle}</p>
                   </div>
                 </div>
               </div>

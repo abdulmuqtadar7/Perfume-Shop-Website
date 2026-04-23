@@ -16,6 +16,7 @@ export type Product = {
   rating: number;   // 0-5
   reviews: number;
   description: string;
+  subtitle: string; // short type + volume shown on the bottle label (e.g. "Extrait de Parfum")
   notes: { top: string; heart: string; base: string };
   variants?: string[]; // if present, card says "Choose Options"
 };

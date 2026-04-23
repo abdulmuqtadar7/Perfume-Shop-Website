@@ -75,10 +75,10 @@ export default function QuickViewModal() {
                 style={{ background: p.art }}
               >
                 <div className="ub-bottle" style={{ ["--bot" as string]: p.art }}>
-                  <div className="ub-label">
+                  <div className="ub-label ub-label--minimal">
                     <p className="ub-label__brand">USMAN BAIG</p>
                     <p className="ub-label__name serif">{p.name}</p>
-                    <p className="ub-label__tag">{p.category}</p>
+                    <p className="ub-label__tag">{p.subtitle}</p>
                   </div>
                 </div>
                 <span className="absolute top-4 left-4 bg-ink text-white text-[11px] font-semibold tracking-wide px-2 py-1 rounded">

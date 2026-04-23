@@ -17,6 +17,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 312,
     description: "A royal composition of oud, saffron and warm amber — fit for a coronation.",
+    subtitle: "Extrait de Parfum",
     notes: { top: "Saffron, pink pepper", heart: "Oud, Bulgarian rose", base: "Amber, sandalwood" },
   },
   {
@@ -33,6 +34,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 418,
     description: "An alcohol-free attar with pure oud, musk and rose — inspired by the sacred journey.",
+    subtitle: "Attar · 12 ml",
     notes: { top: "Rose, citrus zest", heart: "Oud, musk", base: "Sandalwood, amber" },
     variants: ["6ml roll-on", "12ml roll-on"],
   },
@@ -50,6 +52,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 186,
     description: "Rich leather and smoked oud laced with cardamom — a throne-room presence.",
+    subtitle: "Oud Extrait · 50 ml",
     notes: { top: "Cardamom, bergamot", heart: "Leather, oud", base: "Tonka, patchouli" },
   },
   {
@@ -66,6 +69,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviews: 204,
     description: "A luminous floral — Damask rose, jasmine and white musk.",
+    subtitle: "Eau de Parfum · 100 ml",
     notes: { top: "Bergamot, lychee", heart: "Damask rose, jasmine", base: "White musk, cedar" },
   },
   {
@@ -82,6 +86,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 512,
     description: "A pure Cambodi oud attar aged for 6 years — deeply resinous.",
+    subtitle: "Oud Attar · 12 ml",
     notes: { top: "Saffron", heart: "Pure oud", base: "Amber, labdanum" },
     variants: ["3ml", "6ml", "12ml"],
   },
@@ -99,6 +104,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 221,
     description: "Creamy white musk with a breath of jasmine — soft, skin-close, gorgeous.",
+    subtitle: "Musk Attar · 12 ml",
     notes: { top: "Orange blossom", heart: "White musk, jasmine", base: "Sandalwood" },
     variants: ["6ml", "12ml"],
   },
@@ -116,6 +122,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviews: 148,
     description: "Grasse jasmine absolute layered over Mysore sandalwood.",
+    subtitle: "Floral Attar · 12 ml",
     notes: { top: "Neroli", heart: "Jasmine absolute", base: "Mysore sandalwood" },
   },
   {
@@ -132,6 +139,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 277,
     description: "A master blend of oud, rose, saffron and amber — layered for hours of projection.",
+    subtitle: "Mukhalat · 6 ml",
     notes: { top: "Saffron, rose petals", heart: "Oud, amber", base: "Patchouli, musk" },
   },
   {
@@ -148,6 +156,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 163,
     description: "Slow-burning oud-infused wood chips. Fills a room in minutes.",
+    subtitle: "Oud Wood · 40 g",
     notes: { top: "—", heart: "Oud wood, agarwood", base: "Smoked amber" },
     variants: ["40g", "80g"],
   },
@@ -165,6 +174,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 91,
     description: "Hand-hammered brass mabkhara with electric heating base.",
+    subtitle: "Incense Burner",
     notes: { top: "—", heart: "—", base: "—" },
   },
   {
@@ -181,6 +191,7 @@ export const products: Product[] = [
     rating: 4.4,
     reviews: 88,
     description: "Bright bergamot and yuzu over white musk — a clean daily driver.",
+    subtitle: "Eau de Toilette · 75 ml",
     notes: { top: "Bergamot, yuzu", heart: "Neroli", base: "White musk, cedar" },
   },
   {
@@ -197,6 +208,7 @@ export const products: Product[] = [
     rating: 4.3,
     reviews: 142,
     description: "Salty air, driftwood and a pinch of ambroxan — summer on the coast.",
+    subtitle: "Eau de Toilette · 75 ml",
     notes: { top: "Sea salt, mandarin", heart: "Driftwood", base: "Ambroxan, musk" },
   },
   {
@@ -213,6 +225,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 196,
     description: "Turkish rose meets smoked oud — the timeless pairing, perfected.",
+    subtitle: "Parfum · 50 ml",
     notes: { top: "Rose petals", heart: "Oud, raspberry", base: "Amber, patchouli" },
   },
   {
@@ -229,6 +242,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviews: 121,
     description: "Cashmere musk, vanilla and soft woods — a hug in a bottle.",
+    subtitle: "Eau de Parfum · 75 ml",
     notes: { top: "Aldehyde, bergamot", heart: "Cashmere musk, vanilla", base: "Sandalwood" },
   },
   {
@@ -245,6 +259,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 88,
     description: "Undiluted Hindi oud — an investment piece for the oud connoisseur.",
+    subtitle: "Pure Oud Attar · 3 ml",
     notes: { top: "Saffron", heart: "Pure Hindi oud", base: "Resinous woods" },
     variants: ["1.5ml", "3ml"],
   },

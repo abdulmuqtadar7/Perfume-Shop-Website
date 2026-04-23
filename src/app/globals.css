@@ -126,13 +126,42 @@ body {
   white-space: nowrap;
   text-align: center;
 }
-/* On narrow (mobile) cards the bottle label gets too crowded — hide the middle
-   note line and the bottom tag so only the critical info shows. */
-@media (max-width: 639px) {
-  .ub-label__brand { letter-spacing: 0.14em; font-size: clamp(6px, 2.2cqw, 9px); }
-  .ub-label__name  { font-size: clamp(11px, 4cqw, 16px); }
-  .ub-label__line  { font-size: clamp(8px, 2.6cqw, 11px); grid-template-columns: 28% 1fr; gap: 3%; }
-  .ub-label__line--heart { display: none; }
-  .ub-label__tag   { display: none; }
+/* Minimalist label variant used on product cards + testimonials — matches the
+   hero bottle: brand · name · subtitle, centered, with a gold underline accent
+   between brand and name. No notes, no longevity tag. */
+.ub-label--minimal {
+  justify-content: center;
+  gap: 4%;
+  inset: 24% 10% 20%;
+  padding: 7% 7%;
+}
+.ub-label--minimal .ub-label__brand {
+  position: relative;
+  font-size: clamp(7px, 1.2cqw, 10px);
+  letter-spacing: 0.28em;
+  padding-bottom: 4%;
+}
+.ub-label--minimal .ub-label__brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 18%;
+  height: 1px;
+  background: #b8935a;
+}
+.ub-label--minimal .ub-label__name {
+  font-size: clamp(12px, 2.4cqw, 20px);
+  line-height: 1.1;
+  margin-top: 4%;
+  -webkit-line-clamp: 2;
+}
+.ub-label--minimal .ub-label__tag {
+  border-top: none;
+  padding-top: 4%;
+  font-size: clamp(7px, 1cqw, 10px);
+  letter-spacing: 0.22em;
+  white-space: normal;
 }
 .group:hover .ub-bottle { transform: translate(-50%, -54%); }
