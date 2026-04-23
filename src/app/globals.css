@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: #0f0f0f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .container-x { @apply max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8; }
+  .serif       { font-family: var(--font-serif), "Cormorant Garamond", serif; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Utility: price strike + gold currency */
+.price-strike { @apply text-ink-muted line-through text-sm mr-2; }
+.price-now    { @apply text-ink font-semibold; }
+
+/* Global focus ring */
+*:focus-visible { outline: 2px solid #b8935a; outline-offset: 2px; border-radius: 4px; }
+
+/* Product "mini bottle" placeholder graphic */
+.ub-bottle {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 52%; aspect-ratio: 5 / 7;
+  border-radius: 8px 8px 18px 18px;
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.18), rgba(0,0,0,.18)),
+    var(--bot, linear-gradient(155deg, #d8b883, #8a6338));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.2),
+    inset 6px 8px 20px rgba(255,255,255,.18),
+    inset -6px -10px 26px rgba(20,18,15,.28),
+    0 24px 40px -16px rgba(20,18,15,.45);
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+  container-type: inline-size;
+}
+.ub-bottle::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: -14%;
+  transform: translateX(-50%);
+  width: 36%; height: 12%;
+  background: #0f0f0f;
+  border-radius: 4px 4px 2px 2px;
+}
+.ub-label {
+  position: absolute;
+  inset: 22% 5% 16%;
+  border-radius: 3px;
+  background: rgba(250,247,242,.95);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  padding: 4% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2%;
+  text-align: center;
+  color: #2b2118;
+  overflow: hidden;
+}
+.ub-label__brand {
+  font-size: clamp(6px, 0.95cqw, 9px);
+  letter-spacing: 0.24em;
+  color: #8a6a3c;
+  font-weight: 600;
+  text-align: center;
+}
+.ub-label__name {
+  font-size: clamp(10px, 1.7cqw, 16px);
+  line-height: 1.05;
+  color: #1a120a;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.ub-label__notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+.ub-label__line {
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  gap: 5%;
+  align-items: baseline;
+  font-size: clamp(7px, 1.05cqw, 10px);
+  line-height: 1.22;
+  color: #4a3a26;
+  text-align: left;
+}
+.ub-label__line > span:first-child {
+  color: #a6773c;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-align: left;
+}
+.ub-label__line > span:last-child {
+  min-width: 0;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+.ub-label__tag {
+  padding-top: 2%;
+  border-top: 1px solid rgba(0,0,0,.08);
+  font-size: clamp(6px, 0.9cqw, 9px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a6a3c;
+  white-space: nowrap;
+  text-align: center;
+}
+/* Minimalist label variant used on product cards + testimonials — matches the
+   hero bottle: brand · name · subtitle, centered, with a gold underline accent
+   between brand and name. No notes, no longevity tag. */
+.ub-label--minimal {
+  justify-content: center;
+  gap: 4%;
+  inset: 24% 10% 20%;
+  padding: 7% 7%;
+}
+.ub-label--minimal .ub-label__brand {
+  position: relative;
+  font-size: clamp(7px, 1.2cqw, 10px);
+  letter-spacing: 0.28em;
+  padding-bottom: 4%;
+}
+.ub-label--minimal .ub-label__brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 18%;
+  height: 1px;
+  background: #b8935a;
+}
+.ub-label--minimal .ub-label__name {
+  font-size: clamp(12px, 2.4cqw, 20px);
+  line-height: 1.1;
+  margin-top: 4%;
+  -webkit-line-clamp: 2;
+}
+.ub-label--minimal .ub-label__tag {
+  border-top: none;
+  padding-top: 4%;
+  font-size: clamp(7px, 1cqw, 10px);
+  letter-spacing: 0.22em;
+  white-space: normal;
+}
+.group:hover .ub-bottle { transform: translate(-50%, -54%); }
