@@ -46,12 +46,26 @@ export default function ProductCard({ p, index = 0 }: { p: Product; index?: numb
           style={{ background: p.artHover }}
         />
         <div className="ub-bottle" style={{ ["--bot" as string]: p.art }} />
-        <span className="absolute top-3 left-3 bg-ink text-white text-[11px] font-semibold tracking-wide px-2 py-1 rounded">
+
+        {/* Hover description overlay */}
+        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center p-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p className="serif text-white text-base mb-2">{p.name}</p>
+          <p className="text-white text-sm leading-relaxed">
+            <span className="font-medium">Top:</span> {p.notes.top}.{" "}
+            <span className="font-medium">Middle:</span> {p.notes.heart}.{" "}
+            <span className="font-medium">Base:</span> {p.notes.base}.
+          </p>
+          <p className="mt-2 text-white/80 text-xs uppercase tracking-[0.18em]">
+            Lasts 12–14 hours
+          </p>
+        </div>
+
+        <span className="absolute top-3 left-3 z-10 bg-ink text-white text-[11px] font-semibold tracking-wide px-2 py-1 rounded">
           -{p.discountPct}%
         </span>
 
         {/* Hover icon rail */}
-        <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+        <div className="absolute top-3 right-3 z-10 flex flex-col gap-2 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
           <button
             aria-label={isWished ? "Remove from wishlist" : "Add to wishlist"}
             onClick={() => {
