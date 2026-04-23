@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maison Velour · Fine Perfumery from Grasse</title>
+    <meta
+      name="description"
+      content="Maison Velour is an independent perfume house crafting slow-made fragrance from rare, ethically sourced botanicals. Discover our signature collections."
+    />
+    <meta name="theme-color" content="#f5f1ea" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='20' y='8' width='24' height='14' rx='2' fill='%2316130f'/%3E%3Crect x='14' y='22' width='36' height='34' rx='4' fill='%23b8935b'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <div id="mobile-menu"></div>
+    <div id="cart-drawer"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal-stagger">
+          <span class="eyebrow">New Collection · Autumn 25</span>
+          <h1>
+            Scent <span class="italic">of a quiet</span><br />
+            revolution.
+          </h1>
+          <p>
+            Slow-made perfume from rare botanicals, distilled in Grasse and
+            bottled by hand. Fragrance as a form of memory — worn close to the
+            skin, carried like an heirloom.
+          </p>
+          <div class="hero-cta">
+            <a href="shop.html" class="btn btn-primary">Discover the Collection</a>
+            <a href="about.html" class="btn btn-ghost">Our Story</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="bottle-stage">
+            <div class="bottle-glow"></div>
+            <div id="hero-bottle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-meta container">
+        <span>Est. Grasse · 2014</span>
+        <span class="hero-scroll"><span class="line"></span>Scroll</span>
+        <span>12 Signature Accords</span>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Nuit d'Or <span class="dot"></span></span>
+        <span>Jardin Vert <span class="dot"></span></span>
+        <span>Mer Azure <span class="dot"></span></span>
+        <span>Rosa Venezia <span class="dot"></span></span>
+        <span>Fumée Noire <span class="dot"></span></span>
+        <span>Neroli Solaire <span class="dot"></span></span>
+        <span>Cocoa Velvet <span class="dot"></span></span>
+        <span>Iris Parme <span class="dot"></span></span>
+        <!-- duplicate for seamless loop -->
+        <span>Nuit d'Or <span class="dot"></span></span>
+        <span>Jardin Vert <span class="dot"></span></span>
+        <span>Mer Azure <span class="dot"></span></span>
+        <span>Rosa Venezia <span class="dot"></span></span>
+        <span>Fumée Noire <span class="dot"></span></span>
+        <span>Neroli Solaire <span class="dot"></span></span>
+        <span>Cocoa Velvet <span class="dot"></span></span>
+        <span>Iris Parme <span class="dot"></span></span>
+      </div>
+    </div>
+
+    <!-- Featured products -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Signature Fragrances</span>
+            <h2>
+              The <span class="italic">Maison Velour</span> icons.
+            </h2>
+          </div>
+          <p>
+            Six bottles that define the house. Years in the making, minutes to
+            fall for. Complimentary samples with every order.
+          </p>
+        </div>
+        <div class="product-grid reveal-stagger" id="featured-grid"></div>
+        <div style="text-align:center; margin-top:3rem">
+          <a href="shop.html" class="btn btn-ghost">View all fragrances</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="collections">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Olfactive Universes</span>
+            <h2>Enter a <span class="italic">collection</span>.</h2>
+          </div>
+          <p>
+            Four worlds, one maison. Each collection is a different hour of the
+            same long, perfumed day.
+          </p>
+        </div>
+        <div class="collection-grid reveal-stagger">
+          <a href="shop.html?category=Oriental" class="collection-card amber">
+            <div class="bg"></div>
+            <div class="content">
+              <span class="eyebrow" style="color:rgba(255,255,255,0.75)">01 · Amber Hour</span>
+              <h3>Oriental &amp; Amber</h3>
+              <p>Oud, saffron and resins — the warm nocturne.</p>
+              <span class="btn btn-light">Explore</span>
+            </div>
+          </a>
+          <a href="shop.html?category=Floral" class="collection-card noir">
+            <div class="bg"></div>
+            <div class="content">
+              <span class="eyebrow" style="color:rgba(255,255,255,0.75)">02 · Rose Noir</span>
+              <h3>Floral &amp; Rose</h3>
+              <p>Damask rose, iris, velvet peony.</p>
+              <span class="btn btn-light">Explore</span>
+            </div>
+          </a>
+          <a href="shop.html?category=Green" class="collection-card verdant">
+            <div class="bg"></div>
+            <div class="content">
+              <span class="eyebrow" style="color:rgba(255,255,255,0.75)">03 · Verdant</span>
+              <h3>Green &amp; Botanical</h3>
+              <p>Fig leaf, vetiver, crushed herbs.</p>
+              <span class="btn btn-light">Explore</span>
+            </div>
+          </a>
+          <a href="shop.html?category=Aquatic" class="collection-card oceanic">
+            <div class="bg"></div>
+            <div class="content">
+              <span class="eyebrow" style="color:rgba(255,255,255,0.75)">04 · Oceanic</span>
+              <h3>Aquatic &amp; Marine</h3>
+              <p>Sea salt, iris, driftwood at dawn.</p>
+              <span class="btn btn-light">Explore</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story">
+      <div class="container">
+        <div class="story-copy reveal">
+          <span class="eyebrow" style="color:rgba(245,241,234,0.6)">The Maison</span>
+          <h2>
+            A decade in <span class="italic">a single drop</span>.
+          </h2>
+          <p>
+            Maison Velour was founded in 2014 in a quiet atelier above the
+            flower fields of Grasse. Every fragrance is macerated for at least
+            nine months, blended in micro-batches, and hand-filled into
+            apothecary glass. We never compromise on the ingredients, and we
+            never will.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="num">11</div>
+              <div class="label">Years in Grasse</div>
+            </div>
+            <div class="stat">
+              <div class="num">200+</div>
+              <div class="label">Rare raw materials</div>
+            </div>
+            <div class="stat">
+              <div class="num">9mo</div>
+              <div class="label">Minimum maceration</div>
+            </div>
+          </div>
+          <div style="margin-top:2rem">
+            <a href="about.html" class="btn-link">Read our story →</a>
+          </div>
+        </div>
+        <div class="story-image reveal" id="story-bottle"></div>
+      </div>
+    </section>
+
+    <!-- Notes / Pillars -->
+    <section class="notes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">The Craft</span>
+            <h2>
+              Four pillars of the <span class="italic">maison</span>.
+            </h2>
+          </div>
+        </div>
+        <div class="notes-grid reveal-stagger">
+          <div class="note-card">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3C7 8 7 13 12 21 17 13 17 8 12 3Z"/>
+              </svg>
+            </div>
+            <h4>Natural Origin</h4>
+            <p>
+              Up to 92% naturally derived. No phthalates, no animal musks, ever.
+            </p>
+          </div>
+          <div class="note-card">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 12h8M12 8v8"/>
+              </svg>
+            </div>
+            <h4>Hand-Blended</h4>
+            <p>
+              Micro-batches of 300 bottles — signed, numbered, and traceable.
+            </p>
+          </div>
+          <div class="note-card">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 21h16M6 21V8l6-4 6 4v13M10 14h4M10 17h4"/>
+              </svg>
+            </div>
+            <h4>Grasse Origin</h4>
+            <p>
+              Distilled in the perfume capital of the world. Always.
+            </p>
+          </div>
+          <div class="note-card">
+            <div class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 7h16v10H4z"/>
+                <path d="M8 7V5h8v2M8 17v2M16 17v2"/>
+              </svg>
+            </div>
+            <h4>Refillable</h4>
+            <p>
+              Return any bottle for a 20% refill credit. Less waste, more scent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-box reveal">
+          <div>
+            <span class="eyebrow" style="color:rgba(245,241,234,0.6)">Le Journal</span>
+            <h2>
+              Notes from <span class="italic">the atelier</span>.
+            </h2>
+            <p>
+              Quiet dispatches on new scents, rare ingredients, and limited
+              drops. Never more than twice a month.
+            </p>
+          </div>
+          <form class="newsletter-form" novalidate>
+            <input type="email" required placeholder="Your email address" aria-label="Email address" />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

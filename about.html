@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Story · Maison Velour</title>
+    <meta name="description" content="The story, craftsmanship and values behind Maison Velour." />
+    <meta name="theme-color" content="#f5f1ea" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='20' y='8' width='24' height='14' rx='2' fill='%2316130f'/%3E%3Crect x='14' y='22' width='36' height='34' rx='4' fill='%23b8935b'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <div id="mobile-menu"></div>
+    <div id="cart-drawer"></div>
+
+    <header class="page-header">
+      <div class="container">
+        <span class="eyebrow">Notre Histoire</span>
+        <h1>
+          A house built on
+          <span class="italic">patience</span>.
+        </h1>
+        <p>
+          Maison Velour began with a single bottle, a single accord, and an
+          unreasonable obsession with getting one scent exactly right. Eleven
+          years later, we're still doing the same thing — just twelve times
+          over.
+        </p>
+      </div>
+    </header>
+
+    <section style="padding-block: 2rem 5rem">
+      <div class="container">
+        <div class="about-intro reveal">
+          <p>
+            Founded in 2014 by perfumer Héloïse Marchand above the flower
+            fields of Grasse, Maison Velour makes fragrance the way it was
+            made a century ago — slowly, by hand, from botanicals we've known
+            growers for a decade. Every drop is macerated for a minimum of
+            nine months before it ever touches glass.
+          </p>
+        </div>
+
+        <div class="section-head reveal" id="craft">
+          <div>
+            <span class="eyebrow">Our Values</span>
+            <h2>Four things we <span class="italic">refuse</span> to compromise.</h2>
+          </div>
+        </div>
+
+        <div class="values reveal-stagger">
+          <div class="value-card">
+            <span class="num">01</span>
+            <h4>Raw materials</h4>
+            <p>
+              We use rare naturals — Tuscan iris, Bulgarian rose, Laotian oud
+              — sourced directly from growers we know by name.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="num">02</span>
+            <h4>Slow maceration</h4>
+            <p>
+              Nine months minimum, often twelve. Patience is what lets the
+              notes marry. There is no shortcut to softness.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="num">03</span>
+            <h4>Small batches</h4>
+            <p>
+              Every batch is 300 bottles, signed and numbered. If it sells out,
+              it sells out. We will not mass-produce.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="num">04</span>
+            <h4>Refill, reuse</h4>
+            <p>
+              Send any bottle back for a 20% refill credit. The glass is
+              designed to last a lifetime; the scent inside to change with you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow" style="color:rgba(245,241,234,0.6)">The Perfumer</span>
+          <h2>
+            Héloïse <span class="italic">Marchand</span>, Nose.
+          </h2>
+          <p>
+            Trained at the Grasse Institute and at Givaudan, Héloïse founded
+            Maison Velour after ten years creating scents for houses she'd
+            rather not name. "I wanted to make one bottle I was proud of,"
+            she says. "Then I made twelve."
+          </p>
+          <p style="margin-top:1rem">
+            She still hand-signs the first bottle of every new batch.
+          </p>
+        </div>
+        <div class="story-image reveal" id="about-bottle"></div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById("about-bottle");
+        const p = (window.PRODUCTS || []).find((x) => x.id === "safran-09") || (window.PRODUCTS || [])[8] || (window.PRODUCTS || [])[0];
+        if (el && p && window.bottleSVG) el.innerHTML = window.bottleSVG(p);
+      });
+    </script>
+
+    <section style="padding-block: 5rem">
+      <div class="container">
+        <div class="section-head reveal" id="journal">
+          <div>
+            <span class="eyebrow">Milestones</span>
+            <h2>A <span class="italic">quiet</span> decade.</h2>
+          </div>
+        </div>
+        <div class="timeline reveal-stagger">
+          <div class="timeline-item">
+            <div class="year">2014</div>
+            <div>
+              <h4>The atelier opens</h4>
+              <p>Above a boulangerie in Grasse. One perfumer, one apprentice, one accord.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2017</div>
+            <div>
+              <h4>Nuit d'Or released</h4>
+              <p>Our first bestseller. Sold out in 48 hours. Still our most-loved bottle.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2020</div>
+            <div>
+              <h4>The refill programme</h4>
+              <p>We became one of the first independent perfumers with a refillable line.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2023</div>
+            <div>
+              <h4>London &amp; Tokyo</h4>
+              <p>Our second and third boutiques open. The atelier remains in Grasse.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2025</div>
+            <div>
+              <h4>Autumn Collection</h4>
+              <p>Four new scents, eleven years of patience. The most ambitious release yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-box reveal">
+          <div>
+            <span class="eyebrow" style="color:rgba(245,241,234,0.6)">Le Journal</span>
+            <h2>Stay <span class="italic">in scent</span>.</h2>
+            <p>
+              Slow dispatches from the atelier. Never more than twice a month,
+              always worth reading.
+            </p>
+          </div>
+          <form class="newsletter-form" novalidate>
+            <input type="email" required placeholder="Your email address" aria-label="Email" />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
