@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fragrance · Maison Velour</title>
+    <meta name="description" content="Maison Velour fragrance detail — notes, sizes, and care." />
+    <meta name="theme-color" content="#f5f1ea" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='20' y='8' width='24' height='14' rx='2' fill='%2316130f'/%3E%3Crect x='14' y='22' width='36' height='34' rx='4' fill='%23b8935b'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <div id="mobile-menu"></div>
+    <div id="cart-drawer"></div>
+
+    <section class="pdp">
+      <div class="container">
+        <div class="pdp-grid" id="pdp-root"></div>
+      </div>
+    </section>
+
+    <section style="padding-block: 4rem 6rem; background: var(--bg-alt)">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">You might also like</span>
+            <h2>From the <span class="italic">same atelier</span>.</h2>
+          </div>
+        </div>
+        <div class="product-grid reveal-stagger" id="related-grid"></div>
+      </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>
