@@ -1,0 +1,237 @@
+export interface Product {
+  id: number;
+  title: string;
+  originalPrice: number;
+  price: number;
+  discount: number;
+  category: "Premium" | "Affordable" | "Bakhoor" | "Attar" | "Perfume";
+  image: string;
+  image2: string;
+  rating: number;
+  reviews: number;
+  description: string;
+  notes: string[];
+  badge?: string;
+}
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 1,
+    title: "Mughal Emperor Oud",
+    originalPrice: 4500,
+    price: 2799,
+    discount: 38,
+    category: "Premium",
+    image: "https://placehold.co/400x400/2d1b0e/D4AF37?text=Mughal+Emperor",
+    image2: "https://placehold.co/400x400/1a1a1a/D4AF37?text=Mughal+Emperor",
+    rating: 4.9,
+    reviews: 214,
+    description:
+      "A regal blend inspired by Mughal royalty. Deep oud heart enveloped in rose and musk, leaving an unforgettable trail.",
+    notes: ["Oud", "Rose", "Amber", "Musk", "Sandalwood"],
+    badge: "Best Seller",
+  },
+  {
+    id: 2,
+    title: "Hajj Mubarak Attar",
+    originalPrice: 2800,
+    price: 1749,
+    discount: 38,
+    category: "Attar",
+    image: "https://placehold.co/400x400/3d2b1e/D4AF37?text=Hajj+Mubarak",
+    image2: "https://placehold.co/400x400/2d1b0e/gold?text=Hajj+Mubarak",
+    rating: 4.8,
+    reviews: 189,
+    description:
+      "Crafted for the sacred journey — a pure, alcohol-free attar with notes of white musk and Zamzam roses.",
+    notes: ["White Musk", "Rose", "Amber", "Oud"],
+    badge: "Top Rated",
+  },
+  {
+    id: 3,
+    title: "Rose Oud Elixir",
+    originalPrice: 3800,
+    price: 2349,
+    discount: 38,
+    category: "Premium",
+    image: "https://placehold.co/400x400/6b2d3e/D4AF37?text=Rose+Oud",
+    image2: "https://placehold.co/400x400/4a1a28/D4AF37?text=Rose+Oud",
+    rating: 4.7,
+    reviews: 156,
+    description:
+      "A luxurious fusion of Bulgarian rose and dark agarwood. Romantic, deep, and intensely long-lasting.",
+    notes: ["Bulgarian Rose", "Oud", "Patchouli", "Vanilla"],
+    badge: "New",
+  },
+  {
+    id: 4,
+    title: "Summer Breeze Cologne",
+    originalPrice: 2200,
+    price: 1364,
+    discount: 38,
+    category: "Perfume",
+    image: "https://placehold.co/400x400/1e4a6b/D4AF37?text=Summer+Breeze",
+    image2: "https://placehold.co/400x400/0d2b42/D4AF37?text=Summer+Breeze",
+    rating: 4.5,
+    reviews: 98,
+    description:
+      "Fresh citrus and ocean breeze accord. Perfect for daytime wear in warm weather.",
+    notes: ["Bergamot", "Sea Salt", "Lime", "Cedar", "White Musk"],
+  },
+  {
+    id: 5,
+    title: "Royal Bakhoor Chips",
+    originalPrice: 1800,
+    price: 1116,
+    discount: 38,
+    category: "Bakhoor",
+    image: "https://placehold.co/400x400/3d2b0e/D4AF37?text=Royal+Bakhoor",
+    image2: "https://placehold.co/400x400/2b1a08/D4AF37?text=Royal+Bakhoor",
+    rating: 4.6,
+    reviews: 134,
+    description:
+      "Premium agarwood chips infused with rose, amber, and musk. Creates an enchanting aromatic atmosphere.",
+    notes: ["Agarwood", "Rose", "Amber", "Musk", "Frankincense"],
+    badge: "Popular",
+  },
+  {
+    id: 6,
+    title: "Midnight Black Oud",
+    originalPrice: 5500,
+    price: 3410,
+    discount: 38,
+    category: "Premium",
+    image: "https://placehold.co/400x400/0d0d0d/D4AF37?text=Midnight+Black",
+    image2: "https://placehold.co/400x400/1a1a1a/C9A84C?text=Midnight+Black",
+    rating: 5.0,
+    reviews: 67,
+    description:
+      "The pinnacle of dark luxury. Rare black agarwood with smoky leather and vetiver base.",
+    notes: ["Black Oud", "Leather", "Vetiver", "Smoke", "Ambergris"],
+    badge: "Premium",
+  },
+  {
+    id: 7,
+    title: "Jasmine Dreams Attar",
+    originalPrice: 1900,
+    price: 1178,
+    discount: 38,
+    category: "Affordable",
+    image: "https://placehold.co/400x400/4a6b2d/D4AF37?text=Jasmine+Dreams",
+    image2: "https://placehold.co/400x400/2d4219/D4AF37?text=Jasmine+Dreams",
+    rating: 4.4,
+    reviews: 201,
+    description:
+      "Light and floral — pure jasmine absolute blended with soft sandalwood for an everyday feminine scent.",
+    notes: ["Jasmine", "Sandalwood", "Neroli", "Musk"],
+  },
+  {
+    id: 8,
+    title: "French Oud Collection",
+    originalPrice: 4200,
+    price: 2604,
+    discount: 38,
+    category: "Premium",
+    image: "https://placehold.co/400x400/2d1f4a/D4AF37?text=French+Oud",
+    image2: "https://placehold.co/400x400/1a1028/D4AF37?text=French+Oud",
+    rating: 4.8,
+    reviews: 112,
+    description:
+      "A sophisticated French interpretation of classic Oud. Iris and oud heart with a mossy oakwood dry-down.",
+    notes: ["Oud", "Iris", "Oakmoss", "Sandalwood", "Tonka Bean"],
+    badge: "Trending",
+  },
+  {
+    id: 9,
+    title: "Saffron Gold Perfume",
+    originalPrice: 3500,
+    price: 2170,
+    discount: 38,
+    category: "Perfume",
+    image: "https://placehold.co/400x400/6b4a0e/D4AF37?text=Saffron+Gold",
+    image2: "https://placehold.co/400x400/4a3008/D4AF37?text=Saffron+Gold",
+    rating: 4.6,
+    reviews: 88,
+    description:
+      "Precious saffron strands woven through warm rose and oud base. A spicy-floral masterpiece.",
+    notes: ["Saffron", "Rose", "Oud", "Amber", "Musk"],
+  },
+  {
+    id: 10,
+    title: "Bakhoor Al Manzil",
+    originalPrice: 2400,
+    price: 1488,
+    discount: 38,
+    category: "Bakhoor",
+    image: "https://placehold.co/400x400/4a2b0e/D4AF37?text=Al+Manzil",
+    image2: "https://placehold.co/400x400/2d1a08/D4AF37?text=Al+Manzil",
+    rating: 4.7,
+    reviews: 145,
+    description:
+      "Traditional Emirati-style bakhoor with dark oud, sweet resins, and spice. Fills your home with heritage.",
+    notes: ["Dark Oud", "Frankincense", "Myrrh", "Rose", "Amber"],
+    badge: "Best Seller",
+  },
+  {
+    id: 11,
+    title: "Velvet Musk Spray",
+    originalPrice: 1600,
+    price: 992,
+    discount: 38,
+    category: "Affordable",
+    image: "https://placehold.co/400x400/6b3d6b/D4AF37?text=Velvet+Musk",
+    image2: "https://placehold.co/400x400/4a284a/D4AF37?text=Velvet+Musk",
+    rating: 4.3,
+    reviews: 234,
+    description:
+      "Soft, skin-close white musk with velvet rose petals. Clean, addictive, and universally loved.",
+    notes: ["White Musk", "Rose Petals", "Powder", "Vanilla"],
+  },
+  {
+    id: 12,
+    title: "Arabian Nights Attar",
+    originalPrice: 3200,
+    price: 1984,
+    discount: 38,
+    category: "Attar",
+    image: "https://placehold.co/400x400/1a3d4a/D4AF37?text=Arabian+Nights",
+    image2: "https://placehold.co/400x400/0d2028/D4AF37?text=Arabian+Nights",
+    rating: 4.9,
+    reviews: 176,
+    description:
+      "A pure oil attar capturing the mystique of Arabian nights. Dark, sensual, and extraordinarily long-lasting.",
+    notes: ["Oud", "Amber", "Civet", "Rose", "Musk", "Frankincense"],
+    badge: "Top Rated",
+  },
+  {
+    id: 13,
+    title: "Citrus Paradise",
+    originalPrice: 1400,
+    price: 868,
+    discount: 38,
+    category: "Affordable",
+    image: "https://placehold.co/400x400/4a6b1e/D4AF37?text=Citrus+Paradise",
+    image2: "https://placehold.co/400x400/2d4212/D4AF37?text=Citrus+Paradise",
+    rating: 4.2,
+    reviews: 187,
+    description:
+      "Vibrant and uplifting citrus blend. Perfect daily wear with lemon, orange blossom, and light woods.",
+    notes: ["Lemon", "Orange Blossom", "Grapefruit", "Cedar", "Musk"],
+  },
+  {
+    id: 14,
+    title: "Imperial Oud Tablet",
+    originalPrice: 2000,
+    price: 1240,
+    discount: 38,
+    category: "Bakhoor",
+    image: "https://placehold.co/400x400/2b1a08/D4AF37?text=Imperial+Tablet",
+    image2: "https://placehold.co/400x400/1a0f04/D4AF37?text=Imperial+Tablet",
+    rating: 4.8,
+    reviews: 92,
+    description:
+      "Compressed bakhoor tablets infused with finest oud and spices. Easy to use, incredibly aromatic.",
+    notes: ["Oud", "Clove", "Cinnamon", "Rose", "Amber"],
+    badge: "New",
+  },
+];
