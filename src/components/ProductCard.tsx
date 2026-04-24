@@ -25,7 +25,7 @@ export function ProductCard({ product, index = 0 }: Props) {
         >
           <div
             className="absolute inset-0 bg-center bg-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-            style={{ backgroundImage: `url(${product.image})` }}
+            style={{ backgroundImage: `url("${product.image}")` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/55 via-ink-900/10 to-transparent" />
 

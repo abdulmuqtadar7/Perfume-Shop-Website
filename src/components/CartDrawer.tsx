@@ -76,7 +76,7 @@ export function CartDrawer() {
                 >
                   <div
                     className={`w-20 h-24 rounded-xl bg-gradient-to-br ${item.product.accent} bg-cover bg-center shrink-0`}
-                    style={{ backgroundImage: `url(${item.product.image})` }}
+                    style={{ backgroundImage: `url("${item.product.image}")` }}
                   />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2">

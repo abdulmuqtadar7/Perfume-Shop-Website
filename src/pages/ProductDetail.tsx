@@ -38,7 +38,7 @@ export function ProductDetail() {
         >
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: `url(${product.image})` }}
+            style={{ backgroundImage: `url("${product.image}")` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/50 via-transparent to-ink-900/10" />
           <div className="absolute top-5 left-5 flex gap-2">

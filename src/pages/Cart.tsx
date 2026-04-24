@@ -39,7 +39,7 @@ export function Cart() {
               <Link
                 to={`/shop/${item.product.id}`}
                 className={`w-24 h-28 rounded-2xl bg-gradient-to-br ${item.product.accent} bg-cover bg-center shrink-0`}
-                style={{ backgroundImage: `url(${item.product.image})` }}
+                style={{ backgroundImage: `url("${item.product.image}")` }}
               />
               <div className="flex-1 min-w-0">
                 <Link

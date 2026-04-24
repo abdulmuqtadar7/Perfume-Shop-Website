@@ -131,7 +131,7 @@ export function Checkout() {
               <div key={i.product.id} className="flex gap-3 items-center">
                 <div
                   className={`w-14 h-16 rounded-xl bg-gradient-to-br ${i.product.accent} bg-cover bg-center shrink-0`}
-                  style={{ backgroundImage: `url(${i.product.image})` }}
+                  style={{ backgroundImage: `url("${i.product.image}")` }}
                 />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium truncate">{i.product.name}</p>
